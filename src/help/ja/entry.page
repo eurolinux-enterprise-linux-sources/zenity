@@ -48,7 +48,7 @@ fi
 </code>
 
 
-    <figure id="zenity-entry-screenshot">
+    <figure>
       <title>テキスト入力ダイアログの例</title>
       <desc><app>Zenity</app> テキスト入力ダイアログの例</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

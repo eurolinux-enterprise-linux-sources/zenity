@@ -36,7 +36,7 @@
     --text="There are system updates necessary!"
   </code>
 
-  <figure id="zenity-notification-screenshot">
+  <figure>
     <title>Exemplo de icona de notificación</title>
     <desc>Exemplo da icona de notificación de <app>Zenity</app></desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
@@ -50,7 +50,7 @@
   EOH
   </code>
 
-  <figure id="zenity-notification-listen-screenshot">
+  <figure>
     <title>Notification Icon with <cmd>--listen</cmd> Example</title>
     <desc><app>Zenity</app> notification with <cmd>--listen</cmd> example</desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-listen-screenshot.png"/>

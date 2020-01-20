@@ -20,8 +20,7 @@ zenity --warning \
 --text="Disconnect the power cable to avoid electrical shock."
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
+      <figure>
         <title>Abisuen elkarrizketa-koadroa</title>
 	<desc><app>Zenity</app> warning dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>

@@ -1,11 +1,11 @@
 Name:          zenity
-Version:       3.22.0
+Version:       3.28.1
 Release:       1%{?dist}
 Summary:       Display dialog boxes from shell scripts
 
 License:       LGPLv2+
 URL:           https://wiki.gnome.org/Projects/Zenity
-Source:        https://download.gnome.org/sources/%{name}/3.22/%{name}-%{version}.tar.xz
+Source:        https://download.gnome.org/sources/%{name}/3.28/%{name}-%{version}.tar.xz
 
 BuildRequires: pkgconfig(gtk+-3.0) >= 3.0.0
 BuildRequires: pkgconfig(libnotify) >= 0.6.1
@@ -46,6 +46,10 @@ rm $RPM_BUILD_ROOT%{_bindir}/gdialog
 
 
 %changelog
+* Mon Jun 04 2018 Richard Hughes <rhughes@redhat.com> - 3.28.1-1
+- Update to 3.28.1
+- Resolves: #1569809
+
 * Thu Sep 22 2016 Kalev Lember <klember@redhat.com> - 3.22.0-1
 - Update to 3.22.0
 - Resolves: #1387068

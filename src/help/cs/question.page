@@ -23,7 +23,7 @@ zenity --question \
 </code>
 
 
-      <figure id="zenity-question-screenshot">
+      <figure>
         <title>Příklad dialogového okna s dotazem</title>
 	<desc>Ukázka dialogového okna <app>Zenity</app> s dotazem</desc>
         <media type="image" mime="image/png" src="figures/zenity-question-screenshot.png"/>

@@ -28,8 +28,7 @@ zenity --warning \
 --text="拔下电源线，避免触电。"
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
+      <figure>
         <title>警告框范例</title>
 	<desc><app>Zenity</app> 警告对话框范例</desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>

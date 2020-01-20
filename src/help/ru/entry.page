@@ -46,7 +46,7 @@ fi
 </code>
 
 
-    <figure id="zenity-entry-screenshot">
+    <figure>
       <title>Пример диалогового окна ввода текста</title>
       <desc><app>Zenity</app> text entry dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

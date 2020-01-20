@@ -66,7 +66,7 @@ case $? in
 esac
 </code>
 
-    <figure id="zenity-fileselection-screenshot">
+    <figure>
       <title>Exempel på filväljardialog</title>
       <desc><app>Zenity</app>-exempel på filväljardialog</desc>
       <media type="image" mime="image/png" src="figures/zenity-fileselection-screenshot.png"/>

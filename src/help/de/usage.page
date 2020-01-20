@@ -50,15 +50,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr valign="top">
-            <td colname="COLSPEC0">
+          <tr>
+            <td>
               <p>Rückgabewert</p></td>
-            <td colname="COLSPEC1">
+            <td>
               <p>Beschreibung</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>0</var></p>
             </td>
@@ -66,7 +66,7 @@
               <p>Der Benutzer hat entweder <gui style="button">OK</gui> oder <gui style="button">Schließen</gui> angeklickt.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>1</var></p>
             </td>
@@ -74,7 +74,7 @@
               <p>Der Benutzer hat entweder <gui style="button">Abbrechen</gui> angeklickt oder die Fensterfunktionen zum Schließen des Dialogs benutzt.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>-1</var></p>
             </td>
@@ -82,7 +82,7 @@
               <p>Es ist ein unerwarteter Fehler aufgetreten.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>5</var></p>
             </td>

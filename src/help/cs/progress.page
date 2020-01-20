@@ -68,7 +68,7 @@ fi
 </code>
 
 
-    <figure id="zenity-progress-screenshot">
+    <figure>
       <title>Příklad dialogového okna s ukazatelem průběhu</title>
       <desc>Ukázka dialogového okna <app>Zenity</app> s ukazatelem průběhu</desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>

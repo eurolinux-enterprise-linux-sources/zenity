@@ -29,7 +29,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>Exempel på feldialog</title>
         <desc><app>Zenity</app>-exempel på feldialog</desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>

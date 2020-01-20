@@ -48,7 +48,7 @@ fi
 </code>
 
 
-    <figure id="zenity-entry-screenshot">
+    <figure>
       <title>Példa szövegbeviteli ablak</title>
       <desc><app>Zenity</app> példa szövegbeviteli ablak</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

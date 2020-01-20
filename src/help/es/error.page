@@ -41,7 +41,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>Ejemplo de diálogo de error</title>
         <desc>Ejemplo del diálogo de error de <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>

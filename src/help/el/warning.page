@@ -40,8 +40,7 @@ zenity --warning \
 --text="Αποσυνδέστε το καλώδιο ρεύματος για να αποφύγετε την ηλεκτροπληξία."
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
+      <figure>
         <title>Παράδειγμα διαλόγου προειδοποίησης</title>
 	<desc>Παράδειγμα διαλόγου προειδοποίησης του <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>

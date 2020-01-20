@@ -50,15 +50,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr valign="top">
-            <td colname="COLSPEC0">
+          <tr>
+            <td>
               <p>退出代码</p></td>
-            <td colname="COLSPEC1">
+            <td>
               <p>描述</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>0</var></p>
             </td>
@@ -66,7 +66,7 @@
               <p>用户已经按下 <gui style="button">确定</gui> 或 <gui style="button">关闭</gui>。</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>1</var></p>
             </td>
@@ -74,7 +74,7 @@
               <p>用户按了 <gui style="button">取消</gui>，或者点了窗口关闭按钮关闭对话框。</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>-1</var></p>
             </td>
@@ -82,7 +82,7 @@
               <p>发生了意外错误。</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>5</var></p>
             </td>

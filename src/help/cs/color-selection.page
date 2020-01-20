@@ -45,7 +45,7 @@ case $? in
 esac
 </code>
 
-  <figure id="zenity-colorselection-screenshot">
+  <figure>
     <title>Příklad dialogového okna pro výběr barvy</title>
     <desc>Ukázka dialogového okna <app>Zenity</app> pro výběr barvy</desc>
     <media type="image" mime="image/png" src="figures/zenity-colorselection-screenshot.png"/>

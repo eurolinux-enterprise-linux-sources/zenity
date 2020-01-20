@@ -41,7 +41,7 @@ zenity --question \
 </code>
 
 
-      <figure id="zenity-question-screenshot">
+      <figure>
         <title>Παράδειγμα διαλόγου ερώτησης</title>
 	<desc>Παράδειγμα διαλόγου ερώτησης του <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-question-screenshot.png"/>

@@ -2,51 +2,51 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="notification" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Use the <cmd>--notification</cmd> option.</desc>
+    <desc>Brug tilvalget <cmd>--notification</cmd>.</desc>
   </info>
   <title>Påmindelsesikon</title>
-    <p>Use the <cmd>--notification</cmd> option to create a notification icon.</p>
+    <p>Brug tilvalget <cmd>--notification</cmd> til at oprette et påmindelsesikon.</p>
 
   <terms>
     <item>
-      <title><cmd>--text</cmd>=<var>text</var></title>
+      <title><cmd>--text</cmd>=<var>tekst</var></title>
       <p>Angiver teksten, der vises i påmindelsesområdet.</p>
     </item>
     <item>
-      <title><cmd>--listen</cmd>=icon: '<var>text</var>', message: '<var>text</var>', tooltip: '<var>text</var>', visible: '<var>text</var>',</title>
-      <p>Listens for commands at standard input. At least one command must be specified. Commands are comma separated. A command must be followed by a colon and a value. </p>
+      <title><cmd>--listen</cmd>=icon: '<var>tekst</var>', message: '<var>tekst</var>', tooltip: '<var>tekst</var>', visible: '<var>tekst</var>',</title>
+      <p>Lytter efter kommandoer på standardinput. Mindst én kommando skal gives. Kommandoer adskilles med komma. En kommando skal følges af kolon og en værdi.</p>
       <note style="tip">
-        <p>The <cmd>icon</cmd> command also accepts four stock icon values such as <var>error</var>, <var>info</var>, <var>question</var> and <var>warning</var>.</p>
+        <p>Kommandoen <cmd>icon</cmd> accepterer også fire standardikonværdier, såsom <var>error</var>, <var>info</var>, <var>question</var> og <var>warning</var>.</p>
       </note>
     </item>
   </terms>
 
-  <p>The following example script shows how to create a notification icon:</p>
+  <p>Følgende eksempelscript viser, hvordan man opretter et påmindelsesikon:</p>
   <code>
   #!/bin/sh
 
   zenity --notification\
     --window-icon="info" \
-    --text="There are system updates necessary!"
+    --text="Der er nødvendige systemopdateringer!"
   </code>
 
-  <figure id="zenity-notification-screenshot">
+  <figure>
     <title>Eksempel på påmindelsesikon</title>
-    <desc><app>Zenity</app> notification icon example</desc>
+    <desc>Eksempel på påmindelsesikon til <app>Zenity</app></desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
   </figure>
 
-  <p>The following example script shows how to create a notification icon along with <cmd>--listen</cmd>:</p>
+  <p>Følgende eksempelscript viser, hvordan man opretter et påmindelsesikon med <cmd>--listen</cmd>:</p>
   <code>
   #!/bin/sh
   cat &lt;&lt;EOH| zenity --notification --listen
-  message: this is the message text
+  message: dette er beskedteksten
   EOH
   </code>
 
-  <figure id="zenity-notification-listen-screenshot">
-    <title>Notification Icon with <cmd>--listen</cmd> Example</title>
-    <desc><app>Zenity</app> notification with <cmd>--listen</cmd> example</desc>
+  <figure>
+    <title>Eksempel på påmindelsesikon med <cmd>--listen</cmd></title>
+    <desc><app>Zenity</app>-påmindelse med <cmd>--listen</cmd>-eksempel</desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-listen-screenshot.png"/>
   </figure>
 

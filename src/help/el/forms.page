@@ -92,7 +92,7 @@ case $? in
 esac
 </code>
 
-    <figure id="zenity-forms-screenshot">
+    <figure>
       <title>Παράδειγμα διαλόγου φορμών</title>
       <desc>Παράδειγμα διαλόγου φορμών του <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-forms-screenshot.png"/>

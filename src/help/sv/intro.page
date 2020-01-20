@@ -2,7 +2,7 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="intro" xml:lang="sv">
 <info>
   <link type="guide" xref="index"/>
-  <desc><app>Zenity</app> låter dig skapa olika typer av enkla dialoger:</desc>
+  <desc><app>Zenity</app> låter dig skapa olika typer av enkla dialoger.</desc>
 
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Nylander</mal:name>

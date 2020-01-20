@@ -36,7 +36,7 @@
     --text="Rendszerfrissítés szükséges!"
   </code>
 
-  <figure id="zenity-notification-screenshot">
+  <figure>
     <title>Példa értesítési ikon</title>
     <desc><app>Zenity</app> példa értesítési ikon</desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
@@ -50,7 +50,7 @@
   EOH
   </code>
 
-  <figure id="zenity-notification-listen-screenshot">
+  <figure>
     <title>Példa értesítési ikon a <cmd>--listen</cmd> használatával</title>
     <desc><app>Zenity</app> példa értesítési ikon a <cmd>--listen</cmd> használatával</desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-listen-screenshot.png"/>

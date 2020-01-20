@@ -22,8 +22,7 @@ zenity --warning \
 --text="Desconecte o cable eléctrico para evitar un shock eléctrico."
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
+      <figure>
         <title>Exemplo do diálogo de advertencia</title>
 	<desc>Exemplo do diálogo de advertencia de <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>

@@ -54,7 +54,7 @@ fi
 </code>
 
 
-    <figure id="zenity-entry-screenshot">
+    <figure>
       <title>文本框范例</title>
       <desc><app>Zenity</app> 文本对话框范例</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

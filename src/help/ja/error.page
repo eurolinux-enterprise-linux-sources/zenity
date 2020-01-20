@@ -23,7 +23,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>エラーダイアログの例</title>
         <desc><app>Zenity</app> エラーダイアログの例</desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>

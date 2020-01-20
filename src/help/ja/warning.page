@@ -22,8 +22,7 @@ zenity --warning \
 --text="電気ショックを避けるために電源ケーブルの接続を解除しました。"
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
+      <figure>
         <title>警告ダイアログの例</title>
 	<desc><app>Zenity</app> 警告ダイアログの例</desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>

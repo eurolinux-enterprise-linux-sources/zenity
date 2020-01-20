@@ -50,15 +50,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr valign="top">
-            <td colname="COLSPEC0">
+          <tr>
+            <td>
               <p>Avslutningskod</p></td>
-            <td colname="COLSPEC1">
+            <td>
               <p>Beskrivning</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>0</var></p>
             </td>
@@ -66,7 +66,7 @@
               <p>Användaren har antingen tryckt på <gui style="button">OK</gui> eller <gui style="button">Stäng</gui>.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>1</var></p>
             </td>
@@ -74,7 +74,7 @@
               <p>Användaren har antingen tryckt på <gui style="button">Avbryt</gui>, eller använt fönsterfunktioner för att stänga dialogrutan.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>-1</var></p>
             </td>
@@ -82,7 +82,7 @@
               <p>Ett oväntat fel har inträffat.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>5</var></p>
             </td>

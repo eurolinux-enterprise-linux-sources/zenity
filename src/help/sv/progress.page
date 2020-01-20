@@ -74,7 +74,7 @@ fi
 </code>
 
 
-    <figure id="zenity-progress-screenshot">
+    <figure>
       <title>Exempel på förloppsdialog</title>
       <desc><app>Zenity</app>-exempel på förloppsdialog</desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>

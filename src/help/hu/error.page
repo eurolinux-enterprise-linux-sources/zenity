@@ -23,7 +23,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>Példa hiba ablak</title>
         <desc><app>Zenity</app> példa hiba ablak</desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>

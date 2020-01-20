@@ -2,19 +2,28 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-selection" xml:lang="pt-BR">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Use the <cmd>--file-selection</cmd> option.</desc>
+    <desc>Use a opção <cmd>--file-selection</cmd>.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rodolfo Ribeiro Gomes</mal:name>
+      <mal:email>rodolforg@gmail.com</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017</mal:years>
+    </mal:credit>
   </info>
   <title>Diálogo de seleção de arquivo</title>
-    <p>
-	Use the <cmd>--file-selection</cmd> option to create a file selection dialog. <app>Zenity</app> returns the selected files or directories to standard 
-        output. The default mode of the file selection dialog is open.
-    </p>
-    <p>O diálogo de seleção de arquivo suporta as seguintes opções:</p>
+    <p>Use a opção <cmd>--file-selection</cmd> para criar um diálogo de seleção de arquivo. O <app>Zenity</app> retorna os arquivos ou diretórios selecionados para a saída padrão. O modo padrão para o diálogo de seleção de arquivo é aberto.</p>
+    <p>O diálogo de seleção de arquivo oferece suporte às seguintes opções:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--filename</cmd>=<var>filename</var></title>
+        <title><cmd>--filename</cmd>=<var>arquivo</var></title>
 	<p>Especifica o arquivo ou o diretório que começa selecionado no diálogo quando ele é mostrado pela primeira vez.</p>
       </item>
 
@@ -34,34 +43,32 @@
       </item>
 
       <item>
-	<title><cmd>--separator</cmd>=<var>separator</var></title>
+	<title><cmd>--separator</cmd>=<var>separador</var></title>
 	<p>Especifica o texto que será usado para dividir a lista de nomes de arquivos retornada.</p>
       </item>
 
     </terms>
 
-    <p>
-      The following example script shows how to create a file selection dialog:
-    </p>
+    <p>O script de exemplo a seguir mostra como criar um diálogo de seleção de arquivo:</p>
 
 <code>
 #!/bin/sh
 
-FILE=`zenity --file-selection --title="Select a File"`
+ARQUIVO=`zenity --file-selection --title="Selecione um arquivo"`
 
 case $? in
          0)
-                echo "\"$FILE\" selected.";;
+                echo "\"$ARQUIVO\" selecionado.";;
          1)
-                echo "No file selected.";;
+                echo "Nenhum arquivo selecionado.";;
         -1)
-                echo "An unexpected error has occurred.";;
+                echo "Ocorreu um erro inesperado.";;
 esac
 </code>
 
-    <figure id="zenity-fileselection-screenshot">
+    <figure>
       <title>Exemplo de diálogo de seleção de arquivo</title>
-      <desc><app>Zenity</app> file selection dialog example</desc>
+      <desc>Exemplo de diálogo de seleção de arquivo do <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-fileselection-screenshot.png"/>
     </figure>
 </page>

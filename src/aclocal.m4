@@ -1,6 +1,6 @@
-# generated automatically by aclocal 1.15 -*- Autoconf -*-
+# generated automatically by aclocal 1.15.1 -*- Autoconf -*-
 
-# Copyright (C) 1996-2014 Free Software Foundation, Inc.
+# Copyright (C) 1996-2017 Free Software Foundation, Inc.
 
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -20,8 +20,351 @@ You have another version of autoconf.  It may work, but is not guaranteed to.
 If you have problems, you may need to regenerate the build system entirely.
 To do so, use the procedure documented by the package, typically 'autoreconf'.])])
 
+# ===========================================================================
+#  https://www.gnu.org/software/autoconf-archive/ax_check_enable_debug.html
+# ===========================================================================
+#
+# SYNOPSIS
+#
+#   AX_CHECK_ENABLE_DEBUG([enable by default=yes/info/profile/no], [ENABLE DEBUG VARIABLES ...], [DISABLE DEBUG VARIABLES NDEBUG ...], [IS-RELEASE])
+#
+# DESCRIPTION
+#
+#   Check for the presence of an --enable-debug option to configure, with
+#   the specified default value used when the option is not present.  Return
+#   the value in the variable $ax_enable_debug.
+#
+#   Specifying 'yes' adds '-g -O0' to the compilation flags for all
+#   languages. Specifying 'info' adds '-g' to the compilation flags.
+#   Specifying 'profile' adds '-g -pg' to the compilation flags and '-pg' to
+#   the linking flags. Otherwise, nothing is added.
+#
+#   Define the variables listed in the second argument if debug is enabled,
+#   defaulting to no variables.  Defines the variables listed in the third
+#   argument if debug is disabled, defaulting to NDEBUG.  All lists of
+#   variables should be space-separated.
+#
+#   If debug is not enabled, ensure AC_PROG_* will not add debugging flags.
+#   Should be invoked prior to any AC_PROG_* compiler checks.
+#
+#   IS-RELEASE can be used to change the default to 'no' when making a
+#   release.  Set IS-RELEASE to 'yes' or 'no' as appropriate. By default, it
+#   uses the value of $ax_is_release, so if you are using the AX_IS_RELEASE
+#   macro, there is no need to pass this parameter.
+#
+#     AX_IS_RELEASE([git-directory])
+#     AX_CHECK_ENABLE_DEBUG()
+#
+# LICENSE
+#
+#   Copyright (c) 2011 Rhys Ulerich <rhys.ulerich@gmail.com>
+#   Copyright (c) 2014, 2015 Philip Withnall <philip@tecnocode.co.uk>
+#
+#   Copying and distribution of this file, with or without modification, are
+#   permitted in any medium without royalty provided the copyright notice
+#   and this notice are preserved.
+
+#serial 8
+
+AC_DEFUN([AX_CHECK_ENABLE_DEBUG],[
+    AC_BEFORE([$0],[AC_PROG_CC])dnl
+    AC_BEFORE([$0],[AC_PROG_CXX])dnl
+    AC_BEFORE([$0],[AC_PROG_F77])dnl
+    AC_BEFORE([$0],[AC_PROG_FC])dnl
+
+    AC_MSG_CHECKING(whether to enable debugging)
+
+    ax_enable_debug_default=m4_tolower(m4_normalize(ifelse([$1],,[no],[$1])))
+    ax_enable_debug_is_release=m4_tolower(m4_normalize(ifelse([$4],,
+                                                              [$ax_is_release],
+                                                              [$4])))
+
+    # If this is a release, override the default.
+    AS_IF([test "$ax_enable_debug_is_release" = "yes"],
+      [ax_enable_debug_default="no"])
+
+    m4_define(ax_enable_debug_vars,[m4_normalize(ifelse([$2],,,[$2]))])
+    m4_define(ax_disable_debug_vars,[m4_normalize(ifelse([$3],,[NDEBUG],[$3]))])
+
+    AC_ARG_ENABLE(debug,
+        [AS_HELP_STRING([--enable-debug=]@<:@yes/info/profile/no@:>@,[compile with debugging])],
+        [],enable_debug=$ax_enable_debug_default)
+
+    # empty mean debug yes
+    AS_IF([test "x$enable_debug" = "x"],
+      [enable_debug="yes"])
+
+    # case of debug
+    AS_CASE([$enable_debug],
+      [yes],[
+        AC_MSG_RESULT(yes)
+        CFLAGS="${CFLAGS} -g -O0"
+        CXXFLAGS="${CXXFLAGS} -g -O0"
+        FFLAGS="${FFLAGS} -g -O0"
+        FCFLAGS="${FCFLAGS} -g -O0"
+        OBJCFLAGS="${OBJCFLAGS} -g -O0"
+      ],
+      [info],[
+        AC_MSG_RESULT(info)
+        CFLAGS="${CFLAGS} -g"
+        CXXFLAGS="${CXXFLAGS} -g"
+        FFLAGS="${FFLAGS} -g"
+        FCFLAGS="${FCFLAGS} -g"
+        OBJCFLAGS="${OBJCFLAGS} -g"
+      ],
+      [profile],[
+        AC_MSG_RESULT(profile)
+        CFLAGS="${CFLAGS} -g -pg"
+        CXXFLAGS="${CXXFLAGS} -g -pg"
+        FFLAGS="${FFLAGS} -g -pg"
+        FCFLAGS="${FCFLAGS} -g -pg"
+        OBJCFLAGS="${OBJCFLAGS} -g -pg"
+        LDFLAGS="${LDFLAGS} -pg"
+      ],
+      [
+        AC_MSG_RESULT(no)
+        dnl Ensure AC_PROG_CC/CXX/F77/FC/OBJC will not enable debug flags
+        dnl by setting any unset environment flag variables
+        AS_IF([test "x${CFLAGS+set}" != "xset"],
+          [CFLAGS=""])
+        AS_IF([test "x${CXXFLAGS+set}" != "xset"],
+          [CXXFLAGS=""])
+        AS_IF([test "x${FFLAGS+set}" != "xset"],
+          [FFLAGS=""])
+        AS_IF([test "x${FCFLAGS+set}" != "xset"],
+          [FCFLAGS=""])
+        AS_IF([test "x${OBJCFLAGS+set}" != "xset"],
+          [OBJCFLAGS=""])
+      ])
+
+    dnl Define various variables if debugging is disabled.
+    dnl assert.h is a NOP if NDEBUG is defined, so define it by default.
+    AS_IF([test "x$enable_debug" = "xyes"],
+      [m4_map_args_w(ax_enable_debug_vars, [AC_DEFINE(], [,,[Define if debugging is enabled])])],
+      [m4_map_args_w(ax_disable_debug_vars, [AC_DEFINE(], [,,[Define if debugging is disabled])])])
+    ax_enable_debug=$enable_debug
+])
+
+# gnome-common.m4
+#
+# serial 3
+# 
+
+AU_DEFUN([GNOME_DEBUG_CHECK],
+[
+	AX_CHECK_ENABLE_DEBUG([no],[GNOME_ENABLE_DEBUG])
+],
+[[$0: This macro is deprecated. You should use AX_CHECK_ENABLE_DEBUG instead and
+replace uses of GNOME_ENABLE_DEBUG with ENABLE_DEBUG.
+See: http://www.gnu.org/software/autoconf-archive/ax_check_enable_debug.html#ax_check_enable_debug]])
+
+dnl GNOME_MAINTAINER_MODE_DEFINES ()
+dnl define DISABLE_DEPRECATED
+dnl
+AU_DEFUN([GNOME_MAINTAINER_MODE_DEFINES],
+[
+	AC_REQUIRE([AM_MAINTAINER_MODE])
+
+	DISABLE_DEPRECATED=""
+	if test $USE_MAINTAINER_MODE = yes; then
+	        DOMAINS="GCONF BONOBO BONOBO_UI GNOME LIBGLADE GNOME_VFS WNCK LIBSOUP"
+	        for DOMAIN in $DOMAINS; do
+	               DISABLE_DEPRECATED="$DISABLE_DEPRECATED -D${DOMAIN}_DISABLE_DEPRECATED -D${DOMAIN}_DISABLE_SINGLE_INCLUDES"
+	        done
+	fi
+
+	AC_SUBST(DISABLE_DEPRECATED)
+],
+[[$0: This macro is deprecated. All of the modules it disables deprecations for
+are obsolete. Remove it and all uses of DISABLE_DEPRECATED.]])
+
+# gnome-compiler-flags.m4
+#
+# serial 4
+#
+
+dnl GNOME_COMPILE_WARNINGS
+dnl Turn on many useful compiler warnings and substitute the result into
+dnl WARN_CFLAGS
+dnl For now, only works on GCC
+dnl Pass the default value of the --enable-compile-warnings configure option as
+dnl the first argument to the macro, defaulting to 'yes'.
+dnl Additional warning/error flags can be passed as an optional second argument.
+dnl
+dnl For example: GNOME_COMPILE_WARNINGS([maximum],[-Werror=some-flag -Wfoobar])
+AU_DEFUN([GNOME_COMPILE_WARNINGS],[
+    dnl ******************************
+    dnl More compiler warnings
+    dnl ******************************
+
+    AC_ARG_ENABLE(compile-warnings, 
+                  AS_HELP_STRING([--enable-compile-warnings=@<:@no/minimum/yes/maximum/error@:>@],
+                                 [Turn on compiler warnings]),,
+                  [enable_compile_warnings="m4_default([$1],[yes])"])
+
+    if test "x$GCC" != xyes; then
+	enable_compile_warnings=no
+    fi
+
+    warning_flags=
+    realsave_CFLAGS="$CFLAGS"
+
+    dnl These are warning flags that aren't marked as fatal.  Can be
+    dnl overridden on a per-project basis with -Wno-foo.
+    base_warn_flags=" \
+        -Wall \
+        -Wstrict-prototypes \
+        -Wnested-externs \
+    "
+
+    dnl These compiler flags typically indicate very broken or suspicious
+    dnl code.  Some of them such as implicit-function-declaration are
+    dnl just not default because gcc compiles a lot of legacy code.
+    dnl We choose to make this set into explicit errors.
+    base_error_flags=" \
+        -Werror=missing-prototypes \
+        -Werror=implicit-function-declaration \
+        -Werror=pointer-arith \
+        -Werror=init-self \
+        -Werror=format-security \
+        -Werror=format=2 \
+        -Werror=missing-include-dirs \
+        -Werror=return-type \
+    "
+
+    dnl Additional warning or error flags provided by the module author to
+    dnl allow stricter standards to be imposed on a per-module basis.
+    dnl The author can pass -W or -Werror flags here as they see fit.
+    additional_flags="m4_default([$2],[])"
+
+    case "$enable_compile_warnings" in
+    no)
+        warning_flags="-w"
+        ;;
+    minimum)
+        warning_flags="-Wall"
+        ;;
+    yes|maximum|error)
+        warning_flags="$base_warn_flags $base_error_flags $additional_flags"
+        ;;
+    *)
+        AC_MSG_ERROR(Unknown argument '$enable_compile_warnings' to --enable-compile-warnings)
+        ;;
+    esac
+
+    if test "$enable_compile_warnings" = "error" ; then
+        warning_flags="$warning_flags -Werror"
+    fi
+
+    dnl Check whether GCC supports the warning options
+    for option in $warning_flags; do
+	save_CFLAGS="$CFLAGS"
+	CFLAGS="$CFLAGS $option"
+	AC_MSG_CHECKING([whether gcc understands $option])
+	AC_TRY_COMPILE([], [],
+	    has_option=yes,
+	    has_option=no,)
+	CFLAGS="$save_CFLAGS"
+	AC_MSG_RESULT([$has_option])
+	if test $has_option = yes; then
+	    tested_warning_flags="$tested_warning_flags $option"
+	fi
+	unset has_option
+	unset save_CFLAGS
+    done
+    unset option
+    CFLAGS="$realsave_CFLAGS"
+    AC_MSG_CHECKING(what warning flags to pass to the C compiler)
+    AC_MSG_RESULT($tested_warning_flags)
+
+    AC_ARG_ENABLE(iso-c,
+                  AS_HELP_STRING([--enable-iso-c],
+                                 [Try to warn if code is not ISO C ]),,
+                  [enable_iso_c=no])
+
+    AC_MSG_CHECKING(what language compliance flags to pass to the C compiler)
+    complCFLAGS=
+    if test "x$enable_iso_c" != "xno"; then
+	if test "x$GCC" = "xyes"; then
+	case " $CFLAGS " in
+	    *[\ \	]-ansi[\ \	]*) ;;
+	    *) complCFLAGS="$complCFLAGS -ansi" ;;
+	esac
+	case " $CFLAGS " in
+	    *[\ \	]-pedantic[\ \	]*) ;;
+	    *) complCFLAGS="$complCFLAGS -pedantic" ;;
+	esac
+	fi
+    fi
+    AC_MSG_RESULT($complCFLAGS)
+
+    WARN_CFLAGS="$tested_warning_flags $complCFLAGS"
+    AC_SUBST(WARN_CFLAGS)
+],
+[[$0: This macro is deprecated. You should use AX_COMPILER_FLAGS instead and
+eliminate use of --enable-iso-c.
+See: http://www.gnu.org/software/autoconf-archive/ax_compiler_flags.html#ax_compiler_flags]])
+
+dnl For C++, do basically the same thing.
+
+AU_DEFUN([GNOME_CXX_WARNINGS],[
+  AC_ARG_ENABLE(cxx-warnings,
+                AS_HELP_STRING([--enable-cxx-warnings=@<:@no/minimum/yes@:>@]
+                               [Turn on compiler warnings.]),,
+                [enable_cxx_warnings="m4_default([$1],[minimum])"])
+
+  AC_MSG_CHECKING(what warning flags to pass to the C++ compiler)
+  warnCXXFLAGS=
+  if test "x$GXX" != xyes; then
+    enable_cxx_warnings=no
+  fi
+  if test "x$enable_cxx_warnings" != "xno"; then
+    if test "x$GXX" = "xyes"; then
+      case " $CXXFLAGS " in
+      *[\ \	]-Wall[\ \	]*) ;;
+      *) warnCXXFLAGS="-Wall -Wno-unused" ;;
+      esac
+
+      ## -W is not all that useful.  And it cannot be controlled
+      ## with individual -Wno-xxx flags, unlike -Wall
+      if test "x$enable_cxx_warnings" = "xyes"; then
+	warnCXXFLAGS="$warnCXXFLAGS -Wshadow -Woverloaded-virtual"
+      fi
+    fi
+  fi
+  AC_MSG_RESULT($warnCXXFLAGS)
+
+   AC_ARG_ENABLE(iso-cxx,
+                 AS_HELP_STRING([--enable-iso-cxx],
+                                [Try to warn if code is not ISO C++ ]),,
+                 [enable_iso_cxx=no])
+
+   AC_MSG_CHECKING(what language compliance flags to pass to the C++ compiler)
+   complCXXFLAGS=
+   if test "x$enable_iso_cxx" != "xno"; then
+     if test "x$GXX" = "xyes"; then
+      case " $CXXFLAGS " in
+      *[\ \	]-ansi[\ \	]*) ;;
+      *) complCXXFLAGS="$complCXXFLAGS -ansi" ;;
+      esac
+
+      case " $CXXFLAGS " in
+      *[\ \	]-pedantic[\ \	]*) ;;
+      *) complCXXFLAGS="$complCXXFLAGS -pedantic" ;;
+      esac
+     fi
+   fi
+  AC_MSG_RESULT($complCXXFLAGS)
+
+  WARN_CXXFLAGS="$CXXFLAGS $warnCXXFLAGS $complCXXFLAGS"
+  AC_SUBST(WARN_CXXFLAGS)
+],
+[[$0: This macro is deprecated. You should use AX_COMPILER_FLAGS instead and
+eliminate use of --enable-iso-cxx.
+See: http://www.gnu.org/software/autoconf-archive/ax_compiler_flags.html#ax_compiler_flags]])
+
 dnl pkg.m4 - Macros to locate and utilise pkg-config.   -*- Autoconf -*-
-dnl serial 11 (pkg-config-0.29)
+dnl serial 11 (pkg-config-0.29.1)
 dnl
 dnl Copyright © 2004 Scott James Remnant <scott@netsplit.com>.
 dnl Copyright © 2012-2015 Dan Nicholson <dbn.lists@gmail.com>
@@ -63,7 +406,7 @@ dnl
 dnl See the "Since" comment for each macro you use to see what version
 dnl of the macros you require.
 m4_defun([PKG_PREREQ],
-[m4_define([PKG_MACROS_VERSION], [0.29])
+[m4_define([PKG_MACROS_VERSION], [0.29.1])
 m4_if(m4_version_compare(PKG_MACROS_VERSION, [$1]), -1,
     [m4_fatal([pkg.m4 version $1 or higher is required but ]PKG_MACROS_VERSION[ found])])
 ])dnl PKG_PREREQ
@@ -296,338 +639,6 @@ AS_VAR_COPY([$1], [pkg_cv_][$1])
 AS_VAR_IF([$1], [""], [$5], [$4])dnl
 ])dnl PKG_CHECK_VAR
 
-# ===========================================================================
-#         http://autoconf-archive.cryp.to/ax_check_enable_debug.html
-# ===========================================================================
-#
-# SYNOPSIS
-#
-#   Check for the presence of an --enable-debug option to configure and
-#   allow/avoid compiled debugging flags appropriately.
-#
-#   AX_CHECK_ENABLE_DEBUG([enable by default=yes/info/profile/no],
-#                         [ENABLE DEBUG VARIABLES …],
-#                         [DISABLE DEBUG VARIABLES NDEBUG …])
-#
-# DESCRIPTION
-#
-#   Check for the presence of an --enable-debug option to configure, with the
-#   specified default value used when the option is not present.  Return the
-#   value in the variable $ax_enable_debug.
-#
-#   Specifying 'yes' adds '-g -O0' to the compilation flags for all languages.
-#   Specifying 'info' adds '-g' to the compilation flags.  Specifying 'profile'
-#   adds '-g -pg' to the compilation flags and '-pg' to the linking flags.
-#   Otherwise, nothing is added.
-#
-#   Define the variables listed in the second argument if debug is enabled,
-#   defaulting to no variables.  Defines the variables listed in the third
-#   argument if debug is disabled, defaulting to NDEBUG.  All lists of
-#   variables should be space-separated.
-#
-#   If debug is not enabled, ensure AC_PROG_* will not add debugging flags.
-#   Should be invoked prior to any AC_PROG_* compiler checks.
-#
-# LAST MODIFICATION
-#
-#   2014-05-12
-#
-# COPYLEFT
-#
-#   Copyright (c) 2011 Rhys Ulerich <rhys.ulerich@gmail.com>
-#   Copyright © 2014 Philip Withnall <philip@tecnocode.co.uk>
-#
-#   Copying and distribution of this file, with or without modification, are
-#   permitted in any medium without royalty provided the copyright notice
-#   and this notice are preserved.
-
-AC_DEFUN([AX_CHECK_ENABLE_DEBUG],[
-    AC_BEFORE([$0],[AC_PROG_CC])dnl
-    AC_BEFORE([$0],[AC_PROG_CXX])dnl
-    AC_BEFORE([$0],[AC_PROG_F77])dnl
-    AC_BEFORE([$0],[AC_PROG_FC])dnl
-
-    AC_MSG_CHECKING(whether to enable debugging)
-
-    m4_define(ax_enable_debug_default,[m4_tolower(m4_normalize(ifelse([$1],,[no],[$1])))])
-    m4_define(ax_enable_debug_vars,[m4_normalize(ifelse([$2],,,[$2]))])
-    m4_define(ax_disable_debug_vars,[m4_normalize(ifelse([$3],,[NDEBUG],[$3]))])
-
-    AC_ARG_ENABLE(debug,
-        [AS_HELP_STRING([--enable-debug]@<:@=ax_enable_debug_default@:>@,[compile with debugging; one of yes/info/profile/no])],
-        [],enable_debug=ax_enable_debug_default)
-    if test "x$enable_debug" = "xyes" || test "x$enable_debug" = "x"; then
-        AC_MSG_RESULT(yes)
-        CFLAGS="${CFLAGS} -g -O0"
-        CXXFLAGS="${CXXFLAGS} -g -O0"
-        FFLAGS="${FFLAGS} -g -O0"
-        FCFLAGS="${FCFLAGS} -g -O0"
-        OBJCFLAGS="${OBJCFLAGS} -g -O0"
-
-        dnl Define various variables if debugging is enabled.
-        m4_map_args_w(ax_enable_debug_vars, [AC_DEFINE(], [,,[Define if debugging is enabled])])
-    else
-        if test "x$enable_debug" = "xinfo"; then
-            AC_MSG_RESULT(info)
-            CFLAGS="${CFLAGS} -g"
-            CXXFLAGS="${CXXFLAGS} -g"
-            FFLAGS="${FFLAGS} -g"
-            FCFLAGS="${FCFLAGS} -g"
-            OBJCFLAGS="${OBJCFLAGS} -g"
-        elif test "x$enable_debug" = "xprofile"; then
-            AC_MSG_RESULT(profile)
-            CFLAGS="${CFLAGS} -g -pg"
-            CXXFLAGS="${CXXFLAGS} -g -pg"
-            FFLAGS="${FFLAGS} -g -pg"
-            FCFLAGS="${FCFLAGS} -g -pg"
-            OBJCFLAGS="${OBJCFLAGS} -g -pg"
-            LDFLAGS="${LDFLAGS} -pg"
-        else
-            AC_MSG_RESULT(no)
-            dnl Ensure AC_PROG_CC/CXX/F77/FC/OBJC will not enable debug flags
-            dnl by setting any unset environment flag variables
-            if test "x${CFLAGS+set}" != "xset"; then
-                CFLAGS=""
-            fi
-            if test "x${CXXFLAGS+set}" != "xset"; then
-                CXXFLAGS=""
-            fi
-            if test "x${FFLAGS+set}" != "xset"; then
-                FFLAGS=""
-            fi
-            if test "x${FCFLAGS+set}" != "xset"; then
-                FCFLAGS=""
-            fi
-            if test "x${OBJCFLAGS+set}" != "xset"; then
-                OBJCFLAGS=""
-            fi
-        fi
-
-        dnl Define various variables if debugging is disabled.
-        dnl assert.h is a NOP if NDEBUG is defined, so define it by default.
-        m4_map_args_w(ax_disable_debug_vars, [AC_DEFINE(], [,,[Define if debugging is disabled])])
-    fi
-    ax_enable_debug=$enable_debug
-])
-
-# gnome-common.m4
-#
-# serial 3
-# 
-
-AU_DEFUN([GNOME_DEBUG_CHECK],
-[
-	AX_CHECK_ENABLE_DEBUG([no],[GNOME_ENABLE_DEBUG])
-],
-[[$0: This macro is deprecated. You should use AX_CHECK_ENABLE_DEBUG instead and
-replace uses of GNOME_ENABLE_DEBUG with ENABLE_DEBUG.
-See: http://www.gnu.org/software/autoconf-archive/ax_check_enable_debug.html#ax_check_enable_debug]])
-
-dnl GNOME_MAINTAINER_MODE_DEFINES ()
-dnl define DISABLE_DEPRECATED
-dnl
-AU_DEFUN([GNOME_MAINTAINER_MODE_DEFINES],
-[
-	AC_REQUIRE([AM_MAINTAINER_MODE])
-
-	DISABLE_DEPRECATED=""
-	if test $USE_MAINTAINER_MODE = yes; then
-	        DOMAINS="GCONF BONOBO BONOBO_UI GNOME LIBGLADE GNOME_VFS WNCK LIBSOUP"
-	        for DOMAIN in $DOMAINS; do
-	               DISABLE_DEPRECATED="$DISABLE_DEPRECATED -D${DOMAIN}_DISABLE_DEPRECATED -D${DOMAIN}_DISABLE_SINGLE_INCLUDES"
-	        done
-	fi
-
-	AC_SUBST(DISABLE_DEPRECATED)
-],
-[[$0: This macro is deprecated. All of the modules it disables deprecations for
-are obsolete. Remove it and all uses of DISABLE_DEPRECATED.]])
-
-# gnome-compiler-flags.m4
-#
-# serial 4
-#
-
-dnl GNOME_COMPILE_WARNINGS
-dnl Turn on many useful compiler warnings and substitute the result into
-dnl WARN_CFLAGS
-dnl For now, only works on GCC
-dnl Pass the default value of the --enable-compile-warnings configure option as
-dnl the first argument to the macro, defaulting to 'yes'.
-dnl Additional warning/error flags can be passed as an optional second argument.
-dnl
-dnl For example: GNOME_COMPILE_WARNINGS([maximum],[-Werror=some-flag -Wfoobar])
-AU_DEFUN([GNOME_COMPILE_WARNINGS],[
-    dnl ******************************
-    dnl More compiler warnings
-    dnl ******************************
-
-    AC_ARG_ENABLE(compile-warnings, 
-                  AS_HELP_STRING([--enable-compile-warnings=@<:@no/minimum/yes/maximum/error@:>@],
-                                 [Turn on compiler warnings]),,
-                  [enable_compile_warnings="m4_default([$1],[yes])"])
-
-    if test "x$GCC" != xyes; then
-	enable_compile_warnings=no
-    fi
-
-    warning_flags=
-    realsave_CFLAGS="$CFLAGS"
-
-    dnl These are warning flags that aren't marked as fatal.  Can be
-    dnl overridden on a per-project basis with -Wno-foo.
-    base_warn_flags=" \
-        -Wall \
-        -Wstrict-prototypes \
-        -Wnested-externs \
-    "
-
-    dnl These compiler flags typically indicate very broken or suspicious
-    dnl code.  Some of them such as implicit-function-declaration are
-    dnl just not default because gcc compiles a lot of legacy code.
-    dnl We choose to make this set into explicit errors.
-    base_error_flags=" \
-        -Werror=missing-prototypes \
-        -Werror=implicit-function-declaration \
-        -Werror=pointer-arith \
-        -Werror=init-self \
-        -Werror=format-security \
-        -Werror=format=2 \
-        -Werror=missing-include-dirs \
-        -Werror=return-type \
-    "
-
-    dnl Additional warning or error flags provided by the module author to
-    dnl allow stricter standards to be imposed on a per-module basis.
-    dnl The author can pass -W or -Werror flags here as they see fit.
-    additional_flags="m4_default([$2],[])"
-
-    case "$enable_compile_warnings" in
-    no)
-        warning_flags="-w"
-        ;;
-    minimum)
-        warning_flags="-Wall"
-        ;;
-    yes|maximum|error)
-        warning_flags="$base_warn_flags $base_error_flags $additional_flags"
-        ;;
-    *)
-        AC_MSG_ERROR(Unknown argument '$enable_compile_warnings' to --enable-compile-warnings)
-        ;;
-    esac
-
-    if test "$enable_compile_warnings" = "error" ; then
-        warning_flags="$warning_flags -Werror"
-    fi
-
-    dnl Check whether GCC supports the warning options
-    for option in $warning_flags; do
-	save_CFLAGS="$CFLAGS"
-	CFLAGS="$CFLAGS $option"
-	AC_MSG_CHECKING([whether gcc understands $option])
-	AC_TRY_COMPILE([], [],
-	    has_option=yes,
-	    has_option=no,)
-	CFLAGS="$save_CFLAGS"
-	AC_MSG_RESULT([$has_option])
-	if test $has_option = yes; then
-	    tested_warning_flags="$tested_warning_flags $option"
-	fi
-	unset has_option
-	unset save_CFLAGS
-    done
-    unset option
-    CFLAGS="$realsave_CFLAGS"
-    AC_MSG_CHECKING(what warning flags to pass to the C compiler)
-    AC_MSG_RESULT($tested_warning_flags)
-
-    AC_ARG_ENABLE(iso-c,
-                  AS_HELP_STRING([--enable-iso-c],
-                                 [Try to warn if code is not ISO C ]),,
-                  [enable_iso_c=no])
-
-    AC_MSG_CHECKING(what language compliance flags to pass to the C compiler)
-    complCFLAGS=
-    if test "x$enable_iso_c" != "xno"; then
-	if test "x$GCC" = "xyes"; then
-	case " $CFLAGS " in
-	    *[\ \	]-ansi[\ \	]*) ;;
-	    *) complCFLAGS="$complCFLAGS -ansi" ;;
-	esac
-	case " $CFLAGS " in
-	    *[\ \	]-pedantic[\ \	]*) ;;
-	    *) complCFLAGS="$complCFLAGS -pedantic" ;;
-	esac
-	fi
-    fi
-    AC_MSG_RESULT($complCFLAGS)
-
-    WARN_CFLAGS="$tested_warning_flags $complCFLAGS"
-    AC_SUBST(WARN_CFLAGS)
-],
-[[$0: This macro is deprecated. You should use AX_COMPILER_FLAGS instead and
-eliminate use of --enable-iso-c.
-See: http://www.gnu.org/software/autoconf-archive/ax_compiler_flags.html#ax_compiler_flags]])
-
-dnl For C++, do basically the same thing.
-
-AU_DEFUN([GNOME_CXX_WARNINGS],[
-  AC_ARG_ENABLE(cxx-warnings,
-                AS_HELP_STRING([--enable-cxx-warnings=@<:@no/minimum/yes@:>@]
-                               [Turn on compiler warnings.]),,
-                [enable_cxx_warnings="m4_default([$1],[minimum])"])
-
-  AC_MSG_CHECKING(what warning flags to pass to the C++ compiler)
-  warnCXXFLAGS=
-  if test "x$GXX" != xyes; then
-    enable_cxx_warnings=no
-  fi
-  if test "x$enable_cxx_warnings" != "xno"; then
-    if test "x$GXX" = "xyes"; then
-      case " $CXXFLAGS " in
-      *[\ \	]-Wall[\ \	]*) ;;
-      *) warnCXXFLAGS="-Wall -Wno-unused" ;;
-      esac
-
-      ## -W is not all that useful.  And it cannot be controlled
-      ## with individual -Wno-xxx flags, unlike -Wall
-      if test "x$enable_cxx_warnings" = "xyes"; then
-	warnCXXFLAGS="$warnCXXFLAGS -Wshadow -Woverloaded-virtual"
-      fi
-    fi
-  fi
-  AC_MSG_RESULT($warnCXXFLAGS)
-
-   AC_ARG_ENABLE(iso-cxx,
-                 AS_HELP_STRING([--enable-iso-cxx],
-                                [Try to warn if code is not ISO C++ ]),,
-                 [enable_iso_cxx=no])
-
-   AC_MSG_CHECKING(what language compliance flags to pass to the C++ compiler)
-   complCXXFLAGS=
-   if test "x$enable_iso_cxx" != "xno"; then
-     if test "x$GXX" = "xyes"; then
-      case " $CXXFLAGS " in
-      *[\ \	]-ansi[\ \	]*) ;;
-      *) complCXXFLAGS="$complCXXFLAGS -ansi" ;;
-      esac
-
-      case " $CXXFLAGS " in
-      *[\ \	]-pedantic[\ \	]*) ;;
-      *) complCXXFLAGS="$complCXXFLAGS -pedantic" ;;
-      esac
-     fi
-   fi
-  AC_MSG_RESULT($complCXXFLAGS)
-
-  WARN_CXXFLAGS="$CXXFLAGS $warnCXXFLAGS $complCXXFLAGS"
-  AC_SUBST(WARN_CXXFLAGS)
-],
-[[$0: This macro is deprecated. You should use AX_COMPILER_FLAGS instead and
-eliminate use of --enable-iso-cxx.
-See: http://www.gnu.org/software/autoconf-archive/ax_compiler_flags.html#ax_compiler_flags]])
-
 AC_DEFUN([YELP_HELP_INIT],
 [
 AC_REQUIRE([AC_PROG_LN_S])
@@ -770,8 +781,8 @@ check-help:
 	    xmlpath="$$lc:$(srcdir)/$$lc"; \
 	  fi; \
 	  for page in $(HELP_FILES); do \
-	    echo "$(XMLLINT) --noout --noent --path $$xmlpath --xinclude $$d$$lc/$$page"; \
-	    $(XMLLINT) --noout --noent --path "$$xmlpath" --xinclude "$$d$$lc/$$page"; \
+	    echo "$(XMLLINT) --nonet --noout --noent --path $$xmlpath --xinclude $$d$$lc/$$page"; \
+	    $(XMLLINT) --nonet --noout --noent --path "$$xmlpath" --xinclude "$$d$$lc/$$page"; \
 	  done; \
 	done
 
@@ -810,7 +821,13 @@ install-help: $(_HELP_LC_FILES)
 	    elif test "x$$lc" != "xC"; then \
 	      if test "x$(YELP_LC_MEDIA_LINKS)" != "x"; then \
 	        echo "$(LN_S) -f $(HELP_DIR)/C/$(HELP_ID)/$$f $$helpdir$$f"; \
-	        $(LN_S) -f "$(HELP_DIR)/C/$(HELP_ID)/$$f" "$$helpdir$$f" || exit 1; \
+	        dname="$$f"; \
+	        pars="../"; \
+	        while test "$$dname" != "." -a "$$dname" != "/"; do \
+	          pars="../$$pars"; \
+	          dname=$$(dirname "$$dname"); \
+	        done; \
+	        $(LN_S) -f $$pars"C/$(HELP_ID)/$$f" "$$helpdir$$f" || exit 1; \
 	      fi; \
 	    fi; \
 	  done; \
@@ -842,7 +859,7 @@ AC_SUBST([YELP_HELP_RULES])
 m4_ifdef([_AM_SUBST_NOTMAKE], [_AM_SUBST_NOTMAKE([YELP_HELP_RULES])])
 ])
 
-# Copyright (C) 2002-2014 Free Software Foundation, Inc.
+# Copyright (C) 2002-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -857,7 +874,7 @@ AC_DEFUN([AM_AUTOMAKE_VERSION],
 [am__api_version='1.15'
 dnl Some users find AM_AUTOMAKE_VERSION and mistake it for a way to
 dnl require some minimum version.  Point them to the right macro.
-m4_if([$1], [1.15], [],
+m4_if([$1], [1.15.1], [],
       [AC_FATAL([Do not call $0, use AM_INIT_AUTOMAKE([$1]).])])dnl
 ])
 
@@ -873,14 +890,14 @@ m4_define([_AM_AUTOCONF_VERSION], [])
 # Call AM_AUTOMAKE_VERSION and AM_AUTOMAKE_VERSION so they can be traced.
 # This function is AC_REQUIREd by AM_INIT_AUTOMAKE.
 AC_DEFUN([AM_SET_CURRENT_AUTOMAKE_VERSION],
-[AM_AUTOMAKE_VERSION([1.15])dnl
+[AM_AUTOMAKE_VERSION([1.15.1])dnl
 m4_ifndef([AC_AUTOCONF_VERSION],
   [m4_copy([m4_PACKAGE_VERSION], [AC_AUTOCONF_VERSION])])dnl
 _AM_AUTOCONF_VERSION(m4_defn([AC_AUTOCONF_VERSION]))])
 
 # AM_AUX_DIR_EXPAND                                         -*- Autoconf -*-
 
-# Copyright (C) 2001-2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -932,7 +949,7 @@ am_aux_dir=`cd "$ac_aux_dir" && pwd`
 
 # AM_CONDITIONAL                                            -*- Autoconf -*-
 
-# Copyright (C) 1997-2014 Free Software Foundation, Inc.
+# Copyright (C) 1997-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -963,7 +980,7 @@ AC_CONFIG_COMMANDS_PRE(
 Usually this means the macro was only invoked conditionally.]])
 fi])])
 
-# Copyright (C) 1999-2014 Free Software Foundation, Inc.
+# Copyright (C) 1999-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1154,7 +1171,7 @@ _AM_SUBST_NOTMAKE([am__nodep])dnl
 
 # Generate code to set up dependency tracking.              -*- Autoconf -*-
 
-# Copyright (C) 1999-2014 Free Software Foundation, Inc.
+# Copyright (C) 1999-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1230,7 +1247,7 @@ AC_DEFUN([AM_OUTPUT_DEPENDENCY_COMMANDS],
 
 # Do all the work for Automake.                             -*- Autoconf -*-
 
-# Copyright (C) 1996-2014 Free Software Foundation, Inc.
+# Copyright (C) 1996-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1427,7 +1444,7 @@ for _am_header in $config_headers :; do
 done
 echo "timestamp for $_am_arg" >`AS_DIRNAME(["$_am_arg"])`/stamp-h[]$_am_stamp_count])
 
-# Copyright (C) 2001-2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1448,7 +1465,7 @@ if test x"${install_sh+set}" != xset; then
 fi
 AC_SUBST([install_sh])])
 
-# Copyright (C) 2003-2014 Free Software Foundation, Inc.
+# Copyright (C) 2003-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1470,7 +1487,7 @@ AC_SUBST([am__leading_dot])])
 # Add --enable-maintainer-mode option to configure.         -*- Autoconf -*-
 # From Jim Meyering
 
-# Copyright (C) 1996-2014 Free Software Foundation, Inc.
+# Copyright (C) 1996-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1505,7 +1522,7 @@ AC_MSG_CHECKING([whether to enable maintainer-specific portions of Makefiles])
 
 # Check to see how 'make' treats includes.	            -*- Autoconf -*-
 
-# Copyright (C) 2001-2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1555,7 +1572,7 @@ rm -f confinc confmf
 
 # Fake the existence of programs that GNU maintainers use.  -*- Autoconf -*-
 
-# Copyright (C) 1997-2014 Free Software Foundation, Inc.
+# Copyright (C) 1997-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1594,7 +1611,7 @@ fi
 
 # Helper functions for option handling.                     -*- Autoconf -*-
 
-# Copyright (C) 2001-2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1623,7 +1640,7 @@ AC_DEFUN([_AM_SET_OPTIONS],
 AC_DEFUN([_AM_IF_OPTION],
 [m4_ifset(_AM_MANGLE_OPTION([$1]), [$2], [$3])])
 
-# Copyright (C) 1999-2014 Free Software Foundation, Inc.
+# Copyright (C) 1999-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1670,7 +1687,7 @@ AC_LANG_POP([C])])
 # For backward compatibility.
 AC_DEFUN_ONCE([AM_PROG_CC_C_O], [AC_REQUIRE([AC_PROG_CC])])
 
-# Copyright (C) 2001-2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1689,7 +1706,7 @@ AC_DEFUN([AM_RUN_LOG],
 
 # Check to make sure that the build environment is sane.    -*- Autoconf -*-
 
-# Copyright (C) 1996-2014 Free Software Foundation, Inc.
+# Copyright (C) 1996-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1770,7 +1787,7 @@ AC_CONFIG_COMMANDS_PRE(
 rm -f conftest.file
 ])
 
-# Copyright (C) 2009-2014 Free Software Foundation, Inc.
+# Copyright (C) 2009-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1830,7 +1847,7 @@ AC_SUBST([AM_BACKSLASH])dnl
 _AM_SUBST_NOTMAKE([AM_BACKSLASH])dnl
 ])
 
-# Copyright (C) 2001-2014 Free Software Foundation, Inc.
+# Copyright (C) 2001-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1858,7 +1875,7 @@ fi
 INSTALL_STRIP_PROGRAM="\$(install_sh) -c -s"
 AC_SUBST([INSTALL_STRIP_PROGRAM])])
 
-# Copyright (C) 2006-2014 Free Software Foundation, Inc.
+# Copyright (C) 2006-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
@@ -1877,7 +1894,7 @@ AC_DEFUN([AM_SUBST_NOTMAKE], [_AM_SUBST_NOTMAKE($@)])
 
 # Check how to create a tarball.                            -*- Autoconf -*-
 
-# Copyright (C) 2004-2014 Free Software Foundation, Inc.
+# Copyright (C) 2004-2017 Free Software Foundation, Inc.
 #
 # This file is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,

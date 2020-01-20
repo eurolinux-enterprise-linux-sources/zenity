@@ -2,28 +2,23 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="warning" xml:lang="da">
   <info>
     <link type="guide" xref="message"/>
-    <desc>Use the <cmd>--warning</cmd> option.</desc>
+    <desc>Brug tilvalget <cmd>--warning</cmd>.</desc>
   </info>
-  <title>Advarselsdialogvindue</title>
-      <p>
-          Use the <cmd>--warning</cmd> option to create a warning dialog.
-      </p>
+  <title>Advarselsdialog</title>
+      <p>Brug tilvalget <cmd>--warning</cmd> til at oprette en advarselsdialog.</p>
 
-      <p>
-        The following example script shows how to create a warning dialog:
-      </p>
+      <p>Følgende eksempelscript viser, hvordan man opretter en advarselsdialog:</p>
 
 <code>
 #!/bin/bash
 
 zenity --warning \
---text="Disconnect the power cable to avoid electrical shock."
+--text="Træk strømkablet ud for at undgå elektrisk stød."
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
-        <title>Eksempel på advarselsdialogvindue</title>
-	<desc><app>Zenity</app> warning dialog example</desc>
+      <figure>
+        <title>Eksempel på advarselsdialog</title>
+	<desc>Eksempel på advarselsdialog til <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>
       </figure>
 </page>

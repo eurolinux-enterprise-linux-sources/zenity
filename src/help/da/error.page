@@ -2,28 +2,24 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="error" xml:lang="da">
   <info>
     <link type="guide" xref="message"/>
-    <desc>Use the <cmd>--error</cmd> option.</desc>
+    <desc>Brug tilvalget <cmd>--error</cmd>.</desc>
   </info>
-  <title>Fejldialogvindue</title>
-      <p>
-          Use the <cmd>--error</cmd> option to create an error dialog.  
-      </p>
+  <title>Fejldialog</title>
+      <p>Brug tilvalget <cmd>--error</cmd> til at oprette en fejldialog.</p>
 
-      <p>
-        The following example script shows how to create an error dialog:
-      </p>
+      <p>Følgende eksempelscript viser, hvordan man opretter en fejldialog:</p>
 
 <code>
 #!/bin/bash
 
 zenity --error \
---text="Could not find /var/log/syslog."
+--text="Kunne ikke finde /var/log/syslog."
 </code>
 
 
-      <figure id="zenity-error-screenshot">
-        <title>Eksempel på fejldialogvindue</title>
-        <desc><app>Zenity</app> error dialog example</desc>
+      <figure>
+        <title>Eksempel på fejldialog</title>
+        <desc>Eksempel på fejldialog til <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>
       </figure>
 </page>

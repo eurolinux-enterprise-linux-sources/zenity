@@ -74,7 +74,7 @@ fi
 </code>
 
 
-    <figure id="zenity-progress-screenshot">
+    <figure>
       <title>进度框范例</title>
       <desc><app>Zenity</app> 进度对话框范例</desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>

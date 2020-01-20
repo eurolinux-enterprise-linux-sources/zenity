@@ -44,15 +44,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr valign="top">
-            <td colname="COLSPEC0">
+          <tr>
+            <td>
               <p>Kilépési kód</p></td>
-            <td colname="COLSPEC1">
+            <td>
               <p>Leírás</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>0</var></p>
             </td>
@@ -60,7 +60,7 @@
               <p>A felhasználó megnyomta az <gui style="button">OK</gui> vagy a <gui style="button">Bezárás</gui> gombot.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>1</var></p>
             </td>
@@ -68,7 +68,7 @@
               <p>A felhasználó megnyomta a <gui style="button">Mégse</gui> gombot, vagy az ablakvezérlő elemekkel bezárta az ablakot.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>-1</var></p>
             </td>
@@ -76,7 +76,7 @@
               <p>Váratlan hiba történt.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>5</var></p>
             </td>

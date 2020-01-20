@@ -23,7 +23,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>Příklad dialogového okna s chybovým hlášením</title>
         <desc>Ukázka dialogového okna <app>Zenity</app> s chybovým hlášením</desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>

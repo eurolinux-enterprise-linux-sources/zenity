@@ -41,7 +41,7 @@ zenity --info \
 </code>
 
 
-      <figure id="zenity-information-screenshot">
+      <figure>
         <title>Παράδειγμα διαλόγου πληροφόρησης</title>
         <desc>Παράδειγμα διαλόγου πληροφόρησης του <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-information-screenshot.png"/>

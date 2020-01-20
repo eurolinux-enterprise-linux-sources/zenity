@@ -29,7 +29,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>错误框范例</title>
         <desc><app>Zenity</app> 错误对话框范例</desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>

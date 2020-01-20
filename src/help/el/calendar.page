@@ -77,7 +77,7 @@ fi
 </code>
 
 
-    <figure id="zenity-calendar-screenshot">
+    <figure>
       <title>Παράδειγμα διαλόγου ημερολογίου</title>
       <desc>Παράδειγμα διαλόγου ημερολογίου του Zenity</desc>
       <media type="image" mime="image/png" src="figures/zenity-calendar-screenshot.png"/>

@@ -1,4 +1,4 @@
-AC_INIT([Zenity],[3.22.0],[http://bugzilla.gnome.org/enter_bug.cgi?product=zenity],[zenity])
+AC_INIT([Zenity],[3.28.1],[https://bugzilla.gnome.org/enter_bug.cgi?product=zenity],[zenity])
 
 AC_PREREQ([2.63])
 
@@ -6,7 +6,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_MACRO_DIR([m4])
 
-AM_INIT_AUTOMAKE([1.10 foreign dist-bzip2 no-dist-gzip])
+AM_INIT_AUTOMAKE([1.10 foreign no-dist-gzip dist-xz])
 AM_MAINTAINER_MODE([enable])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])

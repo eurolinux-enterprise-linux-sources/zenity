@@ -29,7 +29,7 @@ zenity --info \
 </code>
 
 
-      <figure id="zenity-information-screenshot">
+      <figure>
         <title>信息对话框范例</title>
         <desc><app>Zenity</app> 信息对话框范例</desc>
         <media type="image" mime="image/png" src="figures/zenity-information-screenshot.png"/>

@@ -76,7 +76,7 @@ case $? in
 esac
 </code>
 
-    <figure id="zenity-text-screenshot">
+    <figure>
       <title>Példa szöveges információs ablak</title>
       <desc><app>Zenity</app> példa szöveges információs ablak</desc>
       <media type="image" mime="image/png" src="figures/zenity-text-screenshot.png"/>

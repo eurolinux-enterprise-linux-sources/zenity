@@ -23,7 +23,7 @@ zenity --info \
 </code>
 
 
-      <figure id="zenity-information-screenshot">
+      <figure>
         <title>Példa információs ablak</title>
         <desc><app>Zenity</app> példa információs ablak</desc>
         <media type="image" mime="image/png" src="figures/zenity-information-screenshot.png"/>

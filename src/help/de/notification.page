@@ -42,7 +42,7 @@
   --text="Systemaktualisierungen sind erforderlich!"
   </code>
 
-  <figure id="zenity-notification-screenshot">
+  <figure>
     <title>Beispiel für ein Benachrichtigungssymbol</title>
     <desc>Beispiel für ein Benachrichtigungssymbol in <app>Zenity</app></desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
@@ -56,7 +56,7 @@
   EOH
   </code>
 
-  <figure id="zenity-notification-listen-screenshot">
+  <figure>
     <title>Beispiel für ein Benachrichtigungssymbol mit <cmd>--listen</cmd></title>
     <desc>Beispiel für ein Benachrichtigungssymbol mit <cmd>--listen</cmd> in <app>Zenity</app></desc>
     <media type="image" mime="image/png" src="figures/zenity-notification-listen-screenshot.png"/>

@@ -46,8 +46,7 @@ zenity --warning \
 --text="Débranchez le câble pour éviter tout choc électrique."
 </code>
 
-
-      <figure id="zenity-warning-screenshot">
+      <figure>
         <title>Exemple de boîte de dialogue d'avertissement</title>
 	<desc>Exemple de boîte de dialogue d'avertissement <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>

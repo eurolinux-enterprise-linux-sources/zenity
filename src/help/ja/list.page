@@ -66,7 +66,7 @@ zenity --list \
 </code>
 
 
-    <figure id="zenity-list-screenshot">
+    <figure>
       <title>一覧ダイアログの例</title>
       <desc><app>Zenity</app> 一覧ダイアログの例</desc>
       <media type="image" mime="image/png" src="figures/zenity-list-screenshot.png"/>

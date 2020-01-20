@@ -84,7 +84,7 @@ zenity --list \
 </code>
 
 
-    <figure id="zenity-list-screenshot">
+    <figure>
       <title>Ejemplo del diálogo de lista</title>
       <desc>Ejemplo del diálogo de lista de <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-list-screenshot.png"/>

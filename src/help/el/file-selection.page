@@ -78,7 +78,7 @@ case $? in
 esac
 </code>
 
-    <figure id="zenity-fileselection-screenshot">
+    <figure>
       <title>Παράδειγμα διαλόγου επιλογής αρχείου</title>
       <desc>Παράδειγμα διαλόγου επιλογής αρχείου του <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-fileselection-screenshot.png"/>

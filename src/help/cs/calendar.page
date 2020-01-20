@@ -59,7 +59,7 @@ fi
 </code>
 
 
-    <figure id="zenity-calendar-screenshot">
+    <figure>
       <title>Příklad dialogového okna s kalendářem</title>
       <desc>Ukázka dialogového okna <app>Zenity</app> s kalendářem</desc>
       <media type="image" mime="image/png" src="figures/zenity-calendar-screenshot.png"/>

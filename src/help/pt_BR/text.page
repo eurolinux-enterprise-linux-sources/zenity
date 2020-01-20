@@ -2,19 +2,29 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="text" xml:lang="pt-BR">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Use the <cmd>--text-info</cmd> option.</desc>
+    <desc>Use a opção <cmd>--text-info</cmd>.</desc>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rodolfo Ribeiro Gomes</mal:name>
+      <mal:email>rodolforg@gmail.com</mal:email>
+      <mal:years>2009</mal:years>
+    </mal:credit>
+  
+    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
+      <mal:name>Rafael Fontenelle</mal:name>
+      <mal:email>rafaelff@gnome.org</mal:email>
+      <mal:years>2017</mal:years>
+    </mal:credit>
   </info>
   <title>Diálogo de informação textual</title>
-    <p>
-	Use the <cmd>--text-info</cmd> option to create a text information dialog. 
-    </p>
+    <p>Use a opção <cmd>--text-info</cmd> para criar um diálogo de informação textual.</p>
 	
     <p>O diálogo de informação textual oferece suporte às seguintes opções:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--filename</cmd>=<var>filename</var></title>
+        <title><cmd>--filename</cmd>=<var>arquivo</var></title>
 	<p>Especifica um arquivo que será carregado no diálogo de informação textual.</p>
       </item>
 
@@ -24,59 +34,57 @@
       </item>
 
       <item>
-        <title><cmd>--font</cmd>=<var>FONT</var></title>
-	<p>Specifies the text font.</p>
+        <title><cmd>--font</cmd>=<var>FONTE</var></title>
+	<p>Especifica a fonte do texto.</p>
       </item>
 
       <item>
-        <title><cmd>--checkbox</cmd>=<var>TEXT</var></title>
-	<p>Enable a checkbox for use like a 'I read and accept the terms.'</p>
+        <title><cmd>--checkbox</cmd>=<var>TEXTO</var></title>
+	<p>Habilita a caixa de seleção para uso como um “Eu lei e aceito os termos.”</p>
       </item>
 
       <item>
         <title><cmd>--html</cmd></title>
-        <p>Enable html support.</p>
+        <p>Habilita suporte a html.</p>
       </item>
 
       <item>
         <title><cmd>--url</cmd>=<var>URL</var></title>
-	<p>Sets an url instead of a file. Only works if you use --html option.</p>
+	<p>Define uma url em vez de um arquivo. Funciona apenas se você usar a opção --html.</p>
       </item>
 
     </terms>
 
-    <p>
-      The following example script shows how to create a text information dialog:
-    </p>
+    <p>O script de exemplo a seguir mostra como criar um diálogo de informação textual:</p>
 
 <code>
 #!/bin/sh
 
-# You must place file "COPYING" in same folder of this script.
-FILE=`dirname $0`/COPYING
+# Você deve colocar o arquivo "COPYING" na mesma pasta deste script.
+ARQUIVO=`dirname $0`/COPYING
 
 zenity --text-info \
-       --title="License" \
-       --filename=$FILE \
-       --checkbox="I read and accept the terms."
+       --title="Licença" \
+       --filename=$ARQUIVO \
+       --checkbox="Eu li e aceito os termos."
 
 case $? in
     0)
-        echo "Start installation!"
-	# next step
+        echo "Iniciar a instalação!"
+	# próximo passo
 	;;
     1)
-        echo "Stop installation!"
+        echo "Parar a instalação!"
 	;;
     -1)
-        echo "An unexpected error has occurred."
+        echo "Ocorreu um erro inesperado."
 	;;
 esac
 </code>
 
-    <figure id="zenity-text-screenshot">
+    <figure>
       <title>Exemplo de diálogo de informação textual</title>
-      <desc><app>Zenity</app> text information dialog example</desc>
+      <desc>Exemplo de diálogo de informação textual do <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-text-screenshot.png"/>
     </figure>
 </page>

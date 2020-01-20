@@ -80,7 +80,7 @@ case $? in
 esac
 </code>
 
-    <figure id="zenity-forms-screenshot">
+    <figure>
       <title>Beispiel für einen Formulardialog</title>
       <desc>Beispiel für einen Formulardialog in <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-forms-screenshot.png"/>

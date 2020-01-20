@@ -62,15 +62,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr valign="top">
-            <td colname="COLSPEC0">
+          <tr>
+            <td>
               <p>Κώδικας εξόδου</p></td>
-            <td colname="COLSPEC1">
+            <td>
               <p>Περιγραφή</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>0</var></p>
             </td>
@@ -78,7 +78,7 @@
               <p>Ο χρήστης πάτησε είτε το πλήκτρο <gui style="button">Εντάξει</gui> είτε το πλήκτρο <gui style="button">Κλείσιμο</gui>.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>1</var></p>
             </td>
@@ -86,7 +86,7 @@
               <p>Ο χρήστης είτε πάτησε το πλήκτρο <gui style="button">Ακύρωση</gui>, ή χρησιμοποίησε τις λειτουργίες του παραθύρου για να κλείσει τον διάλογο.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>-1</var></p>
             </td>
@@ -94,7 +94,7 @@
               <p>Συνέβη ένα απρόσμενο σφάλμα.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>5</var></p>
             </td>

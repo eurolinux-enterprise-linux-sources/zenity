@@ -2,29 +2,25 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="progress" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Use the <cmd>--progress</cmd> option.</desc>
+    <desc>Brug tilvalget <cmd>--progress</cmd>.</desc>
   </info>
-  <title>Dialogvindue med statusbjælke</title>
-    <p>
-	Use the <cmd>--progress</cmd> option to create a progress dialog. 
-    </p>
+  <title>Statusbjælkedialog</title>
+    <p>Brug tilvalget <cmd>--progress</cmd> til at oprette en dialog med en statusbjælke.</p>
 
-    <p>
-      <app>Zenity</app> reads data from standard input line by line. If a line is prefixed with #, the text is updated with the text on that line. If a line contains only a number, the percentage is updated with that number.
-    </p>
+    <p><app>Zenity</app> læser data linjevis fra standardinput. Hvis en linje starter med #, vil teksten blive opdateret med den efterfølgende tekst på den pågældende linje. Hvis en linje kun indeholder et tal, vil procenttallet blive opdateret med dette tal.</p>
 	
-    <p>Statusbjælkedialogvinduet understøtter følgende tilvalg:</p>
+    <p>Statusbjælkedialogen understøtter følgende tilvalg:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--text</cmd>=<var>text</var></title>
-	  <p>Angiver teksten, der vises i statusbjælkedialogvinduet.</p>
+        <title><cmd>--text</cmd>=<var>tekst</var></title>
+	  <p>Angiver teksten, der vises i statusbjælkedialogen.</p>
       </item>
 
       <item>
-        <title><cmd>--percentage</cmd>=<var>percentage</var></title>
-	  <p>Angiver det procenttal, der fra starten vises i statusbjælkedialogvinduet.</p>
+        <title><cmd>--percentage</cmd>=<var>procentdel</var></title>
+	  <p>Angiver det procenttal, der fra starten vises i statusbjælkedialogen.</p>
       </item>
 
       <item>
@@ -34,43 +30,41 @@
 
       <item>
         <title><cmd>--pulsate</cmd></title>
-	  <p>Angiver at statusbjælken pulserer indtil der læses et EOF-tegn fra standard input.</p>
+	  <p>Angiver at statusbjælken pulserer indtil der læses et EOF-tegn fra standardinput.</p>
       </item>
 
     </terms>
 
-    <p>
-      The following example script shows how to create a progress dialog:
-    </p>
+    <p>Følgende eksempelscript viser, hvordan man opretter en statusbjælkedialog:</p>
 
 <code>
 #!/bin/sh
 (
 echo "10" ; sleep 1
-echo "# Updating mail logs" ; sleep 1
+echo "# Opdaterer mail-logge" ; sleep 1
 echo "20" ; sleep 1
-echo "# Resetting cron jobs" ; sleep 1
+echo "# Nulstiller cron-jobs" ; sleep 1
 echo "50" ; sleep 1
-echo "This line will just be ignored" ; sleep 1
+echo "Denne linje vil blive ignoreret" ; sleep 1
 echo "75" ; sleep 1
-echo "# Rebooting system" ; sleep 1
+echo "# Genstarter system" ; sleep 1
 echo "100" ; sleep 1
 ) |
 zenity --progress \
-  --title="Update System Logs" \
-  --text="Scanning mail logs..." \
+  --title="Opdatér systemlogge" \
+  --text="Skanner mail-logge …" \
   --percentage=0
 
 if [ "$?" = -1 ] ; then
         zenity --error \
-          --text="Update canceled."
+          --text="Opdatering annulleret."
 fi
 </code>
 
 
-    <figure id="zenity-progress-screenshot">
-      <title>Eksempel på dialogvindue med statusbjælke</title>
-      <desc><app>Zenity</app> progress dialog example</desc>
+    <figure>
+      <title>Eksempel på statusbjælkedialog</title>
+      <desc>Eksempel på statusbjælkedialog til <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>
     </figure>
 </page>

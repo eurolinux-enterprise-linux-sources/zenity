@@ -44,15 +44,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr valign="top">
-            <td colname="COLSPEC0">
+          <tr>
+            <td>
               <p>Návratový kód</p></td>
-            <td colname="COLSPEC1">
+            <td>
               <p>Popis</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>0</var></p>
             </td>
@@ -60,7 +60,7 @@
               <p>Uživatel zmáčkl <gui style="button">Budiž</gui> nebo <gui style="button">Zavřít</gui>.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>1</var></p>
             </td>
@@ -68,7 +68,7 @@
               <p>Uživatel buď zmáčkl <gui style="button">Zrušit</gui> nebo použil ovládací prvky okna k jeho zavření.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>-1</var></p>
             </td>
@@ -76,7 +76,7 @@
               <p>Vyskytla se neznámá chyba.</p>
             </td>
           </tr>
-          <tr valign="top">
+          <tr>
             <td>
               <p><var>5</var></p>
             </td>

@@ -41,7 +41,7 @@ zenity --error \
 </code>
 
 
-      <figure id="zenity-error-screenshot">
+      <figure>
         <title>Παράδειγμα διαλόγου σφάλματος</title>
         <desc>Παράδειγμα διαλόγου σφάλματος του <app>Zenity</app></desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>
