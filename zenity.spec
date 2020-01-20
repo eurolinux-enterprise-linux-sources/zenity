@@ -1,6 +1,6 @@
 Name:          zenity
 Version:       3.8.0
-Release:       2%{?dist}
+Release:       4%{?dist}
 Summary:       Display dialog boxes from shell scripts
 Group:         Applications/System
 License:       LGPLv2+
@@ -45,6 +45,12 @@ rm $RPM_BUILD_ROOT%{_bindir}/gdialog
 
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.0-4
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 3.8.0-3
+- Mass rebuild 2013-12-27
+
 * Tue Mar 26 2013 Kalev Lember <kalevlember@gmail.com> - 3.8.0-2
 - Minor spec file updates for 3.8
 
