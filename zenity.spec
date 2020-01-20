@@ -1,11 +1,14 @@
 Name:          zenity
 Version:       3.8.0
-Release:       4%{?dist}
+Release:       5%{?dist}
 Summary:       Display dialog boxes from shell scripts
 Group:         Applications/System
 License:       LGPLv2+
 URL:           http://directory.fsf.org/zenity.html
 Source:        http://download.gnome.org/sources/%{name}/3.8/%{name}-%{version}.tar.xz
+
+# upstream fix
+Patch0:         list-expand.patch
 
 BuildRequires: gtk3-devel >= 3.0.0
 BuildRequires: libnotify-devel >= 0.4.1
@@ -21,7 +24,7 @@ from the same family as dialog, Xdialog, and cdialog.
 
 %prep
 %setup -q
-
+%patch0 -p1
 
 %build
 %configure --disable-webkitgtk
@@ -45,6 +48,10 @@ rm $RPM_BUILD_ROOT%{_bindir}/gdialog
 
 
 %changelog
+* Wed Aug 19 2015 Matthias Clasen <mclasen@redhat.com> - 3.8.0-5
+- Fix non-expanding lists
+  Resolves: #1251137
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.0-4
 - Mass rebuild 2014-01-24
 

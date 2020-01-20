@@ -1,0 +1,11 @@
+diff -up zenity-3.8.0/src/zenity.ui.list-expand zenity-3.8.0/src/zenity.ui
+--- zenity-3.8.0/src/zenity.ui.list-expand	2015-08-19 14:04:38.907058018 -0400
++++ zenity-3.8.0/src/zenity.ui	2015-08-19 14:04:54.619268454 -0400
+@@ -1026,6 +1026,7 @@
+                     <property name="visible">True</property>
+                     <property name="can_focus">True</property>
+                     <property name="has_focus">True</property>
++                    <property name="vexpand">True</property>
+                     <child internal-child="selection">
+                       <object class="GtkTreeSelection" id="treeview-selection1"/>
+                     </child>
