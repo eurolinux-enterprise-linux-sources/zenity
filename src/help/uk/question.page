@@ -21,7 +21,7 @@ zenity --question \
 </code>
 
 
-      <figure>
+      <figure id="zenity-question-screenshot">
         <title>Приклад діалогу запитання</title>
 	<desc><app>Zenity</app> question dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-question-screenshot.png"/>

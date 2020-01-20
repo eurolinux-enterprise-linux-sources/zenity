@@ -2,49 +2,53 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="entry" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Brug tilvalget <cmd>--entry</cmd>.</desc>
+    <desc>Use the <cmd>--entry</cmd> option.</desc>
   </info>
-  <title>Tekstfeltdialog</title>
-    <p>Brug tilvalget <cmd>--entry</cmd> til at oprette en tekstfeltdialog. <app>Zenity</app> returnerer indholdet af tekstfeltet til standardoutput.</p>	
-    <p>Tekstfeltdialogen understøtter følgende tilvalg:</p>
+  <title>Tekstfelt</title>
+    <p>
+        Use the <cmd>--entry</cmd> option to create a text entry dialog. <app>Zenity</app> returns the contents of the text entry to standard output. 
+    </p>	
+    <p>Tekstfeltsdialogvinduet understøtter følgende tilvalg:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--text</cmd>=<var>tekst</var></title>
-	<p>Angiver teksten, der vises i tekstfeltdialogen.</p>
+        <title><cmd>--text</cmd>=<var>text</var></title>
+	<p>Angiver teksten, der vises i dialogvinduet.</p>
       </item>
 
       <item>
-        <title><cmd>--entry-text</cmd>=<var>tekst</var></title>
-	<p>Angiver teksten, der vises i tekstfeltdialogens indtastningsfelt.</p>
+        <title><cmd>--entry-text</cmd>=<var>text</var></title>
+	<p>Angiver teksten, der vises i tekstfeltets indtastningsfelt.</p>
       </item>
 
       <item>
         <title><cmd>--hide-text</cmd></title>
-	<p>Skjuler teksten i tekstfeltdialogens indtastningsfelt.</p>
+	<p>Skjuler teksten i tekstfeltet.</p>
       </item>
 
     </terms>
 
-    <p>Følgende eksempelscript viser, hvordan man opretter en tekstfeltdialog:</p>
+    <p>
+      The following example script shows how to create a text entry dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
 if zenity --entry \
---title="Tilføj ny profil" \
---text="Indtast navn for ny profil:" \
---entry-text "NyProfil"
+--title="Add new profile" \
+--text="Enter name of new profile:" \
+--entry-text "NewProfile"
   then echo $?
-  else echo "Intet navn indtastet"
+  else echo "No name entered"
 fi
 </code>
 
 
-    <figure>
-      <title>Eksempel på tekstfeltdialog</title>
-      <desc>Eksempel på tekstfeltdialog til <app>Zenity</app></desc>
+    <figure id="zenity-entry-screenshot">
+      <title>Eksempel på dialogvindue med et tekstindtastningsfelt</title>
+      <desc><app>Zenity</app> text entry dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>
     </figure>
 </page>

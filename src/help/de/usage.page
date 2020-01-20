@@ -50,15 +50,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>Rückgabewert</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>Beschreibung</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
@@ -66,7 +66,7 @@
               <p>Der Benutzer hat entweder <gui style="button">OK</gui> oder <gui style="button">Schließen</gui> angeklickt.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
@@ -74,7 +74,7 @@
               <p>Der Benutzer hat entweder <gui style="button">Abbrechen</gui> angeklickt oder die Fensterfunktionen zum Schließen des Dialogs benutzt.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -82,7 +82,7 @@
               <p>Es ist ein unerwarteter Fehler aufgetreten.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>
@@ -190,7 +190,7 @@
  
       <item>
         <title><cmd>--help-notification</cmd></title>
-	<p>Damit zeigen Sie den Hilfetext für Optionen des Benachrichtigungssymbols an.</p>
+	<p>Damit zeigen Sie den Hilfetext für Optionen des Benachrichtigungsymbols an.</p>
       </item>
  
       <item>
@@ -238,7 +238,7 @@
 
       <item>
         <title><cmd>--about</cmd></title>
-	<p>Damit zeigen Sie den <gui>Info zu Zenity</gui>-Dialog an, der Versionsinformationen, Copyright-Informationen und Entwicklerinformationen über Zenity enthält.</p>
+	<p>Damit zeigen Sie den <gui>Info zu Zenity</gui>-Dialog an, der Versionsinformationen, Copyright-Informationen und Entwicklerinformationen über <app>Zenity</app> enthält.</p>
       </item>
 
       <item>

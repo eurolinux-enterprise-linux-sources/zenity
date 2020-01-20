@@ -2,77 +2,77 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="scale" xml:lang="cs">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Použití přepínače <cmd>--scale</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2013</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--scale</cmd> option.</desc>
   </info>
-  <title>Dialogové okno se stupnicí</title>
-  <p>K vytvoření dialogového okna se stupnicí použijte přepínač <cmd>--scale</cmd>.</p>
-  <p>Dialogové okno se stupnicí podporuje následující přepínače:</p>
+  <title>Scale Dialog</title>
+  <p>
+    Use the <cmd>--scale</cmd> option to create a scale dialog. 
+  </p>
+  <p>
+    The scale dialog supports the following options:
+  </p>
 
   <terms>
 
     <item>
       <title><cmd>--text</cmd>=<var>TEXT</var></title>
-      <p>Nastaví text dialogového okna. (výchozí: Nastavte hodnotu na stupnici)</p>
+      <p>Set the dialog text. (Default: Adjust the scale value)</p>
     </item>
 
     <item>
-      <title><cmd>--value</cmd>=<var>HODNOTA</var></title>
-      <p>Nastaví počáteční hodnotu. (výchozí: 0) Musíte zadat hodnotu v rozmezí nejnižší a nejvyšší hodnoty.</p>
+      <title><cmd>--value</cmd>=<var>VALUE</var></title>
+      <p>Set initial value. (Default: 0) You must specify value between minimum value to maximum value.</p>
     </item>
 
     <item>
-      <title><cmd>--min-value</cmd>=<var>HODNOTA</var></title>
-      <p>Nastaví nejnižší hodnotu. (výchozí: 0)</p>
+      <title><cmd>--min-value</cmd>=<var>VALUE</var></title>
+      <p>Set minimum value. (Default: 0)</p>
     </item>
 
     <item>
-      <title><cmd>--max-value</cmd>=<var>HODNOTA</var></title>
-      <p>Nastaví nejvyšší hodnotu. (výchozí: 100)</p>
+      <title><cmd>--max-value</cmd>=<var>VALUE</var></title>
+      <p>Set maximum value. (Default: 100)</p>
     </item>
 
     <item>
-      <title><cmd>--step</cmd>=<var>HODNOTA</var></title>
-      <p>Nastaví velikost kroku. (výchozí: 1)</p>
+      <title><cmd>--step</cmd>=<var>VALUE</var></title>
+      <p>Set step size. (Default: 1)</p>
     </item>
 
     <item>
       <title><cmd>--print-partial</cmd></title>
-      <p>Kdykoliv se hodnota změní, vypíše ji na standardní výstup.</p>
+      <p>Print value to standard output, whenever a value is changed. </p>
     </item>
 
     <item>
       <title><cmd>--hide-value</cmd></title>
-      <p>Hodnotu v dialogovém okně skryje.</p>
+      <p>Hide value on dialog.</p>
     </item>
 
   </terms>
 
-  <p>Následující příklad skriptu ukazuje, jak vytvořit dialogové okno se stupnicí:</p>
+  <p>
+    The following example script shows how to create a scale dialog:
+  </p>
 
 <code>
 #!/bin/sh
 
-VALUE=`zenity --scale --text="Zvolte průhlednost okna." --value=50`
+VALUE=`zenity --scale --text="Select window transparency." --value=50`
 
 case $? in
          0)
-		echo "Zvolili jste $VALUE %.";;
+		echo "You selected $VALUE%.";;
          1)
-                echo "Nebyla zvolena žádná hodnota.";;
+                echo "No value selected.";;
         -1)
-                echo "Vyskytla se neočekávaná chyba.";;
+                echo "An unexpected error has occurred.";;
 esac
 </code>
 
-  <figure>
-    <title>Příklad dialogového okna se stupnicí</title>
-    <desc>Ukázka dialogového okna <app>Zenity</app> se stupnicí</desc>
+  <figure id="zenity-scale-screenshot">
+    <title>Scale Dialog Example</title>
+    <desc><app>Zenity</app> scale dialog example</desc>
     <media type="image" mime="image/png" src="figures/zenity-scale-screenshot.png"/>
   </figure>
 

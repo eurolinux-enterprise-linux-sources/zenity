@@ -9,4 +9,5 @@ This software is licensed under the LGPL.
 
 Zen Requirements -
 ==================
-gtk+-3.0
+scrollkeeper and intltool.
+gtk+-2.0

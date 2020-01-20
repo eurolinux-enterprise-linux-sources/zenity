@@ -64,7 +64,7 @@ echo "100" ; sleep 1
 ) |
 zenity --progress \
   --title="System-Logs aktualisieren" \
-  --text="Mail-Logs werden eingelesen …" \
+  --text="Mail-Logs werden eingelesen ..." \
   --percentage=0
 
 if [ "$?" = -1 ] ; then
@@ -74,7 +74,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-progress-screenshot">
       <title>Beispiel für einen Fortschrittsanzeige-Dialog</title>
       <desc>Beispiel für einen Fortschrittsanzeige-Dialog in <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>

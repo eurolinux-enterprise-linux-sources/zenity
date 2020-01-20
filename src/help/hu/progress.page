@@ -7,7 +7,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Kelemen Gábor</mal:name>
       <mal:email>kelemeng at gnome dot hu</mal:email>
-      <mal:years>2012, 2014.</mal:years>
+      <mal:years>2012.</mal:years>
     </mal:credit>
   </info>
   <title>Folyamatjelző ablak</title>
@@ -68,7 +68,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-progress-screenshot">
       <title>Példa folyamatjelző ablak</title>
       <desc><app>Zenity</app> példa folyamatjelző ablak</desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>

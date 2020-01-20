@@ -17,7 +17,7 @@
     </mal:credit>
   </info>
   <title>Schiebereglerdialog</title>
-  <p>Verwenden Sie die Option <cmd>--scale</cmd>, um einen Schiebereglerdialog zu erzeugen.</p>
+  <p>Verwenden Sie die Option <option>--scale</option>, um einen Schiebereglerdialog zu erzeugen.</p>
   <p>Der Schiebereglerdialog unterstützt die folgenden Optionen:</p>
 
   <terms>
@@ -76,7 +76,7 @@ case $? in
 esac
 </code>
 
-  <figure>
+  <figure id="zenity-scale-screenshot">
     <title>Beispiel für einen Schiebereglerdialog</title>
     <desc>Beispiel für einen Schiebereglerdialog in <app>Zenity</app></desc>
     <media type="image" mime="image/png" src="figures/zenity-scale-screenshot.png"/>

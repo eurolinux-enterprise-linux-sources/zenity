@@ -2,87 +2,81 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="forms" xml:lang="sv">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Använd flaggan <cmd>--forms</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--forms</cmd> option.</desc>
   </info>
-  <title>Formulärdialog</title>
-    <p>Använd flaggan <cmd>--forms</cmd> för att skapa en formulärdialog.</p>
+  <title>Forms Dialog</title>
+    <p>
+	Use the <cmd>--forms</cmd> option to create a forms dialog. 
+    </p>
 	
-    <p>Formulärdialogen har stöd för följande flaggor:</p>
+    <p>
+	The forms dialog supports the following options:
+    </p>
 
     <terms>
 
       <item>
-        <title><cmd>--add-entry</cmd>=<var>Fältnamn</var></title>
-	<p>Lägg till en ny inmatningsruta i formulärdialogen.</p>
+        <title><cmd>--add-entry</cmd>=<var>FieldName</var></title>
+	<p>Add a new Entry in forms dialog.</p>
       </item>
 
       <item>
-        <title>--add-password<cmd/>=<var>Fältnamn</var></title>
-	<p>Lägg till en ny lösenordsinmatningsruta i formulärdialogen. (Göm text)</p>
+        <title>--add-password<cmd/>=<var>FieldName</var></title>
+	<p>Add a new Password Entry in forms dialog. (Hide text)</p>
       </item>
 
       <item>
-        <title><cmd>--add-calendar</cmd>=<var>Fältnamn</var></title>
-	<p>Lägg till en ny kalender i formulärdialogen.</p>
+        <title><cmd>--add-calendar</cmd>=<var>FieldName</var></title>
+	<p>Add a new Calendar in forms dialog.</p>
       </item>
 
       <item>
         <title><cmd>--text</cmd>=<var>TEXT</var></title>
-	<p>Ställer in dialogtexten.</p>
+	<p>Set the dialog text.</p>
       </item>
 
       <item>
-        <title><cmd>--separator</cmd>=<var>AVGRÄNSARE</var></title>
-	<p>Ställ in tecken för utmatningsavgränsning. (Standardvärde: | )</p>
+        <title><cmd>--separator</cmd>=<var>SEPARATOR</var></title>
+	<p>Set output separator character. (Default: | )</p>
       </item>
 
       <item>
-        <title><cmd>--forms-date-format</cmd>=<var>MÖNSTER</var></title>
-	<p>Ställ in formatet för det returnerade datumet. Standardformatet beror på din lokalinställning. format måste vara ett format som är acceptabelt för funktionen <cmd>strftime</cmd>, till exempel <var>%A %Y-%m-%d</var>.</p>
+        <title><cmd>--forms-date-format</cmd>=<var>PATTERN</var></title>
+	<p>Set the format for the returned date. The default format depends on your locale. format must be a Format that is acceptable to the <cmd>strftime</cmd> function, for example <var>%A %d/%m/%y</var>.</p>
       </item>
 
     </terms>
 
-    <p>Följande exempelskript visar hur man skapar en formulärdialog:</p>
+    <p>
+      The following example script shows how to create a forms dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
-zenity --forms --title="Lägg till vän" \
-	--text="Mata in information om din vän." \
+zenity --forms --title="Add Friend" \
+	--text="Enter information about your friend." \
 	--separator="," \
-	--add-entry="Tilltalsnamn" \
-	--add-entry="Efternamn" \
-	--add-entry="E-post" \
-	--add-calendar="Födelsedag" &gt;&gt; adr.csv
+	--add-entry="First Name" \
+	--add-entry="Family Name" \
+	--add-entry="Email" \
+	--add-calendar="Birthday" &gt;&gt; addr.csv
 
 case $? in
     0)
-        echo "Vän tillagd.";;
+        echo "Friend added.";;
     1)
-        echo "Ingen vän tillagd."
+        echo "No friend added."
 	;;
     -1)
-        echo "Ett oväntat fel har inträffat."
+        echo "An unexpected error has occurred."
 	;;
 esac
 </code>
 
-    <figure>
-      <title>Exempel på formulärdialog</title>
-      <desc><app>Zenity</app>-exempel på informationsdialog</desc>
+    <figure id="zenity-forms-screenshot">
+      <title>Forms Dialog Example</title>
+      <desc><app>Zenity</app> forms dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-forms-screenshot.png"/>
     </figure>
 </page>

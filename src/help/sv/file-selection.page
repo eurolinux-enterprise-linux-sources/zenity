@@ -2,28 +2,19 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-selection" xml:lang="sv">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Använd flaggan <cmd>--file-selection</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--file-selection</cmd> option.</desc>
   </info>
   <title>Filväljardialog</title>
-    <p>Använd flaggan <cmd>--file-selection</cmd> för att skapa en filväljardialog. <app>Zenity</app> returnerar de valda filerna eller katalogerna till standard ut. Standardläget för filväljardialogen är öppna.</p>
+    <p>
+	Use the <cmd>--file-selection</cmd> option to create a file selection dialog. <app>Zenity</app> returns the selected files or directories to standard 
+        output. The default mode of the file selection dialog is open.
+    </p>
     <p>Filväljardialogen har stöd för följande flaggor:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--filename</cmd>=<var>filnamn</var></title>
+        <title><cmd>--filename</cmd>=<var>filename</var></title>
 	<p>Anger filen eller katalogen som är markerad i filväljardialogen när dialogen först visas.</p>
       </item>
 
@@ -43,32 +34,34 @@
       </item>
 
       <item>
-	<title><cmd>--separator</cmd>=<var>avgränsare</var></title>
+	<title><cmd>--separator</cmd>=<var>separator</var></title>
 	<p>Anger strängen som används för att avgränsa den returnerade listan över filnamn.</p>
       </item>
 
     </terms>
 
-    <p>Följande exempelskript visar hur man skapar en filväljardialog:</p>
+    <p>
+      The following example script shows how to create a file selection dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
-FILE=`zenity --file-selection --title="Välj en fil"`
+FILE=`zenity --file-selection --title="Select a File"`
 
 case $? in
          0)
-                echo "\"$FILE\" vald.";;
+                echo "\"$FILE\" selected.";;
          1)
-                echo "Ingen fil vald.";;
-         -1)
-                echo "Ett oväntat fel har inträffat.";;
+                echo "No file selected.";;
+        -1)
+                echo "An unexpected error has occurred.";;
 esac
 </code>
 
-    <figure>
+    <figure id="zenity-fileselection-screenshot">
       <title>Exempel på filväljardialog</title>
-      <desc><app>Zenity</app>-exempel på filväljardialog</desc>
+      <desc><app>Zenity</app> file selection dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-fileselection-screenshot.png"/>
     </figure>
 </page>

@@ -17,7 +17,7 @@
     </mal:credit>
   </info>
   <title>Farbauswahldialog</title>
-  <p>Verwenden Sie die Option <cmd>--color-selection</cmd>, um einen Farbauswahldialog zu erzeugen.</p>
+  <p>Verwenden Sie die Option <option>--color-selection</option>, um einen Farbauswahldialog zu erzeugen.</p>
   <p>Der Farbauswahldialog unterstützt die folgenden Optionen:</p>
 
   <terms>
@@ -51,7 +51,7 @@ case $? in
 esac
 </code>
 
-  <figure>
+  <figure id="zenity-colorselection-screenshot">
     <title>Beispiel für einen Farbauswahldialog</title>
     <desc>Beispiel für einen Farbauswahldialog in <app>Zenity</app></desc>
     <media type="image" mime="image/png" src="figures/zenity-colorselection-screenshot.png"/>

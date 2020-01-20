@@ -2,17 +2,20 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="file-selection" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Brug tilvalget <cmd>--file-selection</cmd>.</desc>
+    <desc>Use the <cmd>--file-selection</cmd> option.</desc>
   </info>
-  <title>Filvælgerdialog</title>
-    <p>Brug tilvalget <cmd>--file-selection</cmd> til at oprette en filvælgerdialog. <app>Zenity</app> returnerer de valgte filer eller mapper til standardoutput. Standardtilstanden for filvælgeren er åbn.</p>
-    <p>Filvælgerdialoger understøtter følgende tilvalg:</p>
+  <title>Filvælgerdialogvindue</title>
+    <p>
+	Use the <cmd>--file-selection</cmd> option to create a file selection dialog. <app>Zenity</app> returns the selected files or directories to standard 
+        output. The default mode of the file selection dialog is open.
+    </p>
+    <p>Filvælgerdialogvinduer understøtter følgende tilvalg:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--filename</cmd>=<var>filnavn</var></title>
-	<p>Angiver den fil eller mappe, som er valgt i filvælgeren, når dialogen vises første gang.</p>
+        <title><cmd>--filename</cmd>=<var>filename</var></title>
+	<p>Angiver den fil eller mappe, som er valgt i filvælgeren, når dialogvinduet først vises.</p>
       </item>
 
       <item>
@@ -31,32 +34,34 @@
       </item>
 
       <item>
-	<title><cmd>--separator</cmd>=<var>skilletegn</var></title>
+	<title><cmd>--separator</cmd>=<var>separator</var></title>
 	<p>Angiver strengen, der bruges til at dele listen af returnerede filnavne.</p>
       </item>
 
     </terms>
 
-    <p>Følgende eksempelscript viser, hvordan man opretter en filvælgerdialog:</p>
+    <p>
+      The following example script shows how to create a file selection dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
-FIL=`zenity --file-selection --title="Vælg en fil"`
+FILE=`zenity --file-selection --title="Select a File"`
 
 case $? in
          0)
-                echo "\"$FIL\" valgt.";;
+                echo "\"$FILE\" selected.";;
          1)
-                echo "Ingen fil valgt.";;
+                echo "No file selected.";;
         -1)
-                echo "Der opstod en uventet fejl.";;
+                echo "An unexpected error has occurred.";;
 esac
 </code>
 
-    <figure>
-      <title>Eksempel med filvælgerdialog</title>
-      <desc>Eksempel på filvælgerdialog til <app>Zenity</app></desc>
+    <figure id="zenity-fileselection-screenshot">
+      <title>Eksempel med filvælgerdialogvindue</title>
+      <desc><app>Zenity</app> file selection dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-fileselection-screenshot.png"/>
     </figure>
 </page>

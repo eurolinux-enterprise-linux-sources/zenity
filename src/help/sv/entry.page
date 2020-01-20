@@ -2,22 +2,12 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="entry" xml:lang="sv">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Använd flaggan <cmd>--entry</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--entry</cmd> option.</desc>
   </info>
   <title>Textinmatningsdialog</title>
-    <p>Använd flaggan <cmd>-entry</cmd> för att skapa en textinmatningsdialog. <app>Zenity</app> returnerar innehållet av textinmatningen till standard ut.</p>	
+    <p>
+        Use the <cmd>--entry</cmd> option to create a text entry dialog. <app>Zenity</app> returns the contents of the text entry to standard output. 
+    </p>	
     <p>Textinmatningsdialogen har stöd för följande flaggor:</p>
 
     <terms>
@@ -39,24 +29,26 @@
 
     </terms>
 
-    <p>Följande exempelskript visar hur man skapar en textinmatningsdialog:</p>
+    <p>
+      The following example script shows how to create a text entry dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
 if zenity --entry \
---title="Lägg till ny profil" \
---text="Ange namn för ny profil:" \
+--title="Add new profile" \
+--text="Enter name of new profile:" \
 --entry-text "NewProfile"
   then echo $?
-  else echo "Inget namn angavs"
+  else echo "No name entered"
 fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-entry-screenshot">
       <title>Exempel på textinmatningsdialog</title>
-      <desc><app>Zenity</app>-exempel på textinmatningsdialog</desc>
+      <desc><app>Zenity</app> text entry dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>
     </figure>
 </page>

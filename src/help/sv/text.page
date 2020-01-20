@@ -2,89 +2,81 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="text" xml:lang="sv">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Använd flaggan <cmd>--text-info</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--text-info</cmd> option.</desc>
   </info>
   <title>Textinformationsdialog</title>
-    <p>Använd flaggan <cmd>--text-info</cmd> för att skapa en textinformationsdialog.</p>
+    <p>
+	Use the <cmd>--text-info</cmd> option to create a text information dialog. 
+    </p>
 	
     <p>Textinformationsdialogen har stöd för följande flaggor:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--filename</cmd>=<var>filnamn</var></title>
+        <title><cmd>--filename</cmd>=<var>filename</var></title>
 	<p>Anger en fil som läses in i textinformationsdialogen.</p>
       </item>
 
       <item>
         <title><cmd>--editable</cmd></title>
-        <p>Tillåter att den visade texten redigeras. Den redigerade texten returneras till standard ut när dialogrutan stängs.</p>
+        <p>Allows the displayed text to be edited. The edited text is returned to standard output when the dialog is closed.</p>
       </item>
 
       <item>
-        <title><cmd>--font</cmd>=<var>TYPSNITT</var></title>
-	<p>Anger texttypsnittet.</p>
+        <title><cmd>--font</cmd>=<var>FONT</var></title>
+	<p>Specifies the text font.</p>
       </item>
 
       <item>
         <title><cmd>--checkbox</cmd>=<var>TEXT</var></title>
-	<p>Aktivera en kryssruta för användning i stil med ”Jag har läst och accepterar villkoren.”</p>
+	<p>Enable a checkbox for use like a 'I read and accept the terms.'</p>
       </item>
 
       <item>
         <title><cmd>--html</cmd></title>
-        <p>Aktivera html-stöd.</p>
+        <p>Enable html support.</p>
       </item>
 
       <item>
         <title><cmd>--url</cmd>=<var>URL</var></title>
-	<p>Ställer in en url istället för en fil. Fungerar endast om du använder flaggan --html.</p>
+	<p>Sets an url instead of a file. Only works if you use --html option.</p>
       </item>
 
     </terms>
 
-    <p>Följande exempelskript visar hur man skapar en textinformationsdialog:</p>
+    <p>
+      The following example script shows how to create a text information dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
-# Du måste placera filen "COPYING" i samma mapp som detta skript.
+# You must place file "COPYING" in same folder of this script.
 FILE=`dirname $0`/COPYING
 
 zenity --text-info \
-       --title="Licens" \
+       --title="License" \
        --filename=$FILE \
-       --checkbox="Jag har läst och accepterar villkoren."
+       --checkbox="I read and accept the terms."
 
 case $? in
     0)
-        echo "Påbörja installation!"
-	# nästa steg
+        echo "Start installation!"
+	# next step
 	;;
     1)
-        echo "Avsluta installation!"
+        echo "Stop installation!"
 	;;
     -1)
-        echo "Ett oväntat fel har inträffat."
+        echo "An unexpected error has occurred."
 	;;
 esac
 </code>
 
-    <figure>
+    <figure id="zenity-text-screenshot">
       <title>Exempel på textinformationsdialog</title>
-      <desc><app>Zenity</app>-exempel på textinformationsdialog</desc>
+      <desc><app>Zenity</app> text information dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-text-screenshot.png"/>
     </figure>
 </page>

@@ -1,14 +1,14 @@
 Name:          zenity
-Version:       3.28.1
-Release:       1%{?dist}
+Version:       3.8.0
+Release:       2%{?dist}
 Summary:       Display dialog boxes from shell scripts
-
+Group:         Applications/System
 License:       LGPLv2+
-URL:           https://wiki.gnome.org/Projects/Zenity
-Source:        https://download.gnome.org/sources/%{name}/3.28/%{name}-%{version}.tar.xz
+URL:           http://directory.fsf.org/zenity.html
+Source:        http://download.gnome.org/sources/%{name}/3.8/%{name}-%{version}.tar.xz
 
-BuildRequires: pkgconfig(gtk+-3.0) >= 3.0.0
-BuildRequires: pkgconfig(libnotify) >= 0.6.1
+BuildRequires: gtk3-devel >= 3.0.0
+BuildRequires: libnotify-devel >= 0.4.1
 BuildRequires: which
 BuildRequires: gettext
 BuildRequires: intltool
@@ -25,11 +25,11 @@ from the same family as dialog, Xdialog, and cdialog.
 
 %build
 %configure --disable-webkitgtk
-make V=1 %{?_smp_mflags}
+make %{?_smp_mflags}
 
 
 %install
-%make_install
+make install DESTDIR=$RPM_BUILD_ROOT
 
 # we don't want a perl dependency just for this
 rm $RPM_BUILD_ROOT%{_bindir}/gdialog
@@ -38,32 +38,13 @@ rm $RPM_BUILD_ROOT%{_bindir}/gdialog
 
 
 %files -f zenity.lang
-%license COPYING
-%doc AUTHORS NEWS THANKS README
+%doc COPYING AUTHORS NEWS THANKS README
 %{_bindir}/zenity
 %{_datadir}/zenity
-%{_mandir}/man1/zenity.1*
+%{_mandir}/man1/zenity.1.gz
 
 
 %changelog
-* Mon Jun 04 2018 Richard Hughes <rhughes@redhat.com> - 3.28.1-1
-- Update to 3.28.1
-- Resolves: #1569809
-
-* Thu Sep 22 2016 Kalev Lember <klember@redhat.com> - 3.22.0-1
-- Update to 3.22.0
-- Resolves: #1387068
-
-* Wed Aug 19 2015 Matthias Clasen <mclasen@redhat.com> - 3.8.0-5
-- Fix non-expanding lists
-  Resolves: #1251137
-
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 3.8.0-4
-- Mass rebuild 2014-01-24
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 3.8.0-3
-- Mass rebuild 2013-12-27
-
 * Tue Mar 26 2013 Kalev Lember <kalevlember@gmail.com> - 3.8.0-2
 - Minor spec file updates for 3.8
 

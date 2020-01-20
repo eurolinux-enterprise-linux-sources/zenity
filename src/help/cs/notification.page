@@ -2,58 +2,37 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="notification" xml:lang="cs">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Použití přepínače <cmd>--notification</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2013</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--notification</cmd> option.</desc>
   </info>
   <title>Oznamovací ikona</title>
-    <p>K vytvoření oznamovací ikony použijte přepínač <cmd>--info</cmd>.</p>
+    <p>
+	Use the <cmd>--notification</cmd> option to create a notification icon.
+    </p>
 
-  <terms>
-    <item>
-      <title><cmd>--text</cmd>=<var>TEXT</var></title>
-      <p>Určuje text, který se zobrazí v oznamovací oblasti.</p>
-    </item>
-    <item>
-      <title><cmd>--listen</cmd>=icon: '<var>text</var>', message: '<var>text</var>', tooltip: '<var>text</var>', visible: '<var>text</var>',</title>
-      <p>Naslouchá příkazům ze standardního vstupu. Musí být určen nejméně jeden příkaz. Příkazy se oddělují čárkami. Za příkazem musí následovat dvojtečka a hodnota.</p>
-      <note style="tip">
-        <p>Příkaz <cmd>icon</cmd> přijímá i čtyři hodnoty skladových ikon a to <var>error</var> (chyba), <var>info</var> (informace), <var>question</var> (dotaz) a <var>warning</var> (varování).</p>
-      </note>
-    </item>
-  </terms>
+    <terms>
 
-  <p>Následující příklad skriptu ukazuje, jak vytvořit oznamovací ikonu:</p>
-  <code>
-  #!/bin/sh
+      <item>
+        <title><cmd>--text</cmd>=<var>text</var></title>
+	  <p>Určuje text, který se zobrazí v oznamovací oblasti.</p>
+      </item>
 
-  zenity --notification\
-    --window-icon="info" \
-    --text="Jsou k dispozici důležité aktualizace!"
-  </code>
+    </terms>
 
-  <figure>
-    <title>Příklad oznamovací ikony </title>
-    <desc>Ukázka oznamovací ikony <app>Zenity</app></desc>
-    <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
-  </figure>
+    <p>
+      The following example script shows how to create a notification icon:
+    </p>
+<code>
+#!/bin/sh
 
-  <p>Následující příklad skriptu ukazuje, jak vytvořit oznamovací ikonu s pomocí <cmd>--listen</cmd>:</p>
-  <code>
-  #!/bin/sh
-  cat &lt;&lt;EOH| zenity --notification --listen
-  message: toto je text zprávy
-  EOH
-  </code>
+zenity --notification\
+  --window-icon="info" \
+  --text="There are system updates necessary!"
+</code>
 
-  <figure>
-    <title>Příklad oznamovací ikony pomocí <cmd>--listen</cmd></title>
-    <desc>Ukázka oznamovací ikony <app>Zenity</app> pomocí <app>--listen</app></desc>
-    <media type="image" mime="image/png" src="figures/zenity-notification-listen-screenshot.png"/>
-  </figure>
 
+    <figure id="zenity-notification-screenshot">
+      <title>Příklad oznamovací ikony </title>
+      <desc><app>Zenity</app> notification icon example</desc>
+      <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
+   </figure>
 </page>

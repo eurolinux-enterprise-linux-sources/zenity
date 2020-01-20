@@ -37,47 +37,28 @@
   <title>Icône de notification</title>
     <p>Utilisez l'option <cmd>--notification</cmd> pour créer une icône de notification.</p>
 
-  <terms>
-    <item>
-      <title><cmd>--text</cmd>=<var>texte</var></title>
-      <p>Spécifier le texte affiché dans la zone de notification.</p>
-    </item>
-    <item>
-      <title><cmd>--listen</cmd>=icon: « <var>texte</var> », message: « <var>texte</var> », tooltip: « <var>texte</var> », visible: « <var>texte</var> »,</title>
-      <p>Attend une commande sur l'entrée standard. Au moins une commande doit être précisée. Les commandes sont séparées par des virgules. Une commande doit être suivie d'un double-point et d'une valeur.</p>
-      <note style="tip">
-        <p>La commande <cmd>icon</cmd> accepte aussi quatre valeurs spéciales de noms d'icônes qui sont <var>error</var> (erreur), <var>info</var>, <var>question</var> et <var>warning</var>.</p>
-      </note>
-    </item>
-  </terms>
+    <terms>
 
-  <p>Le script d'exemple suivant montre comment créer une icône de notification :</p>
-  <code>
-  #!/bin/sh
+      <item>
+        <title><cmd>--text</cmd>=<var>texte</var></title>
+	  <p>Spécifier le texte affiché dans la zone de notification.</p>
+      </item>
 
-  zenity --notification\
-    --window-icon="info" \
-    --text="Mise à jour du système nécessaire !"
-    </code>
+    </terms>
 
-  <figure>
-    <title>Exemple d'icône de notification</title>
-    <desc>Exemple d'icône de notification <app>Zenity</app></desc>
-    <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
-  </figure>
+    <p>Le script d'exemple suivant montre comment créer une icône de notification :</p>
+<code>
+#!/bin/sh
 
-  <p>Le script d'exemple suivant montre comment créer une icône de notification avec <cmd>--listen</cmd> :</p>
-  <code>
-  #!/bin/sh
-  cat &lt;&lt;EOH| zenity --notification --listen
-  message: ceci est le texte du message
-  EOH
-  </code>
+zenity --notification\
+  --window-icon="info" \
+  --text="Mise à jour du système nécessaire !"
+</code>
 
-  <figure>
-    <title>Exemple d'icône de notification avec <cmd>--listen</cmd></title>
-    <desc>Exemple d'icône de notification <app>Zenity</app> avec <cmd>--listen</cmd></desc>
-    <media type="image" mime="image/png" src="figures/zenity-notification-listen-screenshot.png"/>
-  </figure>
 
+    <figure id="zenity-notification-screenshot">
+      <title>Exemple d'icône de notification</title>
+      <desc>Exemple d'icône de notification <app>Zenity</app></desc>
+      <media type="image" mime="image/png" src="figures/zenity-notification-screenshot.png"/>
+   </figure>
 </page>

@@ -44,15 +44,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>終了コード</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>説明</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
@@ -60,7 +60,7 @@
               <p>ユーザーが、<gui style="button">OK</gui> か <gui style="button">閉じる</gui>を押しました。</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
@@ -68,7 +68,7 @@
               <p>ユーザーが<gui style="button">キャンセル</gui>を押したか、ウィンドウの機能を利用してダイアログを閉じました。</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -76,7 +76,7 @@
               <p>予期しないエラーが発生しました。</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>

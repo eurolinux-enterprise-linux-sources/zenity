@@ -2,36 +2,28 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="info" xml:lang="pt-BR">
   <info>
     <link type="guide" xref="message"/>
-    <desc>Use a opção <cmd>--info</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rodolfo Ribeiro Gomes</mal:name>
-      <mal:email>rodolforg@gmail.com</mal:email>
-      <mal:years>2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--info</cmd> option.</desc>
   </info>
-  <title>Diálogo de informação</title>
-      <p>Use a opção <cmd>--info</cmd> para criar um diálogo de informação.</p>
+  <title>Info Dialog</title>
+      <p>
+          Use the <cmd>--info</cmd> option to create an information dialog.
+      </p>
 
-      <p>O script de exemplo a seguir mostra como criar um diálogo de informação:</p>
+      <p>
+        The following example script shows how to create an information dialog:
+      </p>
 
 <code>
 #!/bin/bash
 
 zenity --info \
---text="Mesclagem completa. Foram atualizados 3 de 10 arquivos."
+--text="Merge complete. Updated 3 of 10 files."
 </code>
 
 
-      <figure>
+      <figure id="zenity-information-screenshot">
         <title>Exemplo de diálogo de informação</title>
-        <desc>Exemplo de diálogo de informação do <app>Zenity</app></desc>
+        <desc><app>Zenity</app> information dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-information-screenshot.png"/>
       </figure>
 </page>

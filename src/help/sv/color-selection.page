@@ -2,39 +2,33 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-selection" xml:lang="sv">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Använd flaggan <cmd>--color-selection</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--color-selection</cmd> option.</desc>
   </info>
-  <title>Färgväljardialog</title>
-  <p>Använd flaggan <cmd>--color-selection</cmd> för att skapa en färgväljardialog.</p>
-  <p>Färgväljardialogen har stöd för följande flaggor:</p>
+  <title>Color Selection Dialog</title>
+  <p>
+    Use the <cmd>--color-selection</cmd> option to create a color selection dialog. 
+  </p>
+  <p>
+    The color selection dialog supports the following options:
+  </p>
 
   <terms>
 
     <item>
-      <title><cmd>--color</cmd>=<var>VÄRDE</var></title>
-      <p>Ställ in förvald färg.(ex: #FF0000)</p>
+      <title><cmd>--color</cmd>=<var>VALUE</var></title>
+      <p>Set the initial color.(ex: #FF0000)</p>
     </item>
 
     <item>
       <title><cmd>--show-palette</cmd></title>
-      <p>Visa paletten.</p>
+      <p>Show the palette.</p>
     </item>
 
   </terms>
 
-  <p>Följande exempelskript visar hur man skapar en färgväljardialog:</p>
+  <p>
+    The following example script shows how to create a color selection dialog:
+  </p>
 
 <code>
 #!/bin/sh
@@ -43,17 +37,17 @@ COLOR=`zenity --color-selection --show-palette`
 
 case $? in
          0)
-		echo "Du valde $COLOR.";;
+		echo "You selected $COLOR.";;
          1)
-                echo "Ingen färg vald.";;
+                echo "No color selected.";;
         -1)
-                echo "Ett oväntat fel har inträffat.";;
+                echo "An unexpected error has occurred.";;
 esac
 </code>
 
-  <figure>
-    <title>Exempel på färgväljardialog</title>
-    <desc><app>Zenity</app>-exempel på färgväljardialog</desc>
+  <figure id="zenity-colorselection-screenshot">
+    <title>Color Selection Dialog Example</title>
+    <desc><app>Zenity</app> color selection dialog example</desc>
     <media type="image" mime="image/png" src="figures/zenity-colorselection-screenshot.png"/>
   </figure>
 

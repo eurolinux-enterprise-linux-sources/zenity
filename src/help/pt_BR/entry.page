@@ -2,33 +2,23 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="entry" xml:lang="pt-BR">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Use a opção <cmd>--entry</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rodolfo Ribeiro Gomes</mal:name>
-      <mal:email>rodolforg@gmail.com</mal:email>
-      <mal:years>2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--entry</cmd> option.</desc>
   </info>
   <title>Diálogo de entrada de texto</title>
-    <p>Use a opção <cmd>--entry</cmd> para criar um diálogo de entrada de texto. O <app>Zenity</app> retorna o conteúdo da entrada de texto para a saída padrão.</p>	
+    <p>
+        Use the <cmd>--entry</cmd> option to create a text entry dialog. <app>Zenity</app> returns the contents of the text entry to standard output. 
+    </p>	
     <p>O diálogo de entrada de texto oferece suporte às seguintes opções:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--text</cmd>=<var>texto</var></title>
+        <title><cmd>--text</cmd>=<var>text</var></title>
 	<p>Especifica o texto que é exibido no diálogo de entrada de texto.</p>
       </item>
 
       <item>
-        <title><cmd>--entry-text</cmd>=<var>texto</var></title>
+        <title><cmd>--entry-text</cmd>=<var>text</var></title>
 	<p>Especifica o texto que é exibido no campo de entrada do diálogo de entrada de texto.</p>
       </item>
 
@@ -39,24 +29,26 @@
 
     </terms>
 
-    <p>O script de exemplo a seguir mostra como criar um diálogo de entrada de texto:</p>
+    <p>
+      The following example script shows how to create a text entry dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
 if zenity --entry \
---title="Adicionar um novo perfil" \
---text="Digite um nome do novo perfil:" \
---entry-text "NovoPerfil"
+--title="Add new profile" \
+--text="Enter name of new profile:" \
+--entry-text "NewProfile"
   then echo $?
-  else echo "Nenhum nome foi digitado"
+  else echo "No name entered"
 fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-entry-screenshot">
       <title>Exemplo de diálogo de entrada de texto</title>
-      <desc>Exemplo de diálogo de entrada de texto do <app>Zenity</app></desc>
+      <desc><app>Zenity</app> text entry dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>
     </figure>
 </page>

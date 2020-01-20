@@ -25,10 +25,10 @@
  */
 
 #include "config.h"
-#include "util.h"
 #include "zenity.h"
-#include <gdk/gdkkeysyms.h>
+#include "util.h"
 #include <string.h>
+#include <gdk/gdkkeysyms.h>
 
 #define GTK_RESPONSE_CREDITS 0
 #define ZENITY_HELP_PATH ZENITY_DATADIR "/help/"
@@ -39,38 +39,40 @@
 
 static GtkWidget *dialog;
 
-static void zenity_about_dialog_response (
-	GtkWidget *widget, int response, gpointer data);
+static void zenity_about_display_help (GtkWidget *widget, gpointer data);
+static void zenity_about_dialog_response (GtkWidget *widget, int response, gpointer data);
 
 /* Sync with the people in the THANKS file */
-static const gchar *const authors[] = {"Glynn Foster <glynn foster sun com>",
-	"Lucas Rocha <lucasr gnome org>",
-	"Mike Newman <mikegtn gnome org>",
-	NULL};
+static const gchar *const authors[] = {
+  "Glynn Foster <glynn foster sun com>",
+  "Lucas Rocha <lucasr gnome org>",
+  "Mike Newman <mikegtn gnome org>",
+  NULL
+};
 
-static const char *documenters[] = {"Glynn Foster <glynn.foster@sun.com>",
-	"Lucas Rocha <lucasr@gnome.org>",
-	"Java Desktop System Documentation Team",
-	"GNOME Documentation Project",
-	NULL};
+static const char *documenters[] = {
+  "Glynn Foster <glynn.foster@sun.com>",
+  "Lucas Rocha <lucasr@gnome.org>",
+  "Java Desktop System Documentation Team",
+  "GNOME Documentation Project",
+  NULL
+};
 
 static gchar *translators;
 
 static const char *license[] = {
-	N_ ("This program is free software; you can redistribute it and/or modify "
-		"it under the terms of the GNU Lesser General Public License as "
-		"published by "
-		"the Free Software Foundation; either version 2 of the License, or "
-		"(at your option) any later version.\n"),
-	N_ ("This program is distributed in the hope that it will be useful, "
-		"but WITHOUT ANY WARRANTY; without even the implied warranty of "
-		"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
-		"GNU Lesser General Public License for more details.\n"),
-	N_ ("You should have received a copy of the GNU Lesser General Public "
-		"License "
-		"along with this program; if not, write to the Free Software "
-		"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
-		"02110-1301, USA.")};
+	N_("This program is free software; you can redistribute it and/or modify "
+	   "it under the terms of the GNU Lesser General Public License as published by "
+	   "the Free Software Foundation; either version 2 of the License, or "
+	   "(at your option) any later version.\n"),
+	N_("This program is distributed in the hope that it will be useful, "
+	   "but WITHOUT ANY WARRANTY; without even the implied warranty of "
+	   "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "
+	   "GNU Lesser General Public License for more details.\n"),
+	N_("You should have received a copy of the GNU Lesser General Public License "
+	   "along with this program; if not, write to the Free Software "
+	   "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.")
+};
 
 #if 0
 static gint
@@ -252,78 +254,85 @@ zenity_zen_wisdom (GtkDialog *dialog, GdkEventKey *event, gpointer user_data)
 }
 #endif
 
-void
-zenity_about (ZenityData *data) {
-	GdkPixbuf *logo;
-	char *license_trans;
+void 
+zenity_about (ZenityData *data)
+{
+  GdkPixbuf *logo;
+  GtkWidget *help_button;
+  char *license_trans;
 
-	translators = _ ("translator-credits");
-	logo =
-		gdk_pixbuf_new_from_file (ZENITY_IMAGE_FULLPATH ("zenity.png"), NULL);
 
-	license_trans = g_strconcat (
-		_ (license[0]), "\n", _ (license[1]), "\n", _ (license[2]), "\n", NULL);
+  translators = _("translator-credits");
+  logo = gdk_pixbuf_new_from_file (ZENITY_IMAGE_FULLPATH ("zenity.png"), NULL);
 
-	dialog = gtk_about_dialog_new ();
+  license_trans = g_strconcat (_(license[0]), "\n", _(license[1]), "\n",
+                               _(license[2]), "\n", NULL);
 
-	g_object_set (G_OBJECT (dialog),
-		"name",
-		"Zenity",
-		"version",
-		VERSION,
-		"copyright",
-		"Copyright \xc2\xa9 2003 Sun Microsystems",
-		"comments",
-		_ ("Display dialog boxes from shell scripts"),
-		"authors",
-		authors,
-		"documenters",
-		documenters,
-		"translator-credits",
-		translators,
-		"website",
-		"http://live.gnome.org/Zenity",
-		"logo",
-		logo,
-		"wrap-license",
-		TRUE,
-		"license",
-		license_trans,
+  dialog = gtk_about_dialog_new ();
+
+  g_object_set (G_OBJECT (dialog),
+                "name", "Zenity",
+                "version", VERSION,
+                "copyright", "Copyright \xc2\xa9 2003 Sun Microsystems",
+                "comments", _("Display dialog boxes from shell scripts"),
+		"authors", authors,
+                "documenters", documenters,
+                "translator-credits", translators,
+                "website", "http://live.gnome.org/Zenity",
+                "logo", logo,
+                "wrap-license", TRUE,
+                "license", license_trans,
 		NULL);
+ 
+  g_free (license_trans);
 
-	g_free (license_trans);
+  zenity_util_set_window_icon (dialog, NULL, ZENITY_IMAGE_FULLPATH ("zenity.png"));
 
-	zenity_util_set_window_icon (
-		dialog, NULL, ZENITY_IMAGE_FULLPATH ("zenity.png"));
+  help_button = gtk_button_new_from_stock (GTK_STOCK_HELP);
+  
+  g_signal_connect (G_OBJECT (help_button), "clicked",
+                    G_CALLBACK (zenity_about_display_help), data);
+  
+  gtk_widget_show (help_button);
+  
+  gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))),
+                    help_button, FALSE, TRUE, 0);
+  gtk_button_box_set_child_secondary (GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), 
+                                      help_button, TRUE);
 
-	g_signal_connect (G_OBJECT (dialog),
-		"response",
-		G_CALLBACK (zenity_about_dialog_response),
-		data);
+  g_signal_connect (G_OBJECT (dialog), "response",
+                    G_CALLBACK (zenity_about_dialog_response), data);
 
 #if 0
   g_signal_connect (G_OBJECT (dialog), "key_press_event",
                     G_CALLBACK (zenity_zen_wisdom), NULL);
 #endif
 
-	zenity_util_show_dialog (dialog, data->attach);
-	gtk_main ();
+  zenity_util_show_dialog (dialog);
+  gtk_main ();
 }
 
 static void
-zenity_about_dialog_response (GtkWidget *widget, int response, gpointer data) {
-	ZenityData *zen_data = data;
+zenity_about_dialog_response (GtkWidget *widget, int response, gpointer data)
+{
+  ZenityData *zen_data = data;
 
-	switch (response) {
-		case GTK_RESPONSE_CLOSE:
-			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_OK);
-			break;
+  switch (response) {
+    case GTK_RESPONSE_CLOSE:
+      zen_data->exit_code = zenity_util_return_exit_code (ZENITY_OK);
+      break;
 
-		default:
-			/* Esc dialog */
-			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_ESC);
-			break;
-	}
+    default:
+      /* Esc dialog */
+      zen_data->exit_code = zenity_util_return_exit_code (ZENITY_ESC);
+      break;
+  }
 
-	gtk_main_quit ();
+  gtk_main_quit ();
+}
+
+static void
+zenity_about_display_help (GtkWidget *widget, gpointer data)
+{
+  zenity_util_show_help (NULL);
 }

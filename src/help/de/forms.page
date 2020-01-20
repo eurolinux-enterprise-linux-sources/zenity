@@ -50,7 +50,7 @@
 
       <item>
         <title><cmd>--forms-date-format</cmd>=<var>MUSTER</var></title>
-	<p>Damit legen Sie das Format fest, das vom Kalenderdialog nach der Auswahl des Datums zurückgegeben wird. Format muss ein Format sein, das von der <cmd>strftime</cmd>-Funktion unterstützt wird, zum Beispiel <var>%A %d/%m/%y</var>.</p>
+	<p>Damit legen Sie das Format fest, das vom Kalenderdialog nach der Auswahl des Datums zurückgegeben wird. Format muss ein Format sein, das von der <command>strftime</command>-Funktion unterstützt wird, zum Beispiel <var>%A %d/%m/%y</var>.</p>
       </item>
 
     </terms>
@@ -80,7 +80,7 @@ case $? in
 esac
 </code>
 
-    <figure>
+    <figure id="zenity-forms-screenshot">
       <title>Beispiel für einen Formulardialog</title>
       <desc>Beispiel für einen Formulardialog in <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-forms-screenshot.png"/>

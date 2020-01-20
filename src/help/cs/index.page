@@ -19,16 +19,10 @@
    <p>GNU Free Documentation License (GFDL)</p>
   </license>
    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
-
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2013</mal:years>
-    </mal:credit>
-  </info>
+</info>
 <title>Příručka k aplikaci Zenity</title>
 <!--links type="topic" groups="dialogs" /-->
 <section id="dialogs" style="2column">
-  <title>Dialogová okna</title>
+  <title>Dialogs</title>
 </section>
 </page>

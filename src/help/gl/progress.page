@@ -70,7 +70,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-progress-screenshot">
       <title>Exemplo de diálogo de progreso</title>
       <desc><app>Zenity</app> progress dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-progress-screenshot.png"/>

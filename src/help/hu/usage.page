@@ -7,7 +7,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Kelemen Gábor</mal:name>
       <mal:email>kelemeng at gnome dot hu</mal:email>
-      <mal:years>2012, 2014.</mal:years>
+      <mal:years>2012.</mal:years>
     </mal:credit>
   </info>
 <title>Használat</title>
@@ -44,15 +44,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>Kilépési kód</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>Leírás</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
@@ -60,7 +60,7 @@
               <p>A felhasználó megnyomta az <gui style="button">OK</gui> vagy a <gui style="button">Bezárás</gui> gombot.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
@@ -68,7 +68,7 @@
               <p>A felhasználó megnyomta a <gui style="button">Mégse</gui> gombot, vagy az ablakvezérlő elemekkel bezárta az ablakot.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -76,7 +76,7 @@
               <p>Váratlan hiba történt.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>

@@ -2,9 +2,16 @@
 <page xmlns="http://projectmallard.org/1.0/" type="guide" id="message" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs" group="message"/>
-    <desc><link xref="error">Fejl</link>, <link xref="info">Info</link>, <link xref="question">Spørgsmål</link>, <link xref="warning">Advarsel</link></desc>
+    <desc>
+      <link xref="error">Error</link>,
+      <link xref="info">Info</link>,
+      <link xref="question">Question</link>,
+      <link xref="warning">Warning</link>
+    </desc>
   </info>
-  <title>Meddelelsesdialog</title>
-  <p>For hver type, kan du bruge tilvalget <cmd>--text</cmd> til at angive den tekst, der vises i dialogen.</p>
+  <title>Message Dialog</title>
+  <p>
+For each type, use the <cmd>--text</cmd> option to specify the text that is displayed in the dialog.
+  </p>
   <links type="topic" style="2column"/>
 </page>

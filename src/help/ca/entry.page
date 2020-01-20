@@ -46,7 +46,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-entry-screenshot">
       <title>Exemple de diàleg d'entrada de text</title>
       <desc><app>Zenity</app> text entry dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

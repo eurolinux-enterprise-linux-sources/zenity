@@ -1,4 +1,4 @@
-AC_INIT([Zenity],[3.28.1],[https://bugzilla.gnome.org/enter_bug.cgi?product=zenity],[zenity])
+AC_INIT([Zenity],[3.8.0],[http://bugzilla.gnome.org/enter_bug.cgi?product=zenity],[zenity])
 
 AC_PREREQ([2.63])
 
@@ -6,7 +6,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_MACRO_DIR([m4])
 
-AM_INIT_AUTOMAKE([1.10 foreign no-dist-gzip dist-xz])
+AM_INIT_AUTOMAKE([1.10 foreign dist-bzip2 no-dist-gzip])
 AM_MAINTAINER_MODE([enable])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
@@ -80,7 +80,7 @@ fi
 # webkit check
 # *******************************
 
-WEBKITGTK_REQUIRED=2.8.1
+WEBKITGTK_REQUIRED=1.4.0
 
 AC_ARG_ENABLE([webkitgtk],
               [AS_HELP_STRING([--enable-webkitgtk],
@@ -89,7 +89,7 @@ AC_ARG_ENABLE([webkitgtk],
               [enable_webkitgtk=yes])
 
 if test x$enable_webkitgtk = xyes; then
-        PKG_CHECK_MODULES([WEBKIT], [webkit2gtk-4.0 >= $WEBKITGTK_REQUIRED],
+        PKG_CHECK_MODULES([WEBKIT], [webkitgtk-3.0 >= $WEBKITGTK_REQUIRED],
                           [HAVE_WEBKITGTK="yes"],[HAVE_WEBKITGTK="no"])
         AC_SUBST([WEBKIT_CFLAGS])
         AC_SUBST([WEBKIT_LIBS])
@@ -108,12 +108,13 @@ GNOME_COMPILE_WARNINGS([maximum])
 # *******************************
 # Internationalization
 # ******************************* 
-AM_GNU_GETTEXT_VERSION([0.19.4])
-AM_GNU_GETTEXT([external])
+IT_PROG_INTLTOOL([0.40.0])
 
 GETTEXT_PACKAGE=zenity
 AC_SUBST([GETTEXT_PACKAGE])
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext domain])
+
+AM_GLIB_GNU_GETTEXT
 
 # *******************************
 # User manual

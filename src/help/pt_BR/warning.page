@@ -2,35 +2,28 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="warning" xml:lang="pt-BR">
   <info>
     <link type="guide" xref="message"/>
-    <desc>Use a opção <cmd>--warning</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rodolfo Ribeiro Gomes</mal:name>
-      <mal:email>rodolforg@gmail.com</mal:email>
-      <mal:years>2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Rafael Fontenelle</mal:name>
-      <mal:email>rafaelff@gnome.org</mal:email>
-      <mal:years>2017</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--warning</cmd> option.</desc>
   </info>
   <title>Diálogo de aviso</title>
-      <p>Use a opção <cmd>--warning</cmd> para criar um diálogo de aviso.</p>
+      <p>
+          Use the <cmd>--warning</cmd> option to create a warning dialog.
+      </p>
 
-      <p>O script de exemplo a seguir mostra como criar um diálogo de aviso:</p>
+      <p>
+        The following example script shows how to create a warning dialog:
+      </p>
 
 <code>
 #!/bin/bash
 
 zenity --warning \
---text="Desconecte o cabo de energia para evitar choque elétrico."
+--text="Disconnect the power cable to avoid electrical shock."
 </code>
 
-      <figure>
+
+      <figure id="zenity-warning-screenshot">
         <title>Exemplo de diálogo de aviso</title>
-	<desc>Exemplo de diálogo de aviso do <app>Zenity</app></desc>
+	<desc><app>Zenity</app> warning dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>
       </figure>
 </page>

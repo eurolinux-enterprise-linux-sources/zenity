@@ -44,15 +44,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>Código de saída</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>Descrición</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
@@ -60,7 +60,7 @@
               <p>O usuario premeu <gui style="button">Aceptar</gui> ou <gui style="button">Pechar</gui>.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
@@ -68,7 +68,7 @@
               <p>O usuario presionou <gui style="button">Cancelar</gui>, ou usou a función da xanela para pechar o diálogo.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -76,7 +76,7 @@
               <p>Produciuse un erro inesperado.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>

@@ -2,35 +2,28 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="warning" xml:lang="sv">
   <info>
     <link type="guide" xref="message"/>
-    <desc>Använd flaggan <cmd>--warning</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--warning</cmd> option.</desc>
   </info>
   <title>Varningsdialog</title>
-      <p>Använd flaggan <cmd>--warning</cmd> för att skapa en varningsdialog.</p>
+      <p>
+          Use the <cmd>--warning</cmd> option to create a warning dialog.
+      </p>
 
-      <p>Följande exempelskript visar hur man skapar en varningsdialog:</p>
+      <p>
+        The following example script shows how to create a warning dialog:
+      </p>
 
 <code>
 #!/bin/bash
 
 zenity --warning \
---text="Koppla från strömkabeln för att undvika elektriska stötar."
+--text="Disconnect the power cable to avoid electrical shock."
 </code>
 
-      <figure>
+
+      <figure id="zenity-warning-screenshot">
         <title>Exempel på varningsdialog</title>
-	<desc><app>Zenity</app>-exempel på varningsdialog</desc>
+	<desc><app>Zenity</app> warning dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-warning-screenshot.png"/>
       </figure>
 </page>

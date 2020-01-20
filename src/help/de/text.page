@@ -60,7 +60,7 @@
 <code>
 #!/bin/sh
 
-# Sie müssen die Datei »COPYING« in denselben Ordner wie dieses Skript ablegen.
+# Sie müssen die Datei »COPYING« in den selben Ordner wie dieses Skript ablegen.
 FILE=`dirname $0`/COPYING
 
 zenity --text-info \
@@ -82,7 +82,7 @@ case $? in
 esac
 </code>
 
-    <figure>
+    <figure id="zenity-text-screenshot">
       <title>Beispiel für einen Text-Informationsdialog</title>
       <desc>Beispiel für einen Textinformationsdialog in <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-text-screenshot.png"/>

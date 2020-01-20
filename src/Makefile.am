@@ -1,5 +1,4 @@
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
-INCLUDES = src
 
 SUBDIRS = \
 	src	\
@@ -9,13 +8,19 @@ SUBDIRS = \
 
 EXTRA_DIST = \
 	autogen.sh		\
-	config.rpath		\
 	COPYING			\
 	HACKING			\
 	ChangeLog		\
 	NEWS			\
 	README			\
 	AUTHORS
+
+DISTCLEANFILES =                \
+	intltool-extract        \
+	intltool-merge          \
+	intltool-update
+
+DISTCHECK_CONFIGURE_FLAGS = --disable-scrollkeeper
 
 dist-hook:
 	@if test -d "$(srcdir)/.git"; \

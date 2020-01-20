@@ -2,67 +2,77 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="usage" xml:lang="da">
 <info>
   <link type="guide" xref="index"/>
-  <desc>Du kan bruge <app>Zenity</app> til at oprette simple dialoger, der interagerer grafisk med brugeren.</desc>
+  <desc>You can use <app>Zenity</app> to create simple dialogs that interact graphically with the user.</desc>
 </info>
 <title>Brug</title>
-    <p>Når du skriver et script, kan du bruge <app>Zenity</app> til at oprette simple dialoger, der interagerer grafisk med brugeren på følgende vis:</p>
+    <p>
+	When you write scripts, you can use <app>Zenity</app> to create simple dialogs that interact graphically with the user, as follows:
+    </p>
     <list>
       <item>
-        <p>Du kan oprette en dialog for at indhente information fra brugeren. For eksempel kan du bede brugeren om at vælge en dato fra en kalenderdialog, eller om at vælge en fil fra en filvælger.</p>
+        <p>Du kan oprette et dialogvindue for at indhente information fra brugeren. For eksempel kan du bede brugeren om at vælge en dato fra et kalendervindue, eller om at vælge en fil fra en filvælger.</p>
       </item>
       <item>
-        <p>Du kan oprette en dialog for at vise information til brugeren. For eksempel kan du bruge en statusbjælke til at angive status for en handling, eller vise en advarsel til brugeren.</p>
+        <p>Du kan oprette et dialogvindue for at vise information til brugeren. For eksempel kan du bruge en statusbjælke til at angive status for en operation, eller vise en advarsel til brugeren.</p>
       </item>
     </list>
-    <p>Når brugeren lukker dialogen, vil <app>Zenity</app> udskrive teksten, der blev produceret af dialogen, til standardoutput.</p>
+    <p>
+	When the user closes the dialog, <app>Zenity</app> prints the text produced by the dialog to standard output.
+    </p>
 
     <note>
-      <p>Når du skriver <app>Zenity</app>-kommandoer, så sikr dig, at du skriver anførselstegn omkring hvert argument.</p>
-      <p>Brug for eksempel:</p>
-      <screen>zenity --calendar --title="Plan for ferie"</screen>
-      <p>Brug ikke:</p>
-      <screen>zenity --calendar --title=Plan for ferie</screen>
+      <p>
+        When you write <app>Zenity</app> commands, ensure that you place quotation marks around each argument. 
+      </p>
+      <p>For example, use:</p>
+      <screen>zenity --calendar --title="Holiday Planner"</screen>
+      <p>Do not use:</p>
+      <screen>zenity --calendar --title=Holiday Planner</screen>
       <p>Hvis du ikke bruger anførselstegn, kan du få uventede resultater.</p>
     </note>
 
     <section id="zenity-usage-mnemonics">
       <title>Genvejstaster</title>
-	<p>En genvejstast er en tast, der lader dig foretage en handling ved hjælp af tastaturet, frem for at bruge musen til at vælge en kommando fra en menu eller en dialog. Hver genvejstast markeres ved et understreget tegn i en menu eller ved et dialogvalgmulighed.</p>
-	<p>Visse <app>Zenity</app>-dialoger understøtter genvejstaster. Genvejstaster angives ved at placere en bundstreg umiddelbart før det tegn, der svarer til genvejstasten, i dialogteksten. Følgende eksempel viser hvordan man angiver bogstavet “V” som genvejstast:</p>
-	<screen><input>"_Vælg et navn".</input></screen>
+	<p>En genvejstast er en tast, der lader dig foretage en handling ved hjælp af tastaturet, frem for at bruge musen til at vælge en kommando fra en menu eller et dialogvindue. Hver genvejstast markeres ved et understreget tegn i en menu eller ved et dialogvalgmulighed.</p>
+	<p>
+          Some <app>Zenity</app> dialogs support the use of access keys. To specify the character to use as the access key, place an underscore before that character in the text of the dialog. The following example shows how to specify the letter 'C' as the access key:
+	</p>
+	<screen><input>"_Choose a name".</input></screen>
     </section>
 
     <section id="zenity-usage-exitcodes">
       <title>Afslutningskoder</title>
-    <p>Zenity returnerer følgende afslutningskoder:</p>
+    <p>
+        Zenity returns the following exit codes:
+    </p>
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>Afslutningskode</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>Beskrivelse</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
             <td>
-              <p>Brugeren har trykket enten <gui style="button">OK</gui> eller <gui style="button">Luk</gui>.</p>
+              <p>The user has pressed either <gui style="button">OK</gui> or <gui style="button">Close</gui>.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
             <td>
-              <p>Brugeren har trykket enten <gui style="button">Annullér</gui> eller brugt vinduesfunktionerne til at lukke dialogen.</p>
+              <p>The user has either pressed <gui style="button">Cancel</gui>, or used the window functions to close the dialog.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -70,12 +80,12 @@
               <p>Der opstod en uventet fejl.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>
             <td>
-              <p>Dialogen er blevet lukket, fordi tiden er løbet ud.</p>
+              <p>Dialogvinduet er blevet lukket, fordi tiden er løbet ud.</p>
             </td>
           </tr>
         </tbody>
@@ -89,33 +99,35 @@
   <section id="zenity-usage-general-options">
     <title>Generelle tilvalg</title>
 
-    <p>Alle Zenity-dialoger understøtter følgende generelle tilvalg:</p>
+    <p>
+	All Zenity dialogs support the following general options:
+    </p>
 
     <terms>
 
       <item>
-        <title><cmd>--title</cmd>=<var>titel</var></title>
-	<p>Angiver titlen på en dialog.</p>
+        <title><cmd>--title</cmd>=<var>title</var></title>
+	<p>Angiver titel på et dialogvindue.</p>
       </item>
 
       <item>
-        <title><cmd>--window-icon</cmd>=<var>ikonsti</var></title>
-	<p>Angiver det ikon, der skal vises i dialogens ramme. Der er fire standardikoner, der kan bruges ved at angive følgende nøgleord: "info", "warning", "question" eller "error".</p>
+        <title><cmd>--window-icon</cmd>=<var>icon_path</var></title>
+	<p>Angiver det ikon, der skal vises i dialogvinduets ramme. Der er fire standardikoner, der kan bruges ved at angive følgende nøgleord: "info", "warning", "question" eller "error".</p>
       </item>
 
       <item>
-        <title><cmd>--width</cmd>=<var>bredde</var></title>
-	<p>Angiver dialogens bredde.</p>
+        <title><cmd>--width</cmd>=<var>width</var></title>
+	<p>Angiver dialogvinduets bredde.</p>
       </item>
 
       <item>
-        <title><cmd>--height</cmd>=<var>højde</var></title>
-	<p>Angiver dialogens højde.</p>
+        <title><cmd>--height</cmd>=<var>height</var></title>
+	<p>Angiver dialogvinduets højde.</p>
       </item>
 
       <item>
-        <title><cmd>--timeout</cmd>=<var>ventetid</var></title>
-	<p>Angiver ventetiden i sekunder, hvorefter dialogen lukkes.</p>
+        <title><cmd>--timeout</cmd>=<var>timeout</var></title>
+	<p>Angiver tidsudløbet i sekunder, hvorefter dialogvinduet lukkes.</p>
       </item>
 
     </terms>
@@ -127,7 +139,9 @@
   <section id="zenity-help-options">
     <title>Hjælpetilvalg</title>
 
-    <p>Zenity stiller følgende hjælpetilvalg til rådighed:</p>
+    <p>
+	Zenity provides the following help options:
+    </p>
 
     <terms>
 
@@ -138,72 +152,72 @@
 
       <item>
         <title><cmd>--help-all</cmd></title>
-	<p>Viser den fulde hjælpetekst for alle dialoger.</p>
+	<p>Viser den fulde hjælpetekst for alle dialogvinduer.</p>
       </item>
  
       <item>
         <title><cmd>--help-general</cmd></title>
-	<p>Viser hjælpetekst for generelle tilvalg til dialoger.</p>
+	<p>Viser hjælpetekst til de generelle dialogtilvalg.</p>
       </item>
  
       <item>
         <title><cmd>--help-calendar</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til kalenderdialog.</p>
+	<p>Viser hjælpetekst for kalenderdialogvinduets tilvalg.</p>
       </item>
  
       <item>
         <title><cmd>--help-entry</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til tekstfeltdialog.</p>
+	<p>Viser hjælpetekst for tilvalg til tekstindtastningsfelter.</p>
       </item>
  
       <item>
         <title><cmd>--help-error</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til dialoger med fejlmeddelelser.</p>
+	<p>Viser hjælpetekst for tilvalg til dialogvinduer med fejlmeddelelser.</p>
       </item>
  
       <item>
         <title><cmd>--help-info</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til informationsdialog.</p>
+	<p>Viser hjælpetekst for tilvalg til dialogvinduer med informationsmeddelelser.</p>
       </item>
  
       <item>
         <title><cmd>--help-file-selection</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til filvælgerdialog.</p>
+	<p>Viser hjælpetekst til filvælgerdialogvinduer.</p>
       </item>
  
       <item>
         <title><cmd>--help-list</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til listedialog.</p>
+	<p>Viser hjælpetekst til listedialogvinduer.</p>
       </item>
  
       <item>
         <title><cmd>--help-notification</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til påmindelsesikon.</p>
+	<p>Viser hjælpetekst til påmindelsesikoner.</p>
       </item>
  
       <item>
         <title><cmd>--help-progress</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til statusbjælkedialog.</p>
+	<p>Viser hjælpetekst til statusbjælkedialogvinduer.</p>
       </item>
  
       <item>
         <title><cmd>--help-question</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til spørgsmålsdialog.</p>
+	<p>Viser hjælpetekst til spørgsmålsdialogvinduer.</p>
       </item>
  
       <item>
         <title><cmd>--help-warning</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til advarselsdialog.</p>
+	<p>Viser hjælpetekst til advarselsdialogvinduer.</p>
       </item>
  
       <item>
 	<title><cmd>--help-text-info</cmd></title>
-	<p>Viser hjælpetekst for tilvalg til tekstinformationsdialog.</p>
+	<p>Viser hjælpetekst til informationsdialogvinduer.</p>
       </item>
  
       <item>
         <title><cmd>--help-misc</cmd></title>
-	<p>Viser hjælpetekst for diverse tilvalg.</p>
+	<p>Viser hjælpetekst til diverse tilvalg.</p>
       </item>
  
       <item>
@@ -220,18 +234,20 @@
   <section id="zenity-miscellaneous-options">
     <title>Diverse tilvalg</title>
 
-    <p>Zenity stiller yderligere følgende "diverse" tilvalg til rådighed:</p>
+    <p>
+	Zenity also provides the following miscellaneous options:
+    </p>
 
     <terms>
 
       <item>
         <title><cmd>--about</cmd></title>
-	<p>Viser dialogen <gui>Om Zenity</gui>, som indeholder versionsinformation, ophavsretsinformation samt udviklerinformation om Zenity.</p>
+	<p>Displays the <gui>About Zenity</gui> dialog, which contains Zenity version information, copyright information, and developer information.</p>
       </item>
 
       <item>
         <title><cmd>--version</cmd></title>
-	<p>Viser versionsnummeret for Zenity.</p>
+	<p>Displays the version number of Zenity.</p>
       </item>
 
     </terms>
@@ -243,7 +259,9 @@
   <section id="zenity-gtk-options">
     <title>GTK+-tilvalg</title>
 
-    <p>Zenity understøtter standard-GTK+-tilvalgene. Kør kommandoen <cmd>zenity --help-gtk</cmd> for at få yderligere information om GTK+-tilvalg.</p>
+    <p>
+	Zenity supports the standard GTK+ options. For more information about the GTK+ options, execute the <cmd>zenity --help-gtk</cmd> command.
+    </p>
 
   </section>
 
@@ -252,7 +270,11 @@
   <section id="zenity-environment-variables">
     <title>Miljøvariable</title>
 
-    <p>Normalt vil Zenity detektere terminalvinduet, hvorfra det er blevet kørt, og holde sit eget vindue over dette vindue. Denne opførsel kan slås fra ved at nulstille miljøvariablen <var>WINDOWID</var>.</p>
+    <p>
+      Normally, Zenity detects the terminal window from which it was launched
+      and keeps itself above that window.  This behavior can be disabled by
+      unsetting the <var>WINDOWID</var> environment variable.
+    </p>
 
   </section>
 </page>

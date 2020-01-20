@@ -48,15 +48,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>Код завершення</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>Опис</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
@@ -64,7 +64,7 @@
               <p>The user has pressed either <gui style="button">OK</gui> or <gui style="button">Close</gui>.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
@@ -72,7 +72,7 @@
               <p>The user has either pressed <gui style="button">Cancel</gui>, or used the window functions to close the dialog.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -80,7 +80,7 @@
               <p>Несподівана помилка.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>

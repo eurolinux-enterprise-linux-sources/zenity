@@ -2,33 +2,33 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="color-selection" xml:lang="cs">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Použití přepínače <cmd>--color-selection</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Marek Černocký</mal:name>
-      <mal:email>marek@manet.cz</mal:email>
-      <mal:years>2009, 2010, 2013</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--color-selection</cmd> option.</desc>
   </info>
-  <title>Dialogové okno pro výběr barvy</title>
-  <p>K vytvoření dialogového okna pro výběr barvy použijte přepínač <cmd>--color-selection</cmd>.</p>
-  <p>Dialogové okno pro výběr barvy podporuje následující přepínače:</p>
+  <title>Color Selection Dialog</title>
+  <p>
+    Use the <cmd>--color-selection</cmd> option to create a color selection dialog. 
+  </p>
+  <p>
+    The color selection dialog supports the following options:
+  </p>
 
   <terms>
 
     <item>
-      <title><cmd>--color</cmd>=<var>HODNOTA</var></title>
-      <p>Nastaví počáteční barvu. (např. #FF0000)</p>
+      <title><cmd>--color</cmd>=<var>VALUE</var></title>
+      <p>Set the initial color.(ex: #FF0000)</p>
     </item>
 
     <item>
       <title><cmd>--show-palette</cmd></title>
-      <p>Bude zobrazovat paletu.</p>
+      <p>Show the palette.</p>
     </item>
 
   </terms>
 
-  <p>Následující příklad skriptu ukazuje, jak vytvořit dialogové okno pro výběr barvy:</p>
+  <p>
+    The following example script shows how to create a color selection dialog:
+  </p>
 
 <code>
 #!/bin/sh
@@ -37,17 +37,17 @@ COLOR=`zenity --color-selection --show-palette`
 
 case $? in
          0)
-		echo "Vybrali jste $COLOR.";;
+		echo "You selected $COLOR.";;
          1)
-                echo "Není vybrána žádná barva.";;
+                echo "No color selected.";;
         -1)
-                echo "Vyskytla se neočekávaná chyba.";;
+                echo "An unexpected error has occurred.";;
 esac
 </code>
 
-  <figure>
-    <title>Příklad dialogového okna pro výběr barvy</title>
-    <desc>Ukázka dialogového okna <app>Zenity</app> pro výběr barvy</desc>
+  <figure id="zenity-colorselection-screenshot">
+    <title>Color Selection Dialog Example</title>
+    <desc><app>Zenity</app> color selection dialog example</desc>
     <media type="image" mime="image/png" src="figures/zenity-colorselection-screenshot.png"/>
   </figure>
 

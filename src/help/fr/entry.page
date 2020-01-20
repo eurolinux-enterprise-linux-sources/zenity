@@ -72,7 +72,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-entry-screenshot">
       <title>Exemple de boîte de dialogue de saisie</title>
       <desc>Exemple de boîte de dialogue de saisie <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

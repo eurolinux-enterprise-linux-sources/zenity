@@ -2,77 +2,81 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="text" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Brug tilvalget <cmd>--text-info</cmd>.</desc>
+    <desc>Use the <cmd>--text-info</cmd> option.</desc>
   </info>
-  <title>Tekstinformationsdialog</title>
-    <p>Brug tilvalget <cmd>--text-info</cmd> til at oprette en dialog med tekstinformationstekst.</p>
+  <title>Tekstinformationsdialogvindue</title>
+    <p>
+	Use the <cmd>--text-info</cmd> option to create a text information dialog. 
+    </p>
 	
-    <p>Tekstinformationsdialogen understøtter følgende tilvalg:</p>
+    <p>Tekstinformationsdialogvinduet understøtter følgende tilvalg:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--filename</cmd>=<var>filnavn</var></title>
-	<p>Angiver en fil, der indlæses i tekstinformationsdialogen.</p>
+        <title><cmd>--filename</cmd>=<var>filename</var></title>
+	<p>Angiver en fil, der indlæses i tekstinformationsdialogvinduet.</p>
       </item>
 
       <item>
         <title><cmd>--editable</cmd></title>
-        <p>Tillader redigering af den viste tekst. Den redigerede tekst returneres til standardoutput, når dialogen lukkes.</p>
+        <p>Tillader redigering af den viste tekst. Den redigerede tekst returneres til standard output, når dialogvinduet lukkes.</p>
       </item>
 
       <item>
-        <title><cmd>--font</cmd>=<var>SKRIFTTYPE</var></title>
-	<p>Angiver skrifttypen for teksten.</p>
+        <title><cmd>--font</cmd>=<var>FONT</var></title>
+	<p>Specifies the text font.</p>
       </item>
 
       <item>
-        <title><cmd>--checkbox</cmd>=<var>TEKST</var></title>
-	<p>Aktivér et afkrydsningsfelt til brug, såsom “Jeg har læst og accepterer vilkårene”.</p>
+        <title><cmd>--checkbox</cmd>=<var>TEXT</var></title>
+	<p>Enable a checkbox for use like a 'I read and accept the terms.'</p>
       </item>
 
       <item>
         <title><cmd>--html</cmd></title>
-        <p>Aktivér understøttelse af html.</p>
+        <p>Enable html support.</p>
       </item>
 
       <item>
         <title><cmd>--url</cmd>=<var>URL</var></title>
-	<p>Angiver en URL i stedet for en fil. Fungerer kun hvis du bruger tilvalget --html.</p>
+	<p>Sets an url instead of a file. Only works if you use --html option.</p>
       </item>
 
     </terms>
 
-    <p>Følgende eksempelscript viser, hvordan man opretter en tekstinformationsdialog:</p>
+    <p>
+      The following example script shows how to create a text information dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
-# Du skal placere filen “COPYING” i samme mappe som dette script.
+# You must place file "COPYING" in same folder of this script.
 FILE=`dirname $0`/COPYING
 
 zenity --text-info \
-       --title="Licens" \
+       --title="License" \
        --filename=$FILE \
-       --checkbox="Jeg har læst og accepterer vilkårene."
+       --checkbox="I read and accept the terms."
 
 case $? in
     0)
-        echo "Start installationen!"
+        echo "Start installation!"
 	# next step
 	;;
     1)
-        echo "Stop installationen!"
+        echo "Stop installation!"
 	;;
     -1)
-        echo "Der opstod en uventet fejl."
+        echo "An unexpected error has occurred."
 	;;
 esac
 </code>
 
-    <figure>
-      <title>Eksempel på tekstinformationsdialog</title>
-      <desc>Eksempel på tekstinformationsdialog til <app>Zenity</app></desc>
+    <figure id="zenity-text-screenshot">
+      <title>Eksempel på dialogvindue med tekstinformation</title>
+      <desc><app>Zenity</app> text information dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-text-screenshot.png"/>
     </figure>
 </page>

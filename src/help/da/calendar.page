@@ -2,60 +2,64 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="calendar" xml:lang="da">
   <info>
     <link type="guide" xref="index#dialogs"/>
-    <desc>Brug tilvalget <cmd>--calendar</cmd>.</desc>
+    <desc>Use the <cmd>--calendar</cmd> option.</desc>
   </info>
-  <title>Kalenderdialog</title>
-    <p>Brug <cmd>--calendar</cmd>-tilvalget til at oprette en kalenderdialog. Zenity returnerer den valgte dato til standardoutput. Hvis ingen dato angives på kommandolinjen, bruger dialogen den aktuelle dato.</p>
-    <p>Kalenderdialogen understøtter følgende tilvalg:</p>
+  <title>Kalenderdialogvindue</title>
+    <p>
+        Use the <cmd>--calendar</cmd> option to create a calendar dialog. Zenity returns the selected date to standard output. If no date is specified on the command line, the dialog uses the current date.
+    </p>
+    <p>Kalenderdialogvinduet understøtter følgende tilvalg:</p>
 
     <terms>
 
       <item>
-        <title><cmd>--text</cmd>=<var>tekst</var></title>
-	<p>Angiver teksten, der vises i kalenderdialogen.</p>
+        <title><cmd>--text</cmd>=<var>text</var></title>
+	<p>Angiver teksten, der vises i kalenderdialogvinduet.</p>
       </item>
      	
       <item>
-        <title><cmd>--day</cmd>=<var>dag</var></title>
-	<p>Angiver den dag, der markeres i kalenderdialogen. dag skal være et tal mellem 1 og 31 inklusive.</p>
+        <title><cmd>--day</cmd>=<var>day</var></title>
+	<p>Specifies the day that is selected in the calendar dialog. day must be a number between 1 and 31 inclusive.</p>
       </item>
 
       <item>
-        <title><cmd>--month</cmd>=<var>måned</var></title>
-	<p>Angiver måneden, der markeres i kalenderdialogen. måned skal være et tal mellem 1 og 12 inklusive.</p>
+        <title><cmd>--month</cmd>=<var>month</var></title>
+	<p>Specifies the month that is selected in the calendar dialog. month must be a number between 1 and 12 inclusive.</p>
       </item>
 
       <item>
-        <title><cmd>--year</cmd>=<var>år</var></title>
-	<p>Angiver året, der markeres i kalenderdialogen.</p>
+        <title><cmd>--year</cmd>=<var>year</var></title>
+	<p>Angiver året, der markeres i kalenderdialogvinduet.</p>
       </item>
 
       <item>
         <title><cmd>--date-format</cmd>=<var>format</var></title>
-	<p>Angiver formatet, der returneres fra kalenderdialogen efter datoen er blevet valgt. Standardformatet afhænger af regionaldata. format skal være et format, som accepteres af <cmd>strftime</cmd>-funktionen, såsom <var>%A %d/%m/%y</var>.</p>
+	<p>Specifies the format that is returned from the calendar dialog after date selection. The default format depends on your locale. Format must be a format that is acceptable to the <cmd>strftime</cmd> function, for example <var>%A %d/%m/%y</var>.</p>
       </item>
 
     </terms>
 
-    <p>Følgende eksempelscript viser, hvordan man opretter en kalenderdialog:</p>
+    <p>
+      The following example script shows how to create a calendar dialog:
+    </p>
 
 <code>
 #!/bin/sh
 
 
 if zenity --calendar \
---title="Vælg en dato" \
---text="Klik på den dato, du vil vælge." \
+--title="Select a Date" \
+--text="Click on a date to select that date." \
 --day=10 --month=8 --year=2004
   then echo $?
-  else echo "Ingen dato valgt"
+  else echo "No date selected"
 fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-calendar-screenshot">
       <title>Eksempel på kalenderdialog</title>
-      <desc>Eksempel på kalenderdialog til Zenity</desc>
+      <desc>Zenity calendar dialog example</desc>
       <media type="image" mime="image/png" src="figures/zenity-calendar-screenshot.png"/>
    </figure>
 </page>

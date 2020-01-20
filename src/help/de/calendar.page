@@ -17,7 +17,7 @@
     </mal:credit>
   </info>
   <title>Kalenderdialog</title>
-    <p>Benutzen Sie die Option <cmd>--calendar</cmd> zur Erzeugung eines Kalenderdialogs. Zenity gibt das gewählte Datum an die Standardausgabe zurück. Wenn kein Datum auf der Befehlszeile angegeben wird, verwendet der Dialog das aktuelle Datum.</p>
+    <p>Benutzen Sie die Option <cmd>--calendar</cmd> zur Erzeugung eines Kalenderdialogs. <app>Zenity</app> gibt das gewählte Datum an die Standardausgabe zurück. Wenn kein Datum auf der Befehlszeile angegeben wird, verwendet der Dialog das aktuelle Datum.</p>
     <p>Der Kalenderdialog unterstützt die folgenden Optionen:</p>
 
     <terms>
@@ -65,7 +65,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-calendar-screenshot">
       <title>Beispiel für einen Kalenderdialog</title>
       <desc>Beispiel für einen Kalenderdialog in <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-calendar-screenshot.png"/>

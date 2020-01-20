@@ -5,27 +5,15 @@
   <desc>Όταν γράφετε σενάρια, μπορείτε χρησιμοποιώντας το <app>Zenity</app> να δημιουργήσετε απλούς διαλόγους που αλληλεπιδρούν γραφικά με τον χρήστη, ως εξής:</desc>
 
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
-      <mal:email>team@gnome.gr</mal:email>
-      <mal:years>2009-2014 </mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Στέργιος Προσινικλής</mal:name>
+      <mal:name>  Στέργιος Προσινικλής</mal:name>
       <mal:email>steriosprosiniklis@gmail.com</mal:email>
       <mal:years>2009</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Θάνος Τρυφωνίδης</mal:name>
+      <mal:name>  Θάνος Τρυφωνίδης</mal:name>
       <mal:email>tomtryf@gmail.com</mal:email>
       <mal:years>2012</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Δημήτρης Σπίγγος</mal:name>
-      <mal:email>dmtrs32@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
     </mal:credit>
   </info>
 <title>Χρήση</title>
@@ -62,15 +50,15 @@
 
     <table frame="all" rules="all">
         <thead>
-          <tr>
-            <td>
+          <tr valign="top">
+            <td colname="COLSPEC0">
               <p>Κώδικας εξόδου</p></td>
-            <td>
+            <td colname="COLSPEC1">
               <p>Περιγραφή</p></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>0</var></p>
             </td>
@@ -78,7 +66,7 @@
               <p>Ο χρήστης πάτησε είτε το πλήκτρο <gui style="button">Εντάξει</gui> είτε το πλήκτρο <gui style="button">Κλείσιμο</gui>.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>1</var></p>
             </td>
@@ -86,7 +74,7 @@
               <p>Ο χρήστης είτε πάτησε το πλήκτρο <gui style="button">Ακύρωση</gui>, ή χρησιμοποίησε τις λειτουργίες του παραθύρου για να κλείσει τον διάλογο.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>-1</var></p>
             </td>
@@ -94,7 +82,7 @@
               <p>Συνέβη ένα απρόσμενο σφάλμα.</p>
             </td>
           </tr>
-          <tr>
+          <tr valign="top">
             <td>
               <p><var>5</var></p>
             </td>

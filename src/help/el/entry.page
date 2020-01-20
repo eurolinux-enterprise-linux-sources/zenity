@@ -5,27 +5,15 @@
     <desc>Χρησιμοποιήστε την επιλογή <cmd>--entry</cmd>.</desc>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Ελληνική μεταφραστική ομάδα GNOME</mal:name>
-      <mal:email>team@gnome.gr</mal:email>
-      <mal:years>2009-2014 </mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Στέργιος Προσινικλής</mal:name>
+      <mal:name>  Στέργιος Προσινικλής</mal:name>
       <mal:email>steriosprosiniklis@gmail.com</mal:email>
       <mal:years>2009</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Θάνος Τρυφωνίδης</mal:name>
+      <mal:name>  Θάνος Τρυφωνίδης</mal:name>
       <mal:email>tomtryf@gmail.com</mal:email>
       <mal:years>2012</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Δημήτρης Σπίγγος</mal:name>
-      <mal:email>dmtrs32@gmail.com</mal:email>
-      <mal:years>2014</mal:years>
     </mal:credit>
   </info>
   <title>Διάλογος καταχώρησης κειμένου</title>
@@ -66,7 +54,7 @@ fi
 </code>
 
 
-    <figure>
+    <figure id="zenity-entry-screenshot">
       <title>Παράδειγμα διαλόγου καταχώρησης κειμένου</title>
       <desc>Παράδειγμα διαλόγου καταχώρησης κειμένου του <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-entry-screenshot.png"/>

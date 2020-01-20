@@ -45,7 +45,7 @@ case $? in
 esac
 </code>
 
-  <figure>
+  <figure id="zenity-colorselection-screenshot">
     <title>色選択ダイアログの例</title>
     <desc><app>Zenity</app> 色選択ダイアログの例</desc>
     <media type="image" mime="image/png" src="figures/zenity-colorselection-screenshot.png"/>

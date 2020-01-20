@@ -21,7 +21,7 @@ zenity --info \
 </code>
 
 
-      <figure>
+      <figure id="zenity-information-screenshot">
         <title>Exemple de diàleg d'informació</title>
         <desc><app>Zenity</app> information dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-information-screenshot.png"/>

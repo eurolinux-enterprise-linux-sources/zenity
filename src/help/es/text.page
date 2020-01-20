@@ -7,7 +7,7 @@
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
       <mal:name>Daniel Mustieles</mal:name>
       <mal:email>daniel.mustieles@gmail.com</mal:email>
-      <mal:years>2012-2014</mal:years>
+      <mal:years>2012</mal:years>
     </mal:credit>
   
     <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
@@ -94,7 +94,7 @@ case $? in
 esac
 </code>
 
-    <figure>
+    <figure id="zenity-text-screenshot">
       <title>Ejemplo del diálogo de texto de información</title>
       <desc>Ejemplo del diálogo de texto de información de <app>Zenity</app></desc>
       <media type="image" mime="image/png" src="figures/zenity-text-screenshot.png"/>

@@ -2,29 +2,60 @@
 # Copyright (C) 2012. Free Software Foundation, Inc.
 # This file is distributed under the same license as the zenity package.
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2012, 2014.
-# Balázs Úr <urbalazs@gmail.com>, 2014, 2015.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: zenity_help master\n"
-"POT-Creation-Date: 2015-07-17 12:22+0000\n"
-"PO-Revision-Date: 2015-07-17 16:48+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
-"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"POT-Creation-Date: 2012-08-21 22:17+0000\n"
+"PO-Revision-Date: 2012-09-13 16:10+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#. (itstool) path: para/ulink
-#: C/legal.xml:9
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+#| msgid "translator-credits"
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2012."
+
+#: C/index.page:6(credit/name)
+msgid "Sun Java Desktop System Documentation Team"
+msgstr "Sun Java Desktop System Documentation Team"
+
+#: C/index.page:9(credit/name)
+msgid "Glynn Foster"
+msgstr "Glynn Foster"
+
+#: C/index.page:12(credit/name)
+msgid "Nicholas Curran"
+msgstr "Nicholas Curran"
+
+#: C/index.page:16(credit/name)
+msgid "Yasumichi Akahoshi"
+msgstr "Yasumichi Akahoshi"
+
+#: C/index.page:20(license/p)
+msgid "GNU Free Documentation License (GFDL)"
+msgstr "GNU Free Documentation License (GFDL)"
+
+#: C/index.page:24(page/title)
+msgid "Zenity Manual"
+msgstr "Zenity kézikönyv"
+
+#: C/index.page:27(section/title)
+msgid "Dialogs"
+msgstr "Párbeszédablakok"
+
+#: C/legal.xml:9(para/ulink)
 msgid "link"
 msgstr "hivatkozáson"
 
-#. (itstool) path: legalnotice/para
-#: C/legal.xml:2
+#: C/legal.xml:2(legalnotice/para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -37,11 +68,10 @@ msgstr ""
 "Free Documentation License (GFDL) 1.1-es verziója vagy a Free Software "
 "Foundation által kiadott ennél frissebb verziója alatt, a „Nem változtatható "
 "szakaszok”, „Címlapszövegek” és a „Hátlapszövegek” kivételével. A GFDL "
-"leírása ezen a <_:ulink-1/> érhető el, vagy a jelen dokumentációban "
-"található COPYING-DOCS fájlban."
+"leírása ezen a <_:ulink-1/> érhető el, vagy a jelen dokumentációban található "
+"COPYING-DOCS fájlban."
 
-#. (itstool) path: legalnotice/para
-#: C/legal.xml:12
+#: C/legal.xml:12(legalnotice/para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -53,8 +83,7 @@ msgstr ""
 "terjeszthető, a licenc másolatát mellékelve a 6. fejezetben leírtaknak "
 "megfelelően."
 
-#. (itstool) path: legalnotice/para
-#: C/legal.xml:19
+#: C/legal.xml:19(legalnotice/para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -68,8 +97,7 @@ msgstr ""
 "van a védjegyről, abban az esetben ezek az elnevezések teljes egészében vagy "
 "kezdőbetűik nagybetűsek."
 
-#. (itstool) path: listitem/para
-#: C/legal.xml:35
+#: C/legal.xml:35(listitem/para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -95,8 +123,7 @@ msgstr ""
 "LICENC LÉNYEGI RÉSZE. A LEFEDETT DOKUMENTUM VAGY ANNAK MÓDOSÍTOTT "
 "VERZIÓJÁNAK HASZNÁLATA CSAK A JELEN ELUTASÍTÁSSAL EGYÜTT ENGEDÉLYEZETT, ÉS"
 
-#. (itstool) path: listitem/para
-#: C/legal.xml:55
+#: C/legal.xml:55(listitem/para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -122,8 +149,7 @@ msgstr ""
 "SZEMÉLYI SÉRÜLÉS TÖRTÉNT A FÉL HANYAGSÁGÁBÓL KIFOLYÓLAG, OLYAN MÉRTÉKBEN, "
 "AMENNYIRE AZ ALKALMAZHATÓ TÖRVÉNYEK MEGTILTJÁK AZ ILYEN KORLÁTOZÁSOKAT."
 
-#. (itstool) path: legalnotice/para
-#: C/legal.xml:28
+#: C/legal.xml:28(legalnotice/para)
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -132,17 +158,14 @@ msgstr ""
 "A DOKUMENTUM ÉS A DOKUMENTUM MÓDOSÍTOTT VERZIÓJA A GNU FREE DOCUMENTATION "
 "LICENSE (GFDL) ALATT JELENIK MEG AZ ALÁBBI ÉRTELMEZÉSSEL: <_:orderedlist-1/>"
 
-#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-msgctxt "_"
-msgid "translator-credits"
-msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2012, 2014."
-
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/calendar.page:66
+#: C/calendar.page:66(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-calendar-screenshot.png'; "
+#| "md5=92bf5317d799665acf0d4005cee184c2"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-calendar-screenshot.png' "
@@ -151,18 +174,15 @@ msgstr ""
 "external ref='figures/zenity-calendar-screenshot.png' "
 "md5='92bf5317d799665acf0d4005cee184c2'"
 
-#. (itstool) path: info/desc
-#: C/calendar.page:6
+#: C/calendar.page:6(info/desc)
 msgid "Use the <cmd>--calendar</cmd> option."
 msgstr "A <cmd>--calendar</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/calendar.page:8
+#: C/calendar.page:8(page/title)
 msgid "Calendar Dialog"
 msgstr "Naptár ablak"
 
-#. (itstool) path: page/p
-#: C/calendar.page:9
+#: C/calendar.page:9(page/p)
 msgid ""
 "Use the <cmd>--calendar</cmd> option to create a calendar dialog. Zenity "
 "returns the selected date to standard output. If no date is specified on the "
@@ -172,29 +192,24 @@ msgstr ""
 "A Zenity a kiválasztott dátumot a szabványos kimenetre írja. Ha nincs "
 "megadva dátum a parancssorban, akkor az ablak az aktuális dátumot használja."
 
-#. (itstool) path: page/p
-#: C/calendar.page:12
+#: C/calendar.page:12(page/p)
 msgid "The calendar dialog supports the following options:"
 msgstr "A naptár ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/title
-#: C/calendar.page:19 C/entry.page:19 C/notification.page:13
-#: C/progress.page:24
+#: C/calendar.page:19(item/title) C/entry.page:19(item/title)
+#: C/notification.page:16(item/title) C/progress.page:24(item/title)
 msgid "<cmd>--text</cmd>=<var>text</var>"
 msgstr "<cmd>--text</cmd>=<var>szöveg</var>"
 
-#. (itstool) path: item/p
-#: C/calendar.page:20
+#: C/calendar.page:20(item/p)
 msgid "Specifies the text that is displayed in the calendar dialog."
 msgstr "A naptár ablakban megjelenítendő szöveg megadása."
 
-#. (itstool) path: item/title
-#: C/calendar.page:24
+#: C/calendar.page:24(item/title)
 msgid "<cmd>--day</cmd>=<var>day</var>"
 msgstr "<cmd>--day</cmd>=<var>nap</var>"
 
-#. (itstool) path: item/p
-#: C/calendar.page:25
+#: C/calendar.page:25(item/p)
 msgid ""
 "Specifies the day that is selected in the calendar dialog. day must be a "
 "number between 1 and 31 inclusive."
@@ -202,13 +217,11 @@ msgstr ""
 "Megadja a naptár ablakban kiválasztott napot. A napnak 1 és 31 között kell "
 "lennie, ezeket is beleértve."
 
-#. (itstool) path: item/title
-#: C/calendar.page:29
+#: C/calendar.page:29(item/title)
 msgid "<cmd>--month</cmd>=<var>month</var>"
 msgstr "<cmd>--month</cmd>=<var>hónap</var>"
 
-#. (itstool) path: item/p
-#: C/calendar.page:30
+#: C/calendar.page:30(item/p)
 msgid ""
 "Specifies the month that is selected in the calendar dialog. month must be a "
 "number between 1 and 12 inclusive."
@@ -216,23 +229,19 @@ msgstr ""
 "Megadja a naptár ablakban kiválasztott hónapot. A hónapnak 1 és 12 között "
 "kell lennie, ezeket is beleértve."
 
-#. (itstool) path: item/title
-#: C/calendar.page:34
+#: C/calendar.page:34(item/title)
 msgid "<cmd>--year</cmd>=<var>year</var>"
 msgstr "<cmd>--year</cmd>=<var>év</var>"
 
-#. (itstool) path: item/p
-#: C/calendar.page:35
+#: C/calendar.page:35(item/p)
 msgid "Specifies the year that is selected in the calendar dialog."
 msgstr "Megadja a naptár ablakban kiválasztott évet."
 
-#. (itstool) path: item/title
-#: C/calendar.page:39
+#: C/calendar.page:39(item/title)
 msgid "<cmd>--date-format</cmd>=<var>format</var>"
 msgstr "<cmd>--date-format</cmd>=<var>formátum</var>"
 
-#. (itstool) path: item/p
-#: C/calendar.page:40
+#: C/calendar.page:40(item/p)
 msgid ""
 "Specifies the format that is returned from the calendar dialog after date "
 "selection. The default format depends on your locale. Format must be a "
@@ -244,13 +253,11 @@ msgstr ""
 "az <cmd>strftime</cmd> függvény által elfogadhatónak kell lennie, például: "
 "<var>%A %d/%m/%y</var>."
 
-#. (itstool) path: page/p
-#: C/calendar.page:45
+#: C/calendar.page:45(page/p)
 msgid "The following example script shows how to create a calendar dialog:"
 msgstr "A következő példa parancsfájl bemutatja a naptár ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/calendar.page:49
+#: C/calendar.page:49(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -277,22 +284,22 @@ msgstr ""
 "  else echo \"Nincs kiválasztva dátum\"\n"
 "fi\n"
 
-#. (itstool) path: figure/title
-#: C/calendar.page:64
+#: C/calendar.page:64(figure/title)
 msgid "Calendar Dialog Example"
 msgstr "Példa naptár ablak"
 
-#. (itstool) path: figure/desc
-#: C/calendar.page:65
+#: C/calendar.page:65(figure/desc)
 msgid "Zenity calendar dialog example"
 msgstr "Zenity példa naptár ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/color-selection.page:52
+#: C/color-selection.page:52(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-colorselection-screenshot.png'; "
+#| "md5=febe3f417acea789c9db628fbe44f798"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-colorselection-screenshot.png' "
@@ -301,18 +308,15 @@ msgstr ""
 "external ref='figures/zenity-colorselection-screenshot.png' "
 "md5='febe3f417acea789c9db628fbe44f798'"
 
-#. (itstool) path: info/desc
-#: C/color-selection.page:6
+#: C/color-selection.page:6(info/desc)
 msgid "Use the <cmd>--color-selection</cmd> option."
 msgstr "A <cmd>--color-selection</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/color-selection.page:8
+#: C/color-selection.page:8(page/title)
 msgid "Color Selection Dialog"
 msgstr "Színválasztó ablak"
 
-#. (itstool) path: page/p
-#: C/color-selection.page:9
+#: C/color-selection.page:9(page/p)
 msgid ""
 "Use the <cmd>--color-selection</cmd> option to create a color selection "
 "dialog."
@@ -320,40 +324,34 @@ msgstr ""
 "A <cmd>--color-selection</cmd> kapcsoló használatával színválasztó ablakot "
 "hozhat létre."
 
-#. (itstool) path: page/p
-#: C/color-selection.page:12
+#: C/color-selection.page:12(page/p)
 msgid "The color selection dialog supports the following options:"
 msgstr "A színválasztó ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/title
-#: C/color-selection.page:19
+#: C/color-selection.page:19(item/title)
 msgid "<cmd>--color</cmd>=<var>VALUE</var>"
 msgstr "<cmd>--color</cmd>=<var>érték</var>"
 
-#. (itstool) path: item/p
-#: C/color-selection.page:20
+#: C/color-selection.page:20(item/p)
 msgid "Set the initial color.(ex: #FF0000)"
 msgstr "A kiinduló szín beállítása (például: #FF0000)"
 
-#. (itstool) path: item/title
-#: C/color-selection.page:24
+#: C/color-selection.page:24(item/title)
+#| msgid "--show-palette"
 msgid "<cmd>--show-palette</cmd>"
 msgstr "<cmd>--show-palette</cmd>"
 
-#. (itstool) path: item/p
-#: C/color-selection.page:25
+#: C/color-selection.page:25(item/p)
 msgid "Show the palette."
 msgstr "A paletta megjelenítése."
 
-#. (itstool) path: page/p
-#: C/color-selection.page:30
+#: C/color-selection.page:30(page/p)
 msgid ""
 "The following example script shows how to create a color selection dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a színválasztó ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/color-selection.page:34
+#: C/color-selection.page:34(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -384,22 +382,22 @@ msgstr ""
 "                echo \"Váratlan hiba történt.\";;\n"
 "esac\n"
 
-#. (itstool) path: figure/title
-#: C/color-selection.page:50
+#: C/color-selection.page:50(figure/title)
 msgid "Color Selection Dialog Example"
 msgstr "Példa színválasztó ablak"
 
-#. (itstool) path: figure/desc
-#: C/color-selection.page:51
+#: C/color-selection.page:51(figure/desc)
 msgid "<app>Zenity</app> color selection dialog example"
 msgstr "<app>Zenity</app> példa színválasztó ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/entry.page:55
+#: C/entry.page:55(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-entry-screenshot.png'; "
+#| "md5=bae6bf4342a66a3900deb15bde82ff42"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-entry-screenshot.png' "
@@ -408,18 +406,15 @@ msgstr ""
 "external ref='figures/zenity-entry-screenshot.png' "
 "md5='bae6bf4342a66a3900deb15bde82ff42'"
 
-#. (itstool) path: info/desc
-#: C/entry.page:6
+#: C/entry.page:6(info/desc)
 msgid "Use the <cmd>--entry</cmd> option."
 msgstr "A <cmd>--entry</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/entry.page:8
+#: C/entry.page:8(page/title)
 msgid "Text Entry Dialog"
 msgstr "Szövegbeviteli ablak"
 
-#. (itstool) path: page/p
-#: C/entry.page:9
+#: C/entry.page:9(page/p)
 msgid ""
 "Use the <cmd>--entry</cmd> option to create a text entry dialog. "
 "<app>Zenity</app> returns the contents of the text entry to standard output."
@@ -428,47 +423,40 @@ msgstr ""
 "létre. A <app>Zenity</app> a szövegbeviteli mező tartalmát kiírja a "
 "szabványos kimenetre."
 
-#. (itstool) path: page/p
-#: C/entry.page:12
+#: C/entry.page:12(page/p)
 msgid "The text entry dialog supports the following options:"
 msgstr "A szövegbeviteli ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/p
-#: C/entry.page:20
+#: C/entry.page:20(item/p)
 msgid "Specifies the text that is displayed in the text entry dialog."
 msgstr "A szövegbeviteli ablakban megjelenítendő szöveg megadása."
 
-#. (itstool) path: item/title
-#: C/entry.page:24
+#: C/entry.page:24(item/title)
 msgid "<cmd>--entry-text</cmd>=<var>text</var>"
 msgstr "<cmd>--entry-text</cmd>=<var>szöveg</var>"
 
-#. (itstool) path: item/p
-#: C/entry.page:25
+#: C/entry.page:25(item/p)
 msgid ""
 "Specifies the text that is displayed in the entry field of the text entry "
 "dialog."
 msgstr ""
 "A szövegbeviteli ablak beviteli mezőjében megjelenítendő szöveg megadása."
 
-#. (itstool) path: item/title
-#: C/entry.page:29
+#: C/entry.page:29(item/title)
+#| msgid "--hide-text"
 msgid "<cmd>--hide-text</cmd>"
 msgstr "<cmd>--hide-text</cmd>"
 
-#. (itstool) path: item/p
-#: C/entry.page:30
+#: C/entry.page:30(item/p)
 msgid "Hides the text in the entry field of the text entry dialog."
 msgstr "A szöveg elrejtése a szövegbeviteli ablak beviteli mezőjében."
 
-#. (itstool) path: page/p
-#: C/entry.page:35
+#: C/entry.page:35(page/p)
 msgid "The following example script shows how to create a text entry dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a szövegbeviteli ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/entry.page:39
+#: C/entry.page:39(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -493,22 +481,22 @@ msgstr ""
 "  else echo \"Nem adott meg nevet\"\n"
 "fi\n"
 
-#. (itstool) path: figure/title
-#: C/entry.page:53
+#: C/entry.page:53(figure/title)
 msgid "Text Entry Dialog Example"
 msgstr "Példa szövegbeviteli ablak"
 
-#. (itstool) path: figure/desc
-#: C/entry.page:54
+#: C/entry.page:54(figure/desc)
 msgid "<app>Zenity</app> text entry dialog example"
 msgstr "<app>Zenity</app> példa szövegbeviteli ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/error.page:28
+#: C/error.page:28(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-error-screenshot.png'; "
+#| "md5=a4b287f89625cfd54ca38bc404d8bdf6"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-error-screenshot.png' "
@@ -517,28 +505,23 @@ msgstr ""
 "external ref='figures/zenity-error-screenshot.png' "
 "md5='a4b287f89625cfd54ca38bc404d8bdf6'"
 
-#. (itstool) path: info/desc
-#: C/error.page:6
+#: C/error.page:6(info/desc)
 msgid "Use the <cmd>--error</cmd> option."
 msgstr "A <cmd>--error</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/error.page:8
+#: C/error.page:8(page/title)
 msgid "Error Dialog"
 msgstr "Hiba ablak"
 
-#. (itstool) path: page/p
-#: C/error.page:9
+#: C/error.page:9(page/p)
 msgid "Use the <cmd>--error</cmd> option to create an error dialog."
 msgstr "A <cmd>--error</cmd> kapcsolóval hiba ablakot hozhat létre. "
 
-#. (itstool) path: page/p
-#: C/error.page:13
+#: C/error.page:13(page/p)
 msgid "The following example script shows how to create an error dialog:"
 msgstr "A következő példa parancsfájl bemutatja a hiba ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/error.page:17
+#: C/error.page:17(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -553,22 +536,22 @@ msgstr ""
 "zenity --error \\\n"
 "--text=\"A /var/log/syslog nem található.\"\n"
 
-#. (itstool) path: figure/title
-#: C/error.page:26
+#: C/error.page:26(figure/title)
 msgid "Error Dialog Example"
 msgstr "Példa hiba ablak"
 
-#. (itstool) path: figure/desc
-#: C/error.page:27
+#: C/error.page:27(figure/desc)
 msgid "<app>Zenity</app> error dialog example"
 msgstr "<app>Zenity</app> példa hiba ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/file-selection.page:68
+#: C/file-selection.page:68(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-fileselection-screenshot.png'; "
+#| "md5=bbba2652577f14ab4719f55a2ff57073"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-fileselection-screenshot.png' "
@@ -577,18 +560,15 @@ msgstr ""
 "external ref='figures/zenity-fileselection-screenshot.png' "
 "md5='bbba2652577f14ab4719f55a2ff57073'"
 
-#. (itstool) path: info/desc
-#: C/file-selection.page:6
+#: C/file-selection.page:6(info/desc)
 msgid "Use the <cmd>--file-selection</cmd> option."
 msgstr "A <cmd>--file-selection</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/file-selection.page:8
+#: C/file-selection.page:8(page/title)
 msgid "File Selection Dialog"
 msgstr "Fájlválasztó ablak"
 
-#. (itstool) path: page/p
-#: C/file-selection.page:9
+#: C/file-selection.page:9(page/p)
 msgid ""
 "Use the <cmd>--file-selection</cmd> option to create a file selection "
 "dialog. <app>Zenity</app> returns the selected files or directories to "
@@ -598,18 +578,15 @@ msgstr ""
 "A <app>Zenity</app> a kiválasztott fájlokat vagy könyvtárakat a szabványos "
 "kimenetre írja ki. A fájlválasztó ablak alapértelmezett módja a megnyitás."
 
-#. (itstool) path: page/p
-#: C/file-selection.page:13
+#: C/file-selection.page:13(page/p)
 msgid "The file selection dialog supports the following options:"
 msgstr "A fájlválasztó ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/title
-#: C/file-selection.page:20 C/text.page:20
+#: C/file-selection.page:20(item/title) C/text.page:20(item/title)
 msgid "<cmd>--filename</cmd>=<var>filename</var>"
 msgstr "<cmd>--filename</cmd>=<var>fájlnév</var>"
 
-#. (itstool) path: item/p
-#: C/file-selection.page:21
+#: C/file-selection.page:21(item/p)
 msgid ""
 "Specifies the file or directory that is selected in the file selection "
 "dialog when the dialog is first shown."
@@ -617,59 +594,52 @@ msgstr ""
 "Megadja a fájlválasztó ablak első megjelenítésekor az ablakban megjelenő "
 "fájlt vagy könyvtárat."
 
-#. (itstool) path: item/title
-#: C/file-selection.page:25
+#: C/file-selection.page:25(item/title)
+#| msgid "--multiple"
 msgid "<cmd>--multiple</cmd>"
 msgstr "<cmd>--multiple</cmd>"
 
-#. (itstool) path: item/p
-#: C/file-selection.page:26
+#: C/file-selection.page:26(item/p)
 msgid ""
 "Allows the selection of multiple filenames in the file selection dialog."
 msgstr "Lehetővé teszi több fájlnév kiválasztását a fájlválasztó ablakban."
 
-#. (itstool) path: item/title
-#: C/file-selection.page:30
+#: C/file-selection.page:30(item/title)
+#| msgid "--directory"
 msgid "<cmd>--directory</cmd>"
 msgstr "<cmd>--directory</cmd>"
 
-#. (itstool) path: item/p
-#: C/file-selection.page:31
+#: C/file-selection.page:31(item/p)
 msgid "Allows only selection of directories in the file selection dialog."
 msgstr "Csak könyvtárak kiválasztását teszi lehetővé a fájlválasztó ablakban."
 
-#. (itstool) path: item/title
-#: C/file-selection.page:35
+#: C/file-selection.page:35(item/title)
+#| msgid "Use the <cmd>--scale</cmd> option."
 msgid "<cmd>--save</cmd>"
 msgstr "<cmd>--save</cmd>"
 
-#. (itstool) path: item/p
-#: C/file-selection.page:36
+#: C/file-selection.page:36(item/p)
 msgid "Set the file selection dialog into save mode."
 msgstr "A fájlválasztó ablak mentés módba állítása."
 
-#. (itstool) path: item/title
-#: C/file-selection.page:40 C/list.page:52
+#: C/file-selection.page:40(item/title) C/list.page:52(item/title)
 msgid "<cmd>--separator</cmd>=<var>separator</var>"
 msgstr "<cmd>--separator</cmd>=<var>elválasztó</var>"
 
-#. (itstool) path: item/p
-#: C/file-selection.page:41
+#: C/file-selection.page:41(item/p)
 msgid ""
 "Specifies the string that is used to divide the returned list of filenames."
 msgstr ""
 "Megadja a visszaadott fájlnevek listájának elválasztására használt "
 "karakterláncot."
 
-#. (itstool) path: page/p
-#: C/file-selection.page:46
+#: C/file-selection.page:46(page/p)
 msgid ""
 "The following example script shows how to create a file selection dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a fájlválasztó ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/file-selection.page:50
+#: C/file-selection.page:50(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -700,22 +670,22 @@ msgstr ""
 "                echo \"Váratlan hiba történt.\";;\n"
 "esac\n"
 
-#. (itstool) path: figure/title
-#: C/file-selection.page:66
+#: C/file-selection.page:66(figure/title)
 msgid "File Selection Dialog Example"
 msgstr "Példa fájlválasztó ablak"
 
-#. (itstool) path: figure/desc
-#: C/file-selection.page:67
+#: C/file-selection.page:67(figure/desc)
 msgid "<app>Zenity</app> file selection dialog example"
 msgstr "<app>Zenity</app> példa fájlválasztó ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/forms.page:81
+#: C/forms.page:81(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-forms-screenshot.png'; "
+#| "md5=c11fab02e4d51212a538ce6859799d5f"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-forms-screenshot.png' "
@@ -724,85 +694,69 @@ msgstr ""
 "external ref='figures/zenity-forms-screenshot.png' "
 "md5='c11fab02e4d51212a538ce6859799d5f'"
 
-#. (itstool) path: info/desc
-#: C/forms.page:6
+#: C/forms.page:6(info/desc)
 msgid "Use the <cmd>--forms</cmd> option."
 msgstr "A <cmd>--forms</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/forms.page:8
+#: C/forms.page:8(page/title)
 msgid "Forms Dialog"
 msgstr "Űrlapok ablak"
 
-#. (itstool) path: page/p
-#: C/forms.page:9
+#: C/forms.page:9(page/p)
 msgid "Use the <cmd>--forms</cmd> option to create a forms dialog."
 msgstr ""
 "A <cmd>--forms</cmd> kapcsoló használatával űrlapok ablakot hozhat létre."
 
-#. (itstool) path: page/p
-#: C/forms.page:13
+#: C/forms.page:13(page/p)
 msgid "The forms dialog supports the following options:"
 msgstr "Az űrlapok ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/title
-#: C/forms.page:20
+#: C/forms.page:20(item/title)
 msgid "<cmd>--add-entry</cmd>=<var>FieldName</var>"
 msgstr "<cmd>--add-entry</cmd>=<var>Mezőnév</var>"
 
-#. (itstool) path: item/p
-#: C/forms.page:21
+#: C/forms.page:21(item/p)
 msgid "Add a new Entry in forms dialog."
 msgstr "Új bejegyzés hozzáadása az Űrlapok ablakhoz."
 
-#. (itstool) path: item/title
-#: C/forms.page:25
+#: C/forms.page:25(item/title)
 msgid "--add-password<cmd/>=<var>FieldName</var>"
 msgstr "--add-password<cmd/>=<var>Mezőnév</var>"
 
-#. (itstool) path: item/p
-#: C/forms.page:26
+#: C/forms.page:26(item/p)
 msgid "Add a new Password Entry in forms dialog. (Hide text)"
 msgstr ""
 "Új jelszóbeviteli mező hozzáadása az Űrlapok ablakhoz. (szöveg elrejtése)"
 
-#. (itstool) path: item/title
-#: C/forms.page:30
+#: C/forms.page:30(item/title)
 msgid "<cmd>--add-calendar</cmd>=<var>FieldName</var>"
 msgstr "<cmd>--add-calendar</cmd>=<var>Mezőnév</var>"
 
-#. (itstool) path: item/p
-#: C/forms.page:31
+#: C/forms.page:31(item/p)
 msgid "Add a new Calendar in forms dialog."
 msgstr "Új naptár hozzáadása az Űrlapok ablakhoz."
 
-#. (itstool) path: item/title
-#: C/forms.page:35 C/scale.page:19
+#: C/forms.page:35(item/title) C/scale.page:19(item/title)
 msgid "<cmd>--text</cmd>=<var>TEXT</var>"
 msgstr "<cmd>--text</cmd>=<var>SZÖVEG</var>"
 
-#. (itstool) path: item/p
-#: C/forms.page:36
+#: C/forms.page:36(item/p)
 msgid "Set the dialog text."
 msgstr "Ablak szövegének beállítása."
 
-#. (itstool) path: item/title
-#: C/forms.page:40
+#: C/forms.page:40(item/title)
 msgid "<cmd>--separator</cmd>=<var>SEPARATOR</var>"
 msgstr "<cmd>--separator</cmd>=<var>elválasztó</var>"
 
-#. (itstool) path: item/p
-#: C/forms.page:41
+#: C/forms.page:41(item/p)
 msgid "Set output separator character. (Default: | )"
 msgstr "A kimenet elválasztókarakterének beállítása. (Alapértelmezett: | )"
 
-#. (itstool) path: item/title
-#: C/forms.page:45
+#: C/forms.page:45(item/title)
 msgid "<cmd>--forms-date-format</cmd>=<var>PATTERN</var>"
 msgstr "<cmd>--forms-date-format</cmd>=<var>Minta</var>"
 
-#. (itstool) path: item/p
-#: C/forms.page:46
+#: C/forms.page:46(item/p)
 msgid ""
 "Set the format for the returned date. The default format depends on your "
 "locale. format must be a Format that is acceptable to the <cmd>strftime</"
@@ -812,13 +766,11 @@ msgstr ""
 "függ a területi beállítástól. A formátumnak az <cmd>strftime</cmd> függvény "
 "által elfogadhatónak kell lennie, például: <var>%A %d/%m/%y</var>."
 
-#. (itstool) path: page/p
-#: C/forms.page:51
+#: C/forms.page:51(page/p)
 msgid "The following example script shows how to create a forms dialog:"
 msgstr "A következő példa parancsfájl bemutatja az űrlapok ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/forms.page:55
+#: C/forms.page:55(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -865,57 +817,22 @@ msgstr ""
 "\t;;\n"
 "esac\n"
 
-#. (itstool) path: figure/title
-#: C/forms.page:79
+#: C/forms.page:79(figure/title)
 msgid "Forms Dialog Example"
 msgstr "Példa űrlapok ablak"
 
-#. (itstool) path: figure/desc
-#: C/forms.page:80
+#: C/forms.page:80(figure/desc)
 msgid "<app>Zenity</app> forms dialog example"
 msgstr "<app>Zenity</app> példa űrlapok ablak"
 
-#. (itstool) path: credit/name
-#: C/index.page:6
-msgid "Sun Java Desktop System Documentation Team"
-msgstr "Sun Java Desktop System Documentation Team"
-
-#. (itstool) path: credit/name
-#: C/index.page:9
-msgid "Glynn Foster"
-msgstr "Glynn Foster"
-
-#. (itstool) path: credit/name
-#: C/index.page:12
-msgid "Nicholas Curran"
-msgstr "Nicholas Curran"
-
-#. (itstool) path: credit/name
-#: C/index.page:16
-msgid "Yasumichi Akahoshi"
-msgstr "Yasumichi Akahoshi"
-
-#. (itstool) path: license/p
-#: C/index.page:20
-msgid "GNU Free Documentation License (GFDL)"
-msgstr "GNU Free Documentation License (GFDL)"
-
-#. (itstool) path: page/title
-#: C/index.page:24
-msgid "Zenity Manual"
-msgstr "Zenity kézikönyv"
-
-#. (itstool) path: section/title
-#: C/index.page:27
-msgid "Dialogs"
-msgstr "Párbeszédablakok"
-
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/info.page:28
+#: C/info.page:28(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-information-screenshot.png'; "
+#| "md5=72386d53a991c46e918ee6dd22795aa6"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-information-screenshot.png' "
@@ -924,31 +841,26 @@ msgstr ""
 "external ref='figures/zenity-information-screenshot.png' "
 "md5='72386d53a991c46e918ee6dd22795aa6'"
 
-#. (itstool) path: info/desc
-#: C/info.page:6
+#: C/info.page:6(info/desc)
 msgid "Use the <cmd>--info</cmd> option."
 msgstr "A <cmd>--info</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/info.page:8
+#: C/info.page:8(page/title)
 msgid "Info Dialog"
 msgstr "Információs ablak"
 
-#. (itstool) path: page/p
-#: C/info.page:9
+#: C/info.page:9(page/p)
 msgid "Use the <cmd>--info</cmd> option to create an information dialog."
 msgstr ""
 "A <cmd>--info</cmd> kapcsoló használatával egy információs ablak hozható "
 "létre."
 
-#. (itstool) path: page/p
-#: C/info.page:13
+#: C/info.page:13(page/p)
 msgid "The following example script shows how to create an information dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja az információs ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/info.page:17
+#: C/info.page:17(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -963,123 +875,104 @@ msgstr ""
 "zenity --info \\\n"
 "--text=\"Az összefésülés kész. 10 fájlból 3 frissítve.\"\n"
 
-#. (itstool) path: figure/title
-#: C/info.page:26
+#: C/info.page:26(figure/title)
 msgid "Information Dialog Example"
 msgstr "Példa információs ablak"
 
-#. (itstool) path: figure/desc
-#: C/info.page:27
+#: C/info.page:27(figure/desc)
 msgid "<app>Zenity</app> information dialog example"
 msgstr "<app>Zenity</app> példa információs ablak"
 
-#. (itstool) path: info/desc
-#: C/intro.page:6
+#: C/intro.page:6(info/desc)
 msgid ""
 "<app>Zenity</app> enables you to create the various types of simple dialog."
 msgstr ""
 "A <app>Zenity</app> lehetővé teszi különböző egyszerű párbeszédablakok "
 "létrehozását."
 
-#. (itstool) path: page/title
-#: C/intro.page:8
+#: C/intro.page:8(page/title)
 msgid "Introduction"
 msgstr "Bevezetés"
 
-#. (itstool) path: page/p
-#: C/intro.page:9
+#: C/intro.page:9(page/p)
 msgid ""
 "<app>Zenity</app> enables you to create the following types of simple dialog:"
 msgstr ""
 "A <app>Zenity</app> lehetővé teszi a következő típusú egyszerű "
 "párbeszédablakok létrehozását:"
 
-#. (itstool) path: item/p
-#: C/intro.page:14
+#: C/intro.page:14(item/p)
 msgid "Calendar"
 msgstr "Naptár"
 
-#. (itstool) path: item/p
-#: C/intro.page:15
+#: C/intro.page:15(item/p)
 msgid "File selection"
 msgstr "Fájlválasztó"
 
-#. (itstool) path: item/p
-#: C/intro.page:16
+#: C/intro.page:16(item/p)
 msgid "Forms"
 msgstr "Űrlapok"
 
-#. (itstool) path: item/p
-#: C/intro.page:17
+#: C/intro.page:17(item/p)
 msgid "List"
 msgstr "Lista"
 
-#. (itstool) path: item/p
-#: C/intro.page:18
+#: C/intro.page:18(item/p)
 msgid "Notification icon"
 msgstr "Értesítési ikon"
 
-#. (itstool) path: item/p
-#: C/intro.page:19
+#: C/intro.page:19(item/p)
 msgid "Message"
 msgstr "Üzenet"
 
-#. (itstool) path: item/p
-#: C/intro.page:21
+#: C/intro.page:21(item/p)
 msgid "Error"
 msgstr "Hiba"
 
-#. (itstool) path: item/p
-#: C/intro.page:22
+#: C/intro.page:22(item/p)
 msgid "Information"
 msgstr "Információ"
 
-#. (itstool) path: item/p
-#: C/intro.page:23
+#: C/intro.page:23(item/p)
 msgid "Question"
 msgstr "Kérdés"
 
-#. (itstool) path: item/p
-#: C/intro.page:24
+#: C/intro.page:24(item/p)
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
-#. (itstool) path: item/p
-#: C/intro.page:27
+#: C/intro.page:27(item/p)
 msgid "Password entry"
 msgstr "Jelszóbeviteli mező"
 
-#. (itstool) path: item/p
-#: C/intro.page:28
+#: C/intro.page:28(item/p)
 msgid "Progress"
 msgstr "Folyamatjelző"
 
-#. (itstool) path: item/p
-#: C/intro.page:29
+#: C/intro.page:29(item/p)
 msgid "Text entry"
 msgstr "Szövegmező"
 
-#. (itstool) path: item/p
-#: C/intro.page:30
+#: C/intro.page:30(item/p)
 msgid "Text information"
 msgstr "Szöveges információk"
 
-#. (itstool) path: item/p
-#: C/intro.page:31
+#: C/intro.page:31(item/p)
 msgid "Scale"
 msgstr "Méretezés"
 
-#. (itstool) path: item/p
-#: C/intro.page:32
+#: C/intro.page:32(item/p)
 msgid "Color selection"
 msgstr "Színválasztó"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/list.page:84
+#: C/list.page:84(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-list-screenshot.png'; "
+#| "md5=8bd9ad9c760516a966d3590b2019fa1e"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-list-screenshot.png' "
@@ -1088,18 +981,15 @@ msgstr ""
 "external ref='figures/zenity-list-screenshot.png' "
 "md5='8bd9ad9c760516a966d3590b2019fa1e'"
 
-#. (itstool) path: info/desc
-#: C/list.page:6
+#: C/list.page:6(info/desc)
 msgid "Use the <cmd>--list</cmd> option."
 msgstr "A <cmd>--list</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/list.page:8
+#: C/list.page:8(page/title)
 msgid "List Dialog"
 msgstr "Lista ablak"
 
-#. (itstool) path: page/p
-#: C/list.page:9
+#: C/list.page:9(page/p)
 msgid ""
 "Use the <cmd>--list</cmd> option to create a list dialog. <app>Zenity</app> "
 "returns the entries in the first column of text of selected rows to standard "
@@ -1109,8 +999,7 @@ msgstr ""
 "<app>Zenity</app> a kijelölt sorok első szövegoszlopának bejegyzéseit kiírja "
 "a szabványos kimenetre."
 
-#. (itstool) path: page/p
-#: C/list.page:13
+#: C/list.page:13(page/p)
 msgid ""
 "Data for the dialog must specified column by column, row by row. Data can be "
 "provided to the dialog through standard input. Each entry must be separated "
@@ -1120,8 +1009,7 @@ msgstr ""
 "adatai megadhatók a szabványos bemeneten keresztül. Minden bejegyzést új sor "
 "karakterrel kell elválasztani."
 
-#. (itstool) path: page/p
-#: C/list.page:17
+#: C/list.page:17(page/p)
 msgid ""
 "If you use the <cmd>--checklist</cmd> or <cmd>--radiolist</cmd> options, "
 "each row must start with either 'TRUE' or 'FALSE'."
@@ -1130,18 +1018,15 @@ msgstr ""
 "használja, akkor minden sornak a „TRUE” vagy „FALSE” egyikével kell "
 "kezdődnie."
 
-#. (itstool) path: page/p
-#: C/list.page:21
+#: C/list.page:21(page/p)
 msgid "The list dialog supports the following options:"
 msgstr "A lista ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/title
-#: C/list.page:28
+#: C/list.page:28(item/title)
 msgid "<cmd>--column</cmd>=<var>column</var>"
 msgstr "<cmd>--column</cmd>=<var>oszlop</var>"
 
-#. (itstool) path: item/p
-#: C/list.page:29
+#: C/list.page:29(item/p)
 msgid ""
 "Specifies the column headers that are displayed in the list dialog. You must "
 "specify a <cmd>--column</cmd> option for each column that you want to "
@@ -1151,40 +1036,36 @@ msgstr ""
 "megjelenítendő minden oszlophoz meg kell adnia egy <cmd>--column</cmd> "
 "kapcsolót."
 
-#. (itstool) path: item/title
-#: C/list.page:34
+#: C/list.page:34(item/title)
+#| msgid "--checklist"
 msgid "<cmd>--checklist</cmd>"
 msgstr "<cmd>--checklist</cmd>"
 
-#. (itstool) path: item/p
-#: C/list.page:35
+#: C/list.page:35(item/p)
 msgid ""
 "Specifies that the first column in the list dialog contains check boxes."
 msgstr "Megadja, hogy a lista ablak első oszlopa jelölőnégyzeteket tartalmaz."
 
-#. (itstool) path: item/title
-#: C/list.page:40
+#: C/list.page:40(item/title)
+#| msgid "--radiolist"
 msgid "<cmd>--radiolist</cmd>"
 msgstr "<cmd>--radiolist</cmd>"
 
-#. (itstool) path: item/p
-#: C/list.page:41
+#: C/list.page:41(item/p)
 msgid ""
 "Specifies that the first column in the list dialog contains radio boxes."
 msgstr "Megadja, hogy a lista ablak első oszlopa választógombokat tartalmaz."
 
-#. (itstool) path: item/title
-#: C/list.page:46 C/text.page:25
+#: C/list.page:46(item/title) C/text.page:25(item/title)
+#| msgid "--editable"
 msgid "<cmd>--editable</cmd>"
 msgstr "<cmd>--editable</cmd>"
 
-#. (itstool) path: item/p
-#: C/list.page:47
+#: C/list.page:47(item/p)
 msgid "Allows the displayed items to be edited."
 msgstr "Lehetővé teszi a megjelenített elemek szerkesztését."
 
-#. (itstool) path: item/p
-#: C/list.page:53
+#: C/list.page:53(item/p)
 msgid ""
 "Specifies what string is used when the list dialog returns the selected "
 "entries."
@@ -1192,13 +1073,11 @@ msgstr ""
 "Megadja, hogy melyik karakterlánc kerül felhasználásra, amikor a lista ablak "
 "visszaadja a kijelölt bejegyzéseket."
 
-#. (itstool) path: item/title
-#: C/list.page:58
+#: C/list.page:58(item/title)
 msgid "<cmd>--print-column</cmd>=<var>column</var>"
 msgstr "<cmd>--print-column</cmd>=<var>oszlop</var>"
 
-#. (itstool) path: item/p
-#: C/list.page:59
+#: C/list.page:59(item/p)
 msgid ""
 "Specifies what column should be printed out upon selection. The default "
 "column is '1'. 'ALL' can be used to print out all columns in the list."
@@ -1207,13 +1086,11 @@ msgstr ""
 "oszlop az „1”. A lista összes oszlopának kiírására az „ALL” érték "
 "használható."
 
-#. (itstool) path: page/p
-#: C/list.page:66
+#: C/list.page:66(page/p)
 msgid "The following example script shows how to create a list dialog:"
 msgstr "A következő példa parancsfájl bemutatja a lista ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/list.page:69
+#: C/list.page:69(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -1236,18 +1113,15 @@ msgstr ""
 "    293823 High \"GNOME Dictionary does not handle proxy\" \\\n"
 "    393823 Critical \"Menu editing does not work in GNOME 2.0\"\n"
 
-#. (itstool) path: figure/title
-#: C/list.page:82
+#: C/list.page:82(figure/title)
 msgid "List Dialog Example"
 msgstr "Példa lista ablak"
 
-#. (itstool) path: figure/desc
-#: C/list.page:83
+#: C/list.page:83(figure/desc)
 msgid "<app>Zenity</app> list dialog example"
 msgstr "<app>Zenity</app> példa lista ablak"
 
-#. (itstool) path: info/desc
-#: C/message.page:6
+#: C/message.page:6(info/desc)
 msgid ""
 "<link xref=\"error\">Error</link>, <link xref=\"info\">Info</link>, <link "
 "xref=\"question\">Question</link>, <link xref=\"warning\">Warning</link>"
@@ -1255,13 +1129,11 @@ msgstr ""
 "<link xref=\"error\">Hiba</link>, <link xref=\"info\">Info</link>, <link "
 "xref=\"question\">Kérdés</link>, <link xref=\"warning\">Figyelmeztetés</link>"
 
-#. (itstool) path: page/title
-#: C/message.page:13
+#: C/message.page:13(page/title)
 msgid "Message Dialog"
 msgstr "Üzenet ablak"
 
-#. (itstool) path: page/p
-#: C/message.page:14
+#: C/message.page:14(page/p)
 msgid ""
 "For each type, use the <cmd>--text</cmd> option to specify the text that is "
 "displayed in the dialog."
@@ -1269,170 +1141,78 @@ msgstr ""
 "Minden típus esetén használja a <cmd>--text</cmd> kapcsolót az ablakban "
 "megjelenített szöveg megadásához."
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/notification.page:37
+#: C/notification.page:37(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-notification-screenshot.png'; "
+#| "md5=b67bf309c6e479db8677947f1810a999"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-notification-screenshot.png' "
-"md5='49ebe82aa255c5536d018f2b4f919c51'"
+"md5='b67bf309c6e479db8677947f1810a999'"
 msgstr ""
 "external ref='figures/zenity-notification-screenshot.png' "
-"md5='49ebe82aa255c5536d018f2b4f919c51'"
+"md5='b67bf309c6e479db8677947f1810a999'"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/notification.page:51
-msgctxt "_"
-msgid ""
-"external ref='figures/zenity-notification-listen-screenshot.png' "
-"md5='e7e6edba1c794426c4ce749bc355b25d'"
-msgstr ""
-"external ref='figures/zenity-notification-listen-screenshot.png' "
-"md5='e7e6edba1c794426c4ce749bc355b25d'"
-
-#. (itstool) path: info/desc
-#: C/notification.page:6
+#: C/notification.page:6(info/desc)
 msgid "Use the <cmd>--notification</cmd> option."
 msgstr "A <cmd>--notification</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/notification.page:8
+#: C/notification.page:8(page/title)
 msgid "Notification Icon"
 msgstr "Értesítési ikon"
 
-#. (itstool) path: page/p
-#: C/notification.page:9
+#: C/notification.page:9(page/p)
 msgid "Use the <cmd>--notification</cmd> option to create a notification icon."
 msgstr ""
 "A <cmd>--notification</cmd> kapcsoló használatával értesítési ikont hozhat "
 "létre."
 
-#. (itstool) path: item/p
-#: C/notification.page:14
+#: C/notification.page:17(item/p)
 msgid "Specifies the text that is displayed in the notification area."
 msgstr "Az értesítési területen megjelenítendő szöveg megadása."
 
-#. (itstool) path: item/title
-#: C/notification.page:17
-msgid ""
-"<cmd>--listen</cmd>=icon: '<var>text</var>', message: '<var>text</var>', "
-"tooltip: '<var>text</var>', visible: '<var>text</var>',"
-msgstr ""
-"<cmd>--listen</cmd>=icon: '<var>szöveg</var>', message: '<var>szöveg</var>', "
-"tooltip: '<var>szöveg</var>', visible: '<var>szöveg</var>',"
-
-#. (itstool) path: item/p
-#: C/notification.page:18
-#| msgid ""
-#| "Listens for commands at standard input. At least one command must be "
-#| "specified. Commands are comma seperated. A command must be followed by a "
-#| "colon and a value."
-msgid ""
-"Listens for commands at standard input. At least one command must be "
-"specified. Commands are comma separated. A command must be followed by a "
-"colon and a value."
-msgstr ""
-"Parancsokat vár a szabványos bemeneten. Legalább egy parancsot meg kell "
-"adni. A parancsokat vesszők választják el. Egy parancsot kettőspontnak és "
-"értéknek kell követnie."
-
-#. (itstool) path: note/p
-#: C/notification.page:20
-msgid ""
-"The <cmd>icon</cmd> command also accepts four stock icon values such as "
-"<var>error</var>, <var>info</var>, <var>question</var> and <var>warning</"
-"var>."
-msgstr ""
-"Az <cmd>icon</cmd> parancs elfogad négy alap ikonértéket is, mint az "
-"<var>error</var>, <var>info</var>, <var>question</var> és <var>warning</var>."
-
-#. (itstool) path: page/p
-#: C/notification.page:25
+#: C/notification.page:22(page/p)
 msgid "The following example script shows how to create a notification icon:"
 msgstr ""
 "A következő példa parancsfájl bemutatja az értesítési ikon létrehozását:"
 
-#. (itstool) path: page/code
-#: C/notification.page:26
+#: C/notification.page:25(page/code)
 #, no-wrap
 msgid ""
 "\n"
-"  #!/bin/sh\n"
+"#!/bin/sh\n"
 "\n"
-"  zenity --notification\\\n"
-"    --window-icon=\"info\" \\\n"
-"    --text=\"There are system updates necessary!\"\n"
-"  "
+"zenity --notification\\\n"
+"  --window-icon=\"info\" \\\n"
+"  --text=\"There are system updates necessary!\"\n"
 msgstr ""
 "\n"
-"  #!/bin/sh\n"
+"#!/bin/sh\n"
 "\n"
-"  zenity --notification\\\n"
-"    --window-icon=\"info\" \\\n"
-"    --text=\"Rendszerfrissítés szükséges!\"\n"
-"  "
+"zenity --notification\\\n"
+"  --window-icon=\"info\" \\\n"
+"  --text=\"Rendszerfrissítés szükséges!\"\n"
 
-#. (itstool) path: figure/title
-#: C/notification.page:35
+#: C/notification.page:35(figure/title)
 msgid "Notification Icon Example"
 msgstr "Példa értesítési ikon"
 
-#. (itstool) path: figure/desc
-#: C/notification.page:36
+#: C/notification.page:36(figure/desc)
 msgid "<app>Zenity</app> notification icon example"
 msgstr "<app>Zenity</app> példa értesítési ikon"
 
-#. (itstool) path: page/p
-#: C/notification.page:40
-msgid ""
-"The following example script shows how to create a notification icon along "
-"with <cmd>--listen</cmd>:"
-msgstr ""
-"A következő példa parancsfájl bemutatja az értesítési ikon létrehozását a "
-"<cmd>--listen</cmd> használatával:"
-
-#. (itstool) path: page/code
-#: C/notification.page:41
-#, no-wrap
-msgid ""
-"\n"
-"  #!/bin/sh\n"
-"  cat &lt;&lt;EOH| zenity --notification --listen\n"
-"  message: this is the message text\n"
-"  EOH\n"
-"  "
-msgstr ""
-"\n"
-"  #!/bin/sh\n"
-"  cat &lt;&lt;EOH| zenity --notification --listen\n"
-"  message: ez az üzenetszöveg\n"
-"  EOH\n"
-"  "
-
-#. (itstool) path: figure/title
-#: C/notification.page:49
-msgid "Notification Icon with <cmd>--listen</cmd> Example"
-msgstr "Példa értesítési ikon a <cmd>--listen</cmd> használatával"
-
-#. (itstool) path: figure/desc
-#: C/notification.page:50
-msgid "<app>Zenity</app> notification with <cmd>--listen</cmd> example"
-msgstr ""
-"<app>Zenity</app> példa értesítési ikon a <cmd>--listen</cmd> használatával"
-
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/password.page:47
+#: C/password.page:47(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-password-screenshot.png'; "
+#| "md5=6adbeb624a307f78072593d6d1c6def6"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-password-screenshot.png' "
@@ -1441,47 +1221,40 @@ msgstr ""
 "external ref='figures/zenity-password-screenshot.png' "
 "md5='6adbeb624a307f78072593d6d1c6def6'"
 
-#. (itstool) path: info/desc
-#: C/password.page:6
+#: C/password.page:6(info/desc)
 msgid "Use the <cmd>--password</cmd> option."
 msgstr "A <cmd>--password</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/password.page:8
+#: C/password.page:8(page/title)
 msgid "Password Dialog"
 msgstr "Jelszó ablak"
 
-#. (itstool) path: page/p
-#: C/password.page:9
+#: C/password.page:9(page/p)
 msgid "Use the <cmd>--password</cmd> option to create a password entry dialog."
 msgstr ""
 "A <cmd>--password</cmd> kapcsoló használatával jelszóbeviteli ablakot hozhat "
 "létre."
 
-#. (itstool) path: page/p
-#: C/password.page:12
+#: C/password.page:12(page/p)
 msgid "The password entry dialog supports the following options:"
 msgstr "A jelszóbeviteli ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/title
-#: C/password.page:18
+#: C/password.page:18(item/title)
+#| msgid "--username"
 msgid "<cmd>--username</cmd>"
 msgstr "<cmd>--username</cmd>"
 
-#. (itstool) path: item/p
-#: C/password.page:19
+#: C/password.page:19(item/p)
 msgid "Display the username field."
 msgstr "A felhasználónév mező megjelenítése."
 
-#. (itstool) path: page/p
-#: C/password.page:23
+#: C/password.page:23(page/p)
 msgid ""
 "The following example script shows how to create a password entry dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a jelszóbeviteli ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/password.page:27
+#: C/password.page:27(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -1516,22 +1289,22 @@ msgstr ""
 "                echo \"Váratlan hiba történt.\";;\n"
 "esac\n"
 
-#. (itstool) path: figure/title
-#: C/password.page:45
+#: C/password.page:45(figure/title)
 msgid "Password Entry Dialog Example"
 msgstr "Példa jelszóbeviteli ablak"
 
-#. (itstool) path: figure/desc
-#: C/password.page:46
+#: C/password.page:46(figure/desc)
 msgid "<app>Zenity</app> password entry dialog example"
 msgstr "<app>Zenity</app> példa jelszóbeviteli ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/progress.page:77
+#: C/progress.page:77(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-progress-screenshot.png'; "
+#| "md5=75121bbbcb9cc92de4ebf7fbb92f0780"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-progress-screenshot.png' "
@@ -1540,25 +1313,21 @@ msgstr ""
 "external ref='figures/zenity-progress-screenshot.png' "
 "md5='75121bbbcb9cc92de4ebf7fbb92f0780'"
 
-#. (itstool) path: info/desc
-#: C/progress.page:6
+#: C/progress.page:6(info/desc)
 msgid "Use the <cmd>--progress</cmd> option."
 msgstr "A <cmd>--progress</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/progress.page:8
+#: C/progress.page:8(page/title)
 msgid "Progress Dialog"
 msgstr "Folyamatjelző ablak"
 
-#. (itstool) path: page/p
-#: C/progress.page:9
+#: C/progress.page:9(page/p)
 msgid "Use the <cmd>--progress</cmd> option to create a progress dialog."
 msgstr ""
 "A <cmd>--progress</cmd> kapcsoló használatával folyamatjelző ablakot hozhat "
 "létre."
 
-#. (itstool) path: page/p
-#: C/progress.page:13
+#: C/progress.page:13(page/p)
 msgid ""
 "<app>Zenity</app> reads data from standard input line by line. If a line is "
 "prefixed with #, the text is updated with the text on that line. If a line "
@@ -1569,44 +1338,38 @@ msgstr ""
 "szövegével. Ha a sor csak egy számot tartalmaz, akkor a százalékérték azzal "
 "a számmal kerül frissítésre."
 
-#. (itstool) path: page/p
-#: C/progress.page:17
+#: C/progress.page:17(page/p)
 msgid "The progress dialog supports the following options:"
 msgstr "A folyamatjelző ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/p
-#: C/progress.page:25
+#: C/progress.page:25(item/p)
 msgid "Specifies the text that is displayed in the progress dialog."
 msgstr "A folyamatjelző ablakban megjelenítendő szöveg megadása."
 
-#. (itstool) path: item/title
-#: C/progress.page:29
+#: C/progress.page:29(item/title)
 msgid "<cmd>--percentage</cmd>=<var>percentage</var>"
 msgstr "<cmd>--percentage</cmd>=<var>százalék</var>"
 
-#. (itstool) path: item/p
-#: C/progress.page:30
+#: C/progress.page:30(item/p)
 msgid "Specifies the initial percentage that is set in the progress dialog."
 msgstr ""
 "A folyamatjelző ablakban megjelenítendő kiinduló százalékérték megadása."
 
-#. (itstool) path: item/title
-#: C/progress.page:34
+#: C/progress.page:34(item/title)
+#| msgid "--auto-close"
 msgid "<cmd>--auto-close</cmd>"
 msgstr "<cmd>--auto-close</cmd>"
 
-#. (itstool) path: item/p
-#: C/progress.page:35
+#: C/progress.page:35(item/p)
 msgid "Closes the progress dialog when 100% has been reached."
 msgstr "Folyamatjelző ablak bezárása amikor a 100%-ot elérte."
 
-#. (itstool) path: item/title
-#: C/progress.page:39
+#: C/progress.page:39(item/title)
+#| msgid "--pulsate"
 msgid "<cmd>--pulsate</cmd>"
 msgstr "<cmd>--pulsate</cmd>"
 
-#. (itstool) path: item/p
-#: C/progress.page:40
+#: C/progress.page:40(item/p)
 msgid ""
 "Specifies that the progress bar pulsates until an EOF character is read from "
 "standard input."
@@ -1614,14 +1377,12 @@ msgstr ""
 "A folyamatjelző sáv pulzál, amíg nem olvas EOF karaktert a szabványos "
 "bemenetről."
 
-#. (itstool) path: page/p
-#: C/progress.page:45
+#: C/progress.page:45(page/p)
 msgid "The following example script shows how to create a progress dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a folyamatjelző ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/progress.page:49
+#: C/progress.page:49(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -1670,22 +1431,22 @@ msgstr ""
 "          --text=\"Frissítés megszakítva.\"\n"
 "fi\n"
 
-#. (itstool) path: figure/title
-#: C/progress.page:75
+#: C/progress.page:75(figure/title)
 msgid "Progress Dialog Example"
 msgstr "Példa folyamatjelző ablak"
 
-#. (itstool) path: figure/desc
-#: C/progress.page:76
+#: C/progress.page:76(figure/desc)
 msgid "<app>Zenity</app> progress dialog example"
 msgstr "<app>Zenity</app> példa folyamatjelző ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/question.page:28
+#: C/question.page:28(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-question-screenshot.png'; "
+#| "md5=5889e2a57b9d1885f22977587a269610"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-question-screenshot.png' "
@@ -1694,29 +1455,24 @@ msgstr ""
 "external ref='figures/zenity-question-screenshot.png' "
 "md5='5889e2a57b9d1885f22977587a269610'"
 
-#. (itstool) path: info/desc
-#: C/question.page:6
+#: C/question.page:6(info/desc)
 msgid "Use the <cmd>--question</cmd> option."
 msgstr "A <cmd>--question</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/question.page:8
+#: C/question.page:8(page/title)
 msgid "Question Dialog"
 msgstr "Kérdés ablak"
 
-#. (itstool) path: page/p
-#: C/question.page:9
+#: C/question.page:9(page/p)
 msgid "Use the <cmd>--question</cmd> option to create a question dialog."
 msgstr ""
 "A <cmd>--question</cmd> kapcsoló használatával kérdés ablakot hozhat létre."
 
-#. (itstool) path: page/p
-#: C/question.page:13
+#: C/question.page:13(page/p)
 msgid "The following example script shows how to create a question dialog:"
 msgstr "A következő példa parancsfájl bemutatja a kérdés ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/question.page:17
+#: C/question.page:17(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -1731,22 +1487,22 @@ msgstr ""
 "zenity --question \\\n"
 "--text=\"Biztos, hogy folytatni szeretné?\"\n"
 
-#. (itstool) path: figure/title
-#: C/question.page:26
+#: C/question.page:26(figure/title)
 msgid "Question Dialog Example"
 msgstr "Példa kérdés ablak"
 
-#. (itstool) path: figure/desc
-#: C/question.page:27
+#: C/question.page:27(figure/desc)
 msgid "<app>Zenity</app> question dialog example"
 msgstr "<app>Zenity</app> példa kérdés ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/scale.page:77
+#: C/scale.page:77(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-scale-screenshot.png'; "
+#| "md5=d44259a5b5b6e6ba0aceffd8501d0873"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-scale-screenshot.png' "
@@ -1755,41 +1511,34 @@ msgstr ""
 "external ref='figures/zenity-scale-screenshot.png' "
 "md5='d44259a5b5b6e6ba0aceffd8501d0873'"
 
-#. (itstool) path: info/desc
-#: C/scale.page:6
+#: C/scale.page:6(info/desc)
 msgid "Use the <cmd>--scale</cmd> option."
 msgstr "A <cmd>--scale</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/scale.page:8
+#: C/scale.page:8(page/title)
 msgid "Scale Dialog"
 msgstr "Méretezés ablak"
 
-#. (itstool) path: page/p
-#: C/scale.page:9
+#: C/scale.page:9(page/p)
 msgid "Use the <cmd>--scale</cmd> option to create a scale dialog."
 msgstr ""
 "A <cmd>--scale</cmd> kapcsoló használatával méretezés ablakot hozhat létre."
 
-#. (itstool) path: page/p
-#: C/scale.page:12
+#: C/scale.page:12(page/p)
 msgid "The scale dialog supports the following options:"
 msgstr "A méretezés ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/p
-#: C/scale.page:20
+#: C/scale.page:20(item/p)
 msgid "Set the dialog text. (Default: Adjust the scale value)"
 msgstr ""
 "Az ablak szövegének beállítása. (Alapértelmezett: A méretezés értékének "
 "beállítása)"
 
-#. (itstool) path: item/title
-#: C/scale.page:24
+#: C/scale.page:24(item/title)
 msgid "<cmd>--value</cmd>=<var>VALUE</var>"
 msgstr "<cmd>--value</cmd>=<var>ÉRTÉK</var>"
 
-#. (itstool) path: item/p
-#: C/scale.page:25
+#: C/scale.page:25(item/p)
 msgid ""
 "Set initial value. (Default: 0) You must specify value between minimum value "
 "to maximum value."
@@ -1797,64 +1546,54 @@ msgstr ""
 "Kiinduló érték beállítása (Alapértelmezett: 0). Az értéket a minimális és a "
 "maximális érték között kell megadnia."
 
-#. (itstool) path: item/title
-#: C/scale.page:29
+#: C/scale.page:29(item/title)
 msgid "<cmd>--min-value</cmd>=<var>VALUE</var>"
 msgstr "<cmd>--min-value</cmd>=<var>ÉRTÉK</var>"
 
-#. (itstool) path: item/p
-#: C/scale.page:30
+#: C/scale.page:30(item/p)
 msgid "Set minimum value. (Default: 0)"
 msgstr "Minimális érték beállítása (Alapértelmezett: 0)."
 
-#. (itstool) path: item/title
-#: C/scale.page:34
+#: C/scale.page:34(item/title)
 msgid "<cmd>--max-value</cmd>=<var>VALUE</var>"
 msgstr "<cmd>--max-value</cmd>=<var>ÉRTÉK</var>"
 
-#. (itstool) path: item/p
-#: C/scale.page:35
+#: C/scale.page:35(item/p)
 msgid "Set maximum value. (Default: 100)"
 msgstr "Maximális érték beállítása (Alapértelmezett: 100)"
 
-#. (itstool) path: item/title
-#: C/scale.page:39
+#: C/scale.page:39(item/title)
 msgid "<cmd>--step</cmd>=<var>VALUE</var>"
 msgstr "<cmd>--step</cmd>=<var>ÉRTÉK</var>"
 
-#. (itstool) path: item/p
-#: C/scale.page:40
+#: C/scale.page:40(item/p)
 msgid "Set step size. (Default: 1)"
 msgstr "Lépés értékének beállítása (Alapértelmezett: 1)"
 
-#. (itstool) path: item/title
-#: C/scale.page:44
+#: C/scale.page:44(item/title)
+#| msgid "--print-partial"
 msgid "<cmd>--print-partial</cmd>"
 msgstr "<cmd>--print-partial</cmd>"
 
-#. (itstool) path: item/p
-#: C/scale.page:45
+#: C/scale.page:45(item/p)
 msgid "Print value to standard output, whenever a value is changed."
 msgstr "Érték kiírása a szabványos kimenetre amikor csak az érték változik."
 
-#. (itstool) path: item/title
-#: C/scale.page:49
+#: C/scale.page:49(item/title)
+#| msgid "--hide-value"
 msgid "<cmd>--hide-value</cmd>"
 msgstr "<cmd>--hide-value</cmd>"
 
-#. (itstool) path: item/p
-#: C/scale.page:50
+#: C/scale.page:50(item/p)
 msgid "Hide value on dialog."
 msgstr "Érték elrejtése az ablakban."
 
-#. (itstool) path: page/p
-#: C/scale.page:55
+#: C/scale.page:55(page/p)
 msgid "The following example script shows how to create a scale dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a méretezés ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/scale.page:59
+#: C/scale.page:59(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -1886,22 +1625,22 @@ msgstr ""
 "                echo \"Váratlan hiba történt.\";;\n"
 "esac\n"
 
-#. (itstool) path: figure/title
-#: C/scale.page:75
+#: C/scale.page:75(figure/title)
 msgid "Scale Dialog Example"
 msgstr "Példa méretezés ablak"
 
-#. (itstool) path: figure/desc
-#: C/scale.page:76
+#: C/scale.page:76(figure/desc)
 msgid "<app>Zenity</app> scale dialog example"
 msgstr "<app>Zenity</app> példa méretezés ablak"
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/text.page:83
+#: C/text.page:83(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-text-screenshot.png'; "
+#| "md5=79446b388fa6c3c3a619c8d6565b9f61"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-text-screenshot.png' "
@@ -1910,36 +1649,30 @@ msgstr ""
 "external ref='figures/zenity-text-screenshot.png' "
 "md5='79446b388fa6c3c3a619c8d6565b9f61'"
 
-#. (itstool) path: info/desc
-#: C/text.page:6
+#: C/text.page:6(info/desc)
 msgid "Use the <cmd>--text-info</cmd> option."
 msgstr "A <cmd>--text-info</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/text.page:8
+#: C/text.page:8(page/title)
 msgid "Text Information Dialog"
 msgstr "Szöveges információs ablak"
 
-#. (itstool) path: page/p
-#: C/text.page:9
+#: C/text.page:9(page/p)
 msgid ""
 "Use the <cmd>--text-info</cmd> option to create a text information dialog."
 msgstr ""
 "A <cmd>--text-info</cmd> kapcsoló használatával egy szöveges információs "
 "ablak hozható létre."
 
-#. (itstool) path: page/p
-#: C/text.page:13
+#: C/text.page:13(page/p)
 msgid "The text information dialog supports the following options:"
 msgstr "A szöveges információs ablak a következő kapcsolókat támogatja:"
 
-#. (itstool) path: item/p
-#: C/text.page:21
+#: C/text.page:21(item/p)
 msgid "Specifies a file that is loaded in the text information dialog."
 msgstr "A szöveges információs ablakba betöltendő fájl megadása."
 
-#. (itstool) path: item/p
-#: C/text.page:26
+#: C/text.page:26(item/p)
 msgid ""
 "Allows the displayed text to be edited. The edited text is returned to "
 "standard output when the dialog is closed."
@@ -1947,59 +1680,49 @@ msgstr ""
 "Lehetővé teszi a megjelenített szöveg szerkesztését. A szerkesztett szöveg a "
 "szabványos kimenetre kerül az ablak bezárásakor."
 
-#. (itstool) path: item/title
-#: C/text.page:30
+#: C/text.page:30(item/title)
 msgid "<cmd>--font</cmd>=<var>FONT</var>"
 msgstr "<cmd>--font</cmd>=<var>BETŰKÉSZLET</var>"
 
-#. (itstool) path: item/p
-#: C/text.page:31
+#: C/text.page:31(item/p)
 msgid "Specifies the text font."
 msgstr "A szöveg betűkészletének megadása."
 
-#. (itstool) path: item/title
-#: C/text.page:35
+#: C/text.page:35(item/title)
 msgid "<cmd>--checkbox</cmd>=<var>TEXT</var>"
 msgstr "<cmd>--checkbox</cmd>=<var>SZÖVEG</var>"
 
-#. (itstool) path: item/p
-#: C/text.page:36
+#: C/text.page:36(item/p)
 msgid "Enable a checkbox for use like a 'I read and accept the terms.'"
 msgstr ""
 "Jelölőnégyzet megjelenítése, például „Elolvastam és elfogadom a "
 "feltételeket” jellegű felhasználásra."
 
-#. (itstool) path: item/title
-#: C/text.page:40
+#: C/text.page:40(item/title)
 msgid "<cmd>--html</cmd>"
 msgstr "<cmd>--html</cmd>"
 
-#. (itstool) path: item/p
-#: C/text.page:41
+#: C/text.page:41(item/p)
 msgid "Enable html support."
 msgstr "HTML-támogatás engedélyezése."
 
-#. (itstool) path: item/title
-#: C/text.page:45
+#: C/text.page:45(item/title)
 msgid "<cmd>--url</cmd>=<var>URL</var>"
 msgstr "<cmd>--url</cmd>=<var>URL</var>"
 
-#. (itstool) path: item/p
-#: C/text.page:46
+#: C/text.page:46(item/p)
 msgid "Sets an url instead of a file. Only works if you use --html option."
 msgstr ""
 "URL-címet állít be fájl helyett. Csak a --html kapcsolóval együtt működik."
 
-#. (itstool) path: page/p
-#: C/text.page:51
+#: C/text.page:51(page/p)
 msgid ""
 "The following example script shows how to create a text information dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a szöveges információs ablak "
 "létrehozását:"
 
-#. (itstool) path: page/code
-#: C/text.page:55
+#: C/text.page:55(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -2051,18 +1774,15 @@ msgstr ""
 "\t;;\n"
 "esac\n"
 
-#. (itstool) path: figure/title
-#: C/text.page:81
+#: C/text.page:81(figure/title)
 msgid "Text Information Dialog Example"
 msgstr "Példa szöveges információs ablak"
 
-#. (itstool) path: figure/desc
-#: C/text.page:82
+#: C/text.page:82(figure/desc)
 msgid "<app>Zenity</app> text information dialog example"
 msgstr "<app>Zenity</app> példa szöveges információs ablak"
 
-#. (itstool) path: info/desc
-#: C/usage.page:6
+#: C/usage.page:6(info/desc)
 msgid ""
 "You can use <app>Zenity</app> to create simple dialogs that interact "
 "graphically with the user."
@@ -2070,13 +1790,11 @@ msgstr ""
 "A <app>Zenity</app> segítségével egyszerű grafikus párbeszédablakokat hozhat "
 "létre."
 
-#. (itstool) path: page/title
-#: C/usage.page:8
+#: C/usage.page:8(page/title)
 msgid "Usage"
 msgstr "Használat"
 
-#. (itstool) path: page/p
-#: C/usage.page:9
+#: C/usage.page:9(page/p)
 msgid ""
 "When you write scripts, you can use <app>Zenity</app> to create simple "
 "dialogs that interact graphically with the user, as follows:"
@@ -2085,8 +1803,7 @@ msgstr ""
 "párbeszédablakokat hozhat létre, amelyek a következőképpen kommunikálnak a "
 "felhasználóval:"
 
-#. (itstool) path: item/p
-#: C/usage.page:14
+#: C/usage.page:14(item/p)
 msgid ""
 "You can create a dialog to obtain information from the user. For example, "
 "you can prompt the user to select a date from a calendar dialog, or to "
@@ -2096,8 +1813,7 @@ msgstr ""
 "Megkérheti például a felhasználót egy dátum kiválasztására a dátumválasztó "
 "ablakból, vagy fájl kiválasztására a fájlválasztó ablakból."
 
-#. (itstool) path: item/p
-#: C/usage.page:19
+#: C/usage.page:19(item/p)
 msgid ""
 "You can create a dialog to provide the user with information. For example, "
 "you can use a progress dialog to indicate the current status of an "
@@ -2108,8 +1824,7 @@ msgstr ""
 "állapotát, vagy egy figyelmeztető ablakkal felhívhatja valamire a "
 "felhasználó figyelmét."
 
-#. (itstool) path: page/p
-#: C/usage.page:24
+#: C/usage.page:24(page/p)
 msgid ""
 "When the user closes the dialog, <app>Zenity</app> prints the text produced "
 "by the dialog to standard output."
@@ -2117,8 +1832,7 @@ msgstr ""
 "Amikor a felhasználó bezárja az ablakot, a <app>Zenity</app> kiírja az ablak "
 "által visszaadott szöveget a szabványos kimenetre."
 
-#. (itstool) path: note/p
-#: C/usage.page:29
+#: C/usage.page:29(note/p)
 msgid ""
 "When you write <app>Zenity</app> commands, ensure that you place quotation "
 "marks around each argument."
@@ -2126,40 +1840,33 @@ msgstr ""
 "Amikor <app>Zenity</app> parancsokat ír, mindig tegye idézőjelek közé az "
 "egyes argumentumokat."
 
-#. (itstool) path: note/p
-#: C/usage.page:32
+#: C/usage.page:32(note/p)
 msgid "For example, use:"
 msgstr "Például így:"
 
-#. (itstool) path: note/screen
-#: C/usage.page:33
+#: C/usage.page:33(note/screen)
 #, no-wrap
 msgid "zenity --calendar --title=\"Holiday Planner\""
 msgstr "zenity --calendar --title=\"Szabadság tervezése\""
 
-#. (itstool) path: note/p
-#: C/usage.page:34
+#: C/usage.page:34(note/p)
 msgid "Do not use:"
 msgstr "Ne használja így:"
 
-#. (itstool) path: note/screen
-#: C/usage.page:35
+#: C/usage.page:35(note/screen)
 #, no-wrap
 msgid "zenity --calendar --title=Holiday Planner"
 msgstr "zenity --calendar --title=Szabadság tervezése"
 
-#. (itstool) path: note/p
-#: C/usage.page:36
+#: C/usage.page:36(note/p)
 msgid "If you do not use quotation marks, you might get unexpected results."
 msgstr "Ha nem használ idézőjeleket, akkor váratlan eredményeket kaphat."
 
-#. (itstool) path: section/title
-#: C/usage.page:42
+#: C/usage.page:42(section/title)
 msgid "Access Keys"
 msgstr "Hívóbetűk"
 
-#. (itstool) path: section/p
-#: C/usage.page:43
+#: C/usage.page:43(section/p)
 msgid ""
 "An access key is a key that enables you to perform an action from the "
 "keyboard rather than use the mouse to choose a command from a menu or "
@@ -2171,8 +1878,7 @@ msgstr ""
 "ablakból. A hívóbetűk a menüpontok vagy beállítások szövegének aláhúzott "
 "betűi."
 
-#. (itstool) path: section/p
-#: C/usage.page:46
+#: C/usage.page:46(section/p)
 msgid ""
 "Some <app>Zenity</app> dialogs support the use of access keys. To specify "
 "the character to use as the access key, place an underscore before that "
@@ -2184,39 +1890,33 @@ msgstr ""
 "ablak szövegében. A következő példa bemutatja, hogyan adhatja meg a „V” "
 "betűt hívóbetűként:"
 
-#. (itstool) path: section/screen
-#: C/usage.page:49
+#: C/usage.page:49(section/screen)
 #, no-wrap
+#| msgid "\"_Choose a name\"."
 msgid "<input>\"_Choose a name\".</input>"
 msgstr "<input>\"_Válasszon egy nevet.\"</input>"
 
-#. (itstool) path: section/title
-#: C/usage.page:53
+#: C/usage.page:53(section/title)
 msgid "Exit Codes"
 msgstr "Kilépési kódok"
 
-#. (itstool) path: section/p
-#: C/usage.page:54
+#: C/usage.page:54(section/p)
 msgid "Zenity returns the following exit codes:"
 msgstr "A Zenity a következő kilépési kódokat adja vissza:"
 
-#. (itstool) path: td/p
-#: C/usage.page:62
+#: C/usage.page:62(td/p)
 msgid "Exit Code"
 msgstr "Kilépési kód"
 
-#. (itstool) path: td/p
-#: C/usage.page:64
+#: C/usage.page:64(td/p)
 msgid "Description"
 msgstr "Leírás"
 
-#. (itstool) path: td/p
-#: C/usage.page:70
+#: C/usage.page:70(td/p)
 msgid "<var>0</var>"
 msgstr "<var>0</var>"
 
-#. (itstool) path: td/p
-#: C/usage.page:73
+#: C/usage.page:73(td/p)
 msgid ""
 "The user has pressed either <gui style=\"button\">OK</gui> or <gui style="
 "\"button\">Close</gui>."
@@ -2224,13 +1924,11 @@ msgstr ""
 "A felhasználó megnyomta az <gui style=\"button\">OK</gui> vagy a <gui style="
 "\"button\">Bezárás</gui> gombot."
 
-#. (itstool) path: td/p
-#: C/usage.page:78
+#: C/usage.page:78(td/p)
 msgid "<var>1</var>"
 msgstr "<var>1</var>"
 
-#. (itstool) path: td/p
-#: C/usage.page:81
+#: C/usage.page:81(td/p)
 msgid ""
 "The user has either pressed <gui style=\"button\">Cancel</gui>, or used the "
 "window functions to close the dialog."
@@ -2238,53 +1936,43 @@ msgstr ""
 "A felhasználó megnyomta a <gui style=\"button\">Mégse</gui> gombot, vagy az "
 "ablakvezérlő elemekkel bezárta az ablakot."
 
-#. (itstool) path: td/p
-#: C/usage.page:86
+#: C/usage.page:86(td/p)
 msgid "<var>-1</var>"
 msgstr "<var>-1</var>"
 
-#. (itstool) path: td/p
-#: C/usage.page:89
+#: C/usage.page:89(td/p)
 msgid "An unexpected error has occurred."
 msgstr "Váratlan hiba történt."
 
-#. (itstool) path: td/p
-#: C/usage.page:94
+#: C/usage.page:94(td/p)
 msgid "<var>5</var>"
 msgstr "<var>5</var>"
 
-#. (itstool) path: td/p
-#: C/usage.page:97
+#: C/usage.page:97(td/p)
 msgid "The dialog has been closed because the timeout has been reached."
 msgstr "Az ablak az időkorlát elérése miatt bezárva."
 
-#. (itstool) path: section/title
-#: C/usage.page:109
+#: C/usage.page:109(section/title)
 msgid "General Options"
 msgstr "Általános beállítások"
 
-#. (itstool) path: section/p
-#: C/usage.page:111
+#: C/usage.page:111(section/p)
 msgid "All Zenity dialogs support the following general options:"
 msgstr "Minden Zenity ablak támogatja a következő általános beállításokat:"
 
-#. (itstool) path: item/title
-#: C/usage.page:118
+#: C/usage.page:118(item/title)
 msgid "<cmd>--title</cmd>=<var>title</var>"
 msgstr "<cmd>--title</cmd>=<var>cím</var>"
 
-#. (itstool) path: item/p
-#: C/usage.page:119
+#: C/usage.page:119(item/p)
 msgid "Specifies the title of a dialog."
 msgstr "Az ablak címének megadása."
 
-#. (itstool) path: item/title
-#: C/usage.page:123
+#: C/usage.page:123(item/title)
 msgid "<cmd>--window-icon</cmd>=<var>icon_path</var>"
 msgstr "<cmd>--window-icon</cmd>=<var>ikonútvonal</var>"
 
-#. (itstool) path: item/p
-#: C/usage.page:124
+#: C/usage.page:124(item/p)
 msgid ""
 "Specifies the icon that is displayed in the window frame of the dialog. "
 "There are 4 stock icons also available by providing the following keywords - "
@@ -2294,223 +1982,194 @@ msgstr ""
 "megadásával elérhető 4 alapértelmezett ikon is: „info”, "
 "„warning” (figyelmeztetés), „question” (kérdés) és „error” (hiba)."
 
-#. (itstool) path: item/title
-#: C/usage.page:131
+#: C/usage.page:131(item/title)
 msgid "<cmd>--width</cmd>=<var>width</var>"
 msgstr "<cmd>--width</cmd>=<var>szélesség</var>"
 
-#. (itstool) path: item/p
-#: C/usage.page:132
+#: C/usage.page:132(item/p)
 msgid "Specifies the width of the dialog."
 msgstr "Az ablak szélességének megadása."
 
-#. (itstool) path: item/title
-#: C/usage.page:136
+#: C/usage.page:136(item/title)
 msgid "<cmd>--height</cmd>=<var>height</var>"
 msgstr "<cmd>--height</cmd>=<var>magasság</var>"
 
-#. (itstool) path: item/p
-#: C/usage.page:137
+#: C/usage.page:137(item/p)
 msgid "Specifies the height of the dialog."
 msgstr "Az ablak magasságának megadása."
 
-#. (itstool) path: item/title
-#: C/usage.page:141
+#: C/usage.page:141(item/title)
 msgid "<cmd>--timeout</cmd>=<var>timeout</var>"
 msgstr "<cmd>--timeout</cmd>=<var>időkorlát</var>"
 
-#. (itstool) path: item/p
-#: C/usage.page:142
+#: C/usage.page:142(item/p)
 msgid "Specifies the timeout in seconds after which the dialog is closed."
 msgstr "Időkorlát megadása másodpercben, amely után az ablak bezárandó."
 
-#. (itstool) path: section/title
-#: C/usage.page:152
+#: C/usage.page:152(section/title)
 msgid "Help Options"
 msgstr "Súgólehetőségek"
 
-#. (itstool) path: section/p
-#: C/usage.page:154
+#: C/usage.page:154(section/p)
 msgid "Zenity provides the following help options:"
 msgstr "A Zenity a következő súgólehetőségeket biztosítja:"
 
-#. (itstool) path: item/title
-#: C/usage.page:161
+#: C/usage.page:161(item/title)
 msgid "<cmd>--help</cmd>"
 msgstr "<cmd>--help</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:162
+#: C/usage.page:162(item/p)
 msgid "Displays shortened help text."
 msgstr "Rövid súgószöveg megjelenítése."
 
-#. (itstool) path: item/title
-#: C/usage.page:166
+#: C/usage.page:166(item/title)
+#| msgid "--help-all"
 msgid "<cmd>--help-all</cmd>"
 msgstr "<cmd>--help-all</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:167
+#: C/usage.page:167(item/p)
 msgid "Displays full help text for all dialogs."
 msgstr "Részletes súgószöveg megjelenítése minden ablakhoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:171
+#: C/usage.page:171(item/title)
+#| msgid "--help-general"
 msgid "<cmd>--help-general</cmd>"
 msgstr "<cmd>--help-general</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:172
+#: C/usage.page:172(item/p)
 msgid "Displays help text for general dialog options."
 msgstr "Súgószöveg megjelenítése az általános ablakbeállításokhoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:176
+#: C/usage.page:176(item/title)
+#| msgid "--help-calendar"
 msgid "<cmd>--help-calendar</cmd>"
 msgstr "<cmd>--help-calendar</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:177
+#: C/usage.page:177(item/p)
 msgid "Displays help text for calendar dialog options."
 msgstr "Súgószöveg megjelenítése a naptár ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:181
+#: C/usage.page:181(item/title)
+#| msgid "--help-entry"
 msgid "<cmd>--help-entry</cmd>"
 msgstr "<cmd>--help-entry</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:182
+#: C/usage.page:182(item/p)
 msgid "Displays help text for text entry dialog options."
 msgstr "Súgószöveg megjelenítése a szövegbeviteli ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:186
+#: C/usage.page:186(item/title)
+#| msgid "--help-error"
 msgid "<cmd>--help-error</cmd>"
 msgstr "<cmd>--help-error</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:187
+#: C/usage.page:187(item/p)
 msgid "Displays help text for error dialog options."
 msgstr "Súgószöveg megjelenítése a hibaablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:191
+#: C/usage.page:191(item/title)
+#| msgid "--help-info"
 msgid "<cmd>--help-info</cmd>"
 msgstr "<cmd>--help-info</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:192
+#: C/usage.page:192(item/p)
 msgid "Displays help text for information dialog options."
 msgstr "Súgószöveg megjelenítése az információs ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:196
+#: C/usage.page:196(item/title)
+#| msgid "--help-file-selection"
 msgid "<cmd>--help-file-selection</cmd>"
 msgstr "<cmd>--help-file-selection</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:197
+#: C/usage.page:197(item/p)
 msgid "Displays help text for file selection dialog options."
 msgstr "Súgószöveg megjelenítése a fájlválasztó ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:201
+#: C/usage.page:201(item/title)
+#| msgid "--help-list"
 msgid "<cmd>--help-list</cmd>"
 msgstr "<cmd>--help-list</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:202
+#: C/usage.page:202(item/p)
 msgid "Displays help text for list dialog options."
 msgstr "Súgószöveg megjelenítése a lista ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:206
+#: C/usage.page:206(item/title)
+#| msgid "--help-notification"
 msgid "<cmd>--help-notification</cmd>"
 msgstr "<cmd>--help-notification</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:207
+#: C/usage.page:207(item/p)
 msgid "Displays help text for notification icon options."
 msgstr "Súgószöveg megjelenítése az értesítési ikon beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:211
+#: C/usage.page:211(item/title)
+#| msgid "--help-progress"
 msgid "<cmd>--help-progress</cmd>"
 msgstr "<cmd>--help-progress</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:212
+#: C/usage.page:212(item/p)
 msgid "Displays help text for progress dialog options."
 msgstr "Súgószöveg megjelenítése a folyamatjelző ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:216
+#: C/usage.page:216(item/title)
+#| msgid "--help-question"
 msgid "<cmd>--help-question</cmd>"
 msgstr "<cmd>--help-question</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:217
+#: C/usage.page:217(item/p)
 msgid "Displays help text for question dialog options."
 msgstr "Súgószöveg megjelenítése a kérdés ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:221
+#: C/usage.page:221(item/title)
+#| msgid "--help-warning"
 msgid "<cmd>--help-warning</cmd>"
 msgstr "<cmd>--help-warning</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:222
+#: C/usage.page:222(item/p)
 msgid "Displays help text for warning dialog options."
 msgstr "Súgószöveg megjelenítése a figyelmeztető ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:226
+#: C/usage.page:226(item/title)
+#| msgid "--help-text-info"
 msgid "<cmd>--help-text-info</cmd>"
 msgstr "<cmd>--help-text-info</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:227
+#: C/usage.page:227(item/p)
 msgid "Displays help for text information dialog options."
 msgstr "Súgószöveg megjelenítése a szöveges információs ablak beállításaihoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:231
+#: C/usage.page:231(item/title)
+#| msgid "--help-misc"
 msgid "<cmd>--help-misc</cmd>"
 msgstr "<cmd>--help-misc</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:232
+#: C/usage.page:232(item/p)
 msgid "Displays help for miscellaneous options."
 msgstr "Súgószöveg megjelenítése egyéb beállításokhoz."
 
-#. (itstool) path: item/title
-#: C/usage.page:236
+#: C/usage.page:236(item/title)
+#| msgid "--help-gtk"
 msgid "<cmd>--help-gtk</cmd>"
 msgstr "<cmd>--help-gtk</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:237
+#: C/usage.page:237(item/p)
 msgid "Displays help for GTK+ options."
 msgstr "Súgószöveg megjelenítése a GTK+ beállításokhoz."
 
-#. (itstool) path: section/title
-#: C/usage.page:247
+#: C/usage.page:247(section/title)
 msgid "Miscellaneous Options"
 msgstr "Egyéb beállítások"
 
-#. (itstool) path: section/p
-#: C/usage.page:249
+#: C/usage.page:249(section/p)
 msgid "Zenity also provides the following miscellaneous options:"
 msgstr "A Zenity a következő egyéb beállításokat is biztosítja:"
 
-#. (itstool) path: item/title
-#: C/usage.page:256
+#: C/usage.page:256(item/title)
 msgid "<cmd>--about</cmd>"
 msgstr "<cmd>--about</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:257
+#: C/usage.page:257(item/p)
 msgid ""
 "Displays the <gui>About Zenity</gui> dialog, which contains Zenity version "
 "information, copyright information, and developer information."
@@ -2518,23 +2177,20 @@ msgstr ""
 "Megjeleníti a <gui>Zenity névjegye</gui> ablakot, amely verzió-, szerzői "
 "jogi és fejlesztői információkat tartalmaz."
 
-#. (itstool) path: item/title
-#: C/usage.page:261
+#: C/usage.page:261(item/title)
+#| msgid "Use the <cmd>--question</cmd> option."
 msgid "<cmd>--version</cmd>"
 msgstr "<cmd>--version</cmd>"
 
-#. (itstool) path: item/p
-#: C/usage.page:262
+#: C/usage.page:262(item/p)
 msgid "Displays the version number of Zenity."
 msgstr "A Zenity verziószámának megjelenítése."
 
-#. (itstool) path: section/title
-#: C/usage.page:272
+#: C/usage.page:272(section/title)
 msgid "GTK+ Options"
 msgstr "GTK+ beállításai"
 
-#. (itstool) path: section/p
-#: C/usage.page:274
+#: C/usage.page:274(section/p)
 msgid ""
 "Zenity supports the standard GTK+ options. For more information about the GTK"
 "+ options, execute the <cmd>zenity --help-gtk</cmd> command."
@@ -2543,13 +2199,11 @@ msgstr ""
 "kapcsolatos további információkért adja ki a <cmd>zenity --help-gtk</cmd> "
 "parancsot."
 
-#. (itstool) path: section/title
-#: C/usage.page:283
+#: C/usage.page:283(section/title)
 msgid "Environment Variables"
 msgstr "Környezeti változók"
 
-#. (itstool) path: section/p
-#: C/usage.page:285
+#: C/usage.page:285(section/p)
 msgid ""
 "Normally, Zenity detects the terminal window from which it was launched and "
 "keeps itself above that window. This behavior can be disabled by unsetting "
@@ -2559,12 +2213,14 @@ msgstr ""
 "és azon ablak fölött tartja magát. Ez a viselkedés letiltható a "
 "<var>WINDOWID</var> környezeti változó törlésével."
 
-#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/warning.page:28
+#: C/warning.page:28(media)
+#| msgid ""
+#| "@@image: 'figures/zenity-warning-screenshot.png'; "
+#| "md5=146ea22fcd7104b2f9ed7ca0cc25f51d"
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-warning-screenshot.png' "
@@ -2573,31 +2229,26 @@ msgstr ""
 "external ref='figures/zenity-warning-screenshot.png' "
 "md5='146ea22fcd7104b2f9ed7ca0cc25f51d'"
 
-#. (itstool) path: info/desc
-#: C/warning.page:6
+#: C/warning.page:6(info/desc)
 msgid "Use the <cmd>--warning</cmd> option."
 msgstr "A <cmd>--warning</cmd> kapcsoló használata."
 
-#. (itstool) path: page/title
-#: C/warning.page:8
+#: C/warning.page:8(page/title)
 msgid "Warning Dialog"
 msgstr "Figyelmeztető ablak"
 
-#. (itstool) path: page/p
-#: C/warning.page:9
+#: C/warning.page:9(page/p)
 msgid "Use the <cmd>--warning</cmd> option to create a warning dialog."
 msgstr ""
 "A <cmd>--warning</cmd> kapcsoló használatával figyelmeztető ablakot hozhat "
 "létre."
 
-#. (itstool) path: page/p
-#: C/warning.page:13
+#: C/warning.page:13(page/p)
 msgid "The following example script shows how to create a warning dialog:"
 msgstr ""
 "A következő példa parancsfájl bemutatja a figyelmeztető ablak létrehozását:"
 
-#. (itstool) path: page/code
-#: C/warning.page:17
+#: C/warning.page:17(page/code)
 #, no-wrap
 msgid ""
 "\n"
@@ -2612,23 +2263,13 @@ msgstr ""
 "zenity --warning \\\n"
 "--text=\"Az áramütés elkerülése érdekében húzza ki az elektromos kábelt.\"\n"
 
-#. (itstool) path: figure/title
-#: C/warning.page:26
+#: C/warning.page:26(figure/title)
 msgid "Warning Dialog Example"
 msgstr "Példa figyelmeztető ablak"
 
-#. (itstool) path: figure/desc
-#: C/warning.page:27
+#: C/warning.page:27(figure/desc)
 msgid "<app>Zenity</app> warning dialog example"
 msgstr "<app>Zenity</app> példa figyelmeztető ablak"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/zenity-notification-screenshot.png' "
-#~ "md5='b67bf309c6e479db8677947f1810a999'"
-#~ msgstr ""
-#~ "external ref='figures/zenity-notification-screenshot.png' "
-#~ "md5='b67bf309c6e479db8677947f1810a999'"
 
 #~ msgid "0"
 #~ msgstr "0"

@@ -2,36 +2,28 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="error" xml:lang="sv">
   <info>
     <link type="guide" xref="message"/>
-    <desc>Använd flaggan <cmd>--error</cmd>.</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Daniel Nylander</mal:name>
-      <mal:email>po@danielnylander.se</mal:email>
-      <mal:years>2006, 2009</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>Sebastian Rasmussen</mal:name>
-      <mal:email>sebras@gmail.com</mal:email>
-      <mal:years>2016</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--error</cmd> option.</desc>
   </info>
   <title>Feldialog</title>
-      <p>Använd flaggan <cmd>--error</cmd> för att skapa en feldialog.</p>
+      <p>
+          Use the <cmd>--error</cmd> option to create an error dialog.  
+      </p>
 
-      <p>Följande exempelskript visar hur man skapar en feldialog:</p>
+      <p>
+        The following example script shows how to create an error dialog:
+      </p>
 
 <code>
 #!/bin/bash
 
 zenity --error \
---text="Kunde inte hitta /var/log/syslog."
+--text="Could not find /var/log/syslog."
 </code>
 
 
-      <figure>
+      <figure id="zenity-error-screenshot">
         <title>Exempel på feldialog</title>
-        <desc><app>Zenity</app>-exempel på feldialog</desc>
+        <desc><app>Zenity</app> error dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-error-screenshot.png"/>
       </figure>
 </page>

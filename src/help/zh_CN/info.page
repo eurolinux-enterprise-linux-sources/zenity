@@ -2,36 +2,28 @@
 <page xmlns="http://projectmallard.org/1.0/" type="topic" id="info" xml:lang="zh-CN">
   <info>
     <link type="guide" xref="message"/>
-    <desc>使用 <cmd>--info</cmd> 选项。</desc>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>TeliuTe</mal:name>
-      <mal:email>teliute@163.com</mal:email>
-      <mal:years>2010</mal:years>
-    </mal:credit>
-  
-    <mal:credit xmlns:mal="http://projectmallard.org/1.0/" type="translator copyright">
-      <mal:name>tuhaihe</mal:name>
-      <mal:email>1132321739qq@gmail.com</mal:email>
-      <mal:years>2012</mal:years>
-    </mal:credit>
+    <desc>Use the <cmd>--info</cmd> option.</desc>
   </info>
-  <title>信息对话框</title>
-      <p>使用 <cmd>--info</cmd> 选项创建一个信息对话框。</p>
+  <title>Info Dialog</title>
+      <p>
+          Use the <cmd>--info</cmd> option to create an information dialog.
+      </p>
 
-      <p>下面的脚本示范了如何创建一个信息对话框：</p>
+      <p>
+        The following example script shows how to create an information dialog:
+      </p>
 
 <code>
 #!/bin/bash
 
 zenity --info \
---text="合并完成。更新了 3 / 10 个文件。"
+--text="Merge complete. Updated 3 of 10 files."
 </code>
 
 
-      <figure>
-        <title>信息对话框范例</title>
-        <desc><app>Zenity</app> 信息对话框范例</desc>
+      <figure id="zenity-information-screenshot">
+        <title>信息框范例</title>
+        <desc><app>Zenity</app> information dialog example</desc>
         <media type="image" mime="image/png" src="figures/zenity-information-screenshot.png"/>
       </figure>
 </page>
